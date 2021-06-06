@@ -1,0 +1,21 @@
+{
+  "title": "Matt Mcadams",
+  "url": "https://mattmcadams.com/",
+  "language": "en",
+  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "feed": {
+    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://mattmcadams.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://mattmcadams.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Matthew McAdams",
+    "email": "mattmcadams@outlook.com.com",
+    "url": "https://mattmcadams.com/about/"
+  }
+}

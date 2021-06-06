@@ -1,0 +1,14 @@
+<ol reversed class="postlist" style="counter-reset: start-from {{ (projectslistCounter or projectlist.length) + 1 }}">
+{% for project in projectlist | reverse %}
+{% if project.data.type == "project" %}
+  <li class="postlist-item{% if project.url == url %} postlist-item-active{% endif %}">
+    <a href="{{ project.url | url }}" class="postlist-link">{% if project.data.title %}{{ project.data.title }}{% else %}<code>{{ project.url }}</code>{% endif %}</a>
+    <time class="postlist-date" datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time>
+    {% for tag in project.data.tags | filterTagList %}
+      {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+  </li>
+  {% endif %}
+{% endfor %}
+</ol>

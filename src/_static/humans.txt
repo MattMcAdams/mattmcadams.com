@@ -1,0 +1,69 @@
+mattmcadams.com/humans.txt
+
+---------------------------------------
+### AUTHOR
+---------------------------------------
+
+Matthew McAdams
+- Twitter: MattMakesArt
+- GitHub: MattMcAdams
+- Location: Birmingham, Alabama, USA
+
+---------------------------------------
+### THANKS
+---------------------------------------
+
+__Doug Barrett__
+| Associate Professor of Graphic Design, UAB
+
+__Elisabeth Pellathy__
+| Assistant Professor of New Media, UAB
+
+__Sarah Heath__
+| 3D artist
+
+__Brenda Long__
+| Creative, programmer, app designer
+
+__Miriam Suzanne__
+| Artist, CSS Wizard, and an absolute inspiration
+
+Special thanks to all the developers and technical writers responsible
+for the fantastic documentation and learning materials I relied on to make
+this website possible. You all are the true heros.
+
+---------------------------------------
+### TECHNOLOGY COLOPHON
+---------------------------------------
+
+USED TO WRITE
+- Markdown
+- Sass
+- JavaScript
+- Vue
+- GraphQL
+
+USED TO BUILD
+- VS Code
+- Node
+- Gridsome
+- Remark
+
+USED TO HOST
+- Hover
+- GitHub
+- Google Cloud Services
+- Netlify
+
+---------------------------------------
+### OPEN SOURCE & MADE WITH LOVE
+---------------------------------------
+
+```
+   __                      __
+  /  )     /              /  )    _/_
+ /   __ __/ _    o _     /--/ __  /
+(__/(_)(_/_</_  <_/_)_  /  (_/ (_<__
+
+https://github.com/MattMcAdams/website
+```

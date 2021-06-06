@@ -1,0 +1,20 @@
+a {
+  --mainColor: #1DD4FF;
+  background: linear-gradient(
+        to bottom, var(--mainColor) 0%,
+        var(--mainColor) 100%
+      );
+  background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: 3px 1em;
+  text-decoration: none !important;
+  transition: background-position .2s, background-size .2s;
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+a:hover {
+  background-size: 3px 0.5em;
+  background-position: 0 0.5em;
+  text-decoration: none !important;
+}
