@@ -12,6 +12,7 @@ Personal website of Matthew McAdams
 - https://www.11ty.dev/docs/plugins/rss/
 - https://www.11ty.dev/docs/config/
 - https://github.com/11ty/eleventy/issues/259
+- https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/
 
 ## TODO
 
@@ -40,5 +41,5 @@ Personal website of Matthew McAdams
 - [x] Update site meta files (robots, humans, redirects, etc)
 - [ ] Update readme
 
-- [ ] Deploy to v6.mattmcadams.com for testing
+- [x] Deploy to v6.mattmcadams.com for testing
 - [ ] Get analytics working

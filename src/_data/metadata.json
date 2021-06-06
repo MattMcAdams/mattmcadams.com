@@ -2,9 +2,9 @@
   "title": "Matt Mcadams",
   "url": "https://mattmcadams.com/",
   "language": "en",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "I'm a creative writing about my interests in web design and development.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "I'm a creative writing about my interests in web design and development.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://mattmcadams.com/"
@@ -15,7 +15,7 @@
   },
   "author": {
     "name": "Matthew McAdams",
-    "email": "mattmcadams@outlook.com.com",
+    "email": "mattmcadams@outlook.com",
     "url": "https://mattmcadams.com/about/"
   }
 }
