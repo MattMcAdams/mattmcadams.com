@@ -1,14 +1,103 @@
 ---
-layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
+layout: layouts/base.njk
 ---
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postlist.njk" %}
+<style>
+:root {
+  --accent-color: #00CEFF; /* #3CB9FC #08F7FE */
+}
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 1400px;
+  grid-gap: var(--flow-space);
+  padding: clamp(1em, 5%, 75px);
+  grid-template-areas:
+  "line line thick empty header header header header header header"
+  "line line sidebar empty content content content content content content";
+  min-height: 100vh;
+  grid-template-rows: min-content;
+}
+.sidebar {
+  position: relative;
+  grid-area: sidebar;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+}
+.decorative-bar {
+  width: 75%;
+  height: 100%;
+  background: #E6EBF2;
+  z-index: -1000;
+  grid-area: line
+}
+.sidebar img {
+  margin-bottom: 0;
+  max-width: 120%;
+}
+main {
+  grid-area: content;
+  display: flex;
+  align-items: flex-end;
+}
+header {
+  grid-area: header;
+  grid-column-start: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  /*margin-bottom: 5em;*/
+  margin-top: 1em;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: var(--accent-color);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+nav {
+  margin-top: 1em;
+  width: 70%;
+  background: var(--page-bg-color);
+}
+nav ul {
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+nav ul li {
+  padding: 2em 1em 0;
+}
+:last-child {
+  margin-bottom: 0;
+}
+</style>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<div class="page">
+<div class="decorative-bar"></div>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/projects">Projects</a></li>
+        <li class="nav-item"><a href="/posts">Posts</a></li>
+        <li class="nav-item"><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="sidebar">
+
+    <img src="/images/PortraitFull.png">
+  </div>
+  <main>
+    <div>
+      <h1>Hi, I'm Matt McAdams</h1>
+      <p>I’m a Web / UX Designer with a BFA from the University of Alabama at Birmingham with a focus in graphic design. When I’m not pecking at code or pushing pixels, I like to explore fantasy worlds in books and video games.</p>
+      <p>I’m an advocate for creating a more accessible and inclusive web through thoughtful design and great experiences. On this website, you can see my design work, code projects, and read my thoughts on technology and design.</p>
+    </div>
+  </main>
+</div>

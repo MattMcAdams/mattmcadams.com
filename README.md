@@ -13,6 +13,8 @@ Personal website of Matthew McAdams
 - https://www.11ty.dev/docs/config/
 - https://github.com/11ty/eleventy/issues/259
 - https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/
+- https://markentier.tech/posts/2021/03/responsive-toc-leader-lines-with-css/
+- https://www.w3.org/Style/Examples/007/leaders.en.html
 
 ## TODO
 
