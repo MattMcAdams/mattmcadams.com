@@ -15,9 +15,9 @@ static/temp
 
 # Large media
 
-src/_static/cdn/*
+src/_static/cdn/
 !src/_static/cdn/.gitkeep
-src/_static/images/*
+src/_static/images/
 !src/_static/images/.gitkeep
 
 # Local Netlify folder
