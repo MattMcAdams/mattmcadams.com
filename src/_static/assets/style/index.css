@@ -16,7 +16,7 @@
   /* --font-icon: null; */
 
   /* Colors */
-  --color-gray-100: #F0F1F3;
+  --color-gray-100: #F3F4F6;
   --color-gray-500: #707682;
   --color-gray-900: #2D2F34;
   /* https://hihayk.github.io/scale/#4/4/60/90/0/0/50/-10/707682/112/118/130/white */
@@ -631,6 +631,7 @@ tr:hover {
 code, samp, kbd, var {
   font-family: var(--font-mono);
   padding: 0.1em 0.3em;
+  font-variation-settings: "MONO" 1;
 }
 
 code, samp {
@@ -650,12 +651,26 @@ kbd {
 
 pre {
   margin-bottom: var(--flow-space);
+
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+  padding: var(--space);
+  border-radius: 0.5em;
+  background-color: var(--element-bg-color);
 }
+
+
 
 pre code,
 pre samp {
   display: block;
-  padding: var(--space);
   overflow: auto;
 }
 
