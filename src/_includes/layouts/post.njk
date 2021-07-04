@@ -1,24 +1,20 @@
 ---
-layout: layouts/base.njk
+layout: layouts/no-sidebar.njk
 ---
-<main>
+
 <h1>{{ title }}</h1>
 
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-{%- for tag in tags | filterTagList -%}
-{%- set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset -%}
-<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{%- endfor %}
+<p class="post-meta">
+  <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">
+    {{ page.date | readableDate }}
+  </time> &middot;
 
+  {% for tag in tags | filterTagList %}
+    {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+  {% endfor %}
+</p>
+
+<div class="post-content">
 {{ content | safe }}
-
-{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-{%- if nextPost or previousPost %}
-<hr>
-<ul>
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-</main>
+</div>

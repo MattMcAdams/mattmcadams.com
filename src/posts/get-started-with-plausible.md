@@ -4,7 +4,7 @@ date: 2020-12-02
 published: true
 series: false
 
-tags: ['analytics']
+tags: ['analytics', 'tutorial']
 description: "Plausible is a fantastic alternative to existing JS based analytics solutions. Inexpensive, lightning fast, and build around privacy."
 
 thumbnail: https://www.mattmcadams.com/images/posts/plausible.png
@@ -63,9 +63,8 @@ It's also worth noting that you don't have to make any changes to those instruct
 
 After you finish playing around with everything you may want to go ahead and reset your analytics so far to remove your own activity.
 
-::: blockquote theme-caution
-WARNING: This will reset ALL collected data - not just your own, so I only recommend using this when you first finish setting things up.
-:::
+> **WARNING:** This will reset ALL collected data - not just your own, so I only recommend using this when you first finish setting things up.
+
 
 [Follow this doc to reset your site's data to date](https://docs.plausible.io/reset-site-data).
 
