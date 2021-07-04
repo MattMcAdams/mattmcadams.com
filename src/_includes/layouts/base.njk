@@ -6,14 +6,33 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/assets/style/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/style/mattmcadams.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/style/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
+    <div id="app" class="page">
 
-    {{ content | safe }}
+      <!--<div class="decorative-bar"></div>-->
 
-    <!-- Current page: {{ page.url | url }} -->
+      <header>
+        <div class="level container container-wide">
+          <p class="level-item">Current page: {{ page.url | url }}</p>
+          <div class="level-item">
+          <nav><ul class="nav">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/projects">Projects</a></li>
+            <li class="nav-item"><a href="/posts">Posts</a></li>
+            <li class="nav-item"><a href="/about">About</a></li>
+          </ul></nav>
+        </div>
+      </header>
+
+      {{ content | safe }}
+
+      <footer><p>&copy; 2021 Matthew McAdams</p></footer>
+
+    </div>
   </body>
 </html>

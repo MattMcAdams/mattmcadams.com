@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CRSV,MONO@-15..0,300..800,0..1,0..1&display=swap');
+
+:root {
+  --content-width: 700px;
+  --sidebar-width: 300px;
+
+  --font-body: 'Recursive', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Recursive', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  --page-bg-color: #F8FAFC;
+}
+
+header nav ul {
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  padding: 0 1em;
+}
+
+header .level {
+  padding: 1em;
+}
+header p.level-item {
+  margin-bottom: 0;
+}
+
+.home main {
+  display: flex;
+  align-items: flex-end;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* #main {
+  align-self: start;
+  margin: 0;
+}
+
+header .level.container {
+  margin: 0;
+} */
+
+footer {
+  padding: 1em;
+}
+footer p {
+  margin-bottom: 0;
+}
+
+.sidebar ul.tag-list {
+  max-width: 40em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+.sidebar ul.tag-list li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content:
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . ";
+ }
+.sidebar ul.tag-list a {
+  padding-right: 0.33em;
+  background: var(--page-bg-color);
+}
+.sidebar ul.tag-list span {
+  float: right;
+  padding-left: 0.33em;
+  background: var(--page-bg-color);
+}

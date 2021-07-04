@@ -6,8 +6,8 @@
 /chipboard              https://github.com/MattMcAdams/chipboard
 
 # Redirects for font downloads
-/attika                 https://drive.google.com/open?id=1Lujs5c_xCwoaP6_suoxiv3DcDrqh1SgZ
-/rebar                  https://drive.google.com/open?id=12oqxntGwGA22Sth0d1CS0I8UZhYLh2et
+/downloads/attika                 https://drive.google.com/open?id=1Lujs5c_xCwoaP6_suoxiv3DcDrqh1SgZ
+/downloads/rebar                  https://drive.google.com/open?id=12oqxntGwGA22Sth0d1CS0I8UZhYLh2et
 
 # Redirects for social media
 /github                 https://github.com/MattMcAdams/

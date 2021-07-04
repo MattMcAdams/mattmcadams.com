@@ -1,9 +1,48 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 permalink: /posts/
 ---
+<div id="main" class="has-sidebar">
+  <div class="sidebar">
+    <p>
+      <a href="#">Subscribe via RSS</a><br>
+      <a href="#">Subscribe via Email</a>
+    </p>
 
-<h1>Posts</h1>
+    <h3>Search</h3>
+    <form style="display: flex;">
+    <input type="text"><button>GO</button>
+    </form>
 
-{% set postslist = collections.posts %}
-{% include "postlist.njk" %}
+    <h3>Filter by Tag</h3>
+    <ul class="tag-list">
+      <li><a href="/posts/tags/design/">#design</a> <span>3</span></li>
+      <li><a href="/posts/tags/code/">#code</a> <span>1</span></li>
+      <li><a href="/posts/tags/process/">#process</a> <span>2</span></li>
+      <!--<li><a>#tutorial</a> <span>5</span></li>-->
+      <!--<li><a>#html</a> <span>5</span></li>-->
+      <li><a href="/posts/tags/css/">#css</a> <span>6</span></li>
+      <!--<li><a>#javascript</a> <span>5</span></li>-->
+      <li><a href="/posts/tags/typography/">#typography</a> <span>3</span></li>
+      <li><a href="/posts/tags/analytics/">#analytics</a> <span>1</span></li>
+      <li><a href="/posts/tags/personal/">#personal</a> <span>1</span></li>
+    </ul>
+
+    <h3>Archive</h3>
+    <a>2017</a> &middot; <a>2018</a> &middot; <a>2019</a> &middot; <a>2020</a> &middot; <a>2021</a>
+
+  </div>
+    <main class="content">
+      <div>
+        <h1>Thoughts on design & technology</h1>
+        <p>This is the space I use to talk about my interests, ideas, and projects. Most of the time, this will be focused on front-end web design and development.</p>
+        <p>I am, however, a creative with many interests. I may occasionally write about traditional art, illustration, printmaking, book making, productivity, organization, accessibility, ethics, and inclusion in design.</p>
+
+        <h2>Latest Posts</h2>
+
+        {% set postslist = collections.posts %}
+        {% include "postlist.njk" %}
+      </div>
+    </main>
+  </div>
+</div>

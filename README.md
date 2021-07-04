@@ -25,19 +25,34 @@ Personal website of Matthew McAdams
 
 - [x] Fix static directory passthrough
 - [x] Get nested layouts working / understand how includes work
-- [ ] Remove 11ty navigation
+- [x] Remove 11ty navigation
+
+- [ ] Page build: homepage (needs CSS)
+- [ ] Page build: projects (needs CSS)
+- [ ] Page build: projects tag list
+- [ ] Page build: projects tag
+- [ ] Page build: posts
+- [x] Page build: posts tag list
+- [x] Page build: posts tag
+- [ ] Page build: project
+- [ ] Page build: post
+- [ ] Page build: about
+- [ ] Page build: 404
+- [ ] Page build: archive
 
 - [ ] Organize and upload images
 - [ ] Get gsync working
 - [ ] Import content from old site
 - [ ] Add content to pages
 
-- [ ] Get font working
+- [x] Get font working
 - [ ] Get new CSS working
+- [ ] Get programatic metadata working (page titles, social info, etc)
 
 - [ ] Test RSS feed
 - [ ] Implement site search
-- [ ] Get 404 page working with dynamic error box
+- [ ] Setup mailing list workflow
+- [ ] See if I can automate the "filter by tag" in the sidebar of posts and projects
 
 - [x] Update repository files (package, gitignore, etc.)
 - [x] Update site meta files (robots, humans, redirects, etc)
@@ -45,3 +60,4 @@ Personal website of Matthew McAdams
 
 - [x] Deploy to v6.mattmcadams.com for testing
 - [ ] Get analytics working
+- [ ] Add console.log easter egg

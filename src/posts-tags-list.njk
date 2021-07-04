@@ -1,10 +1,12 @@
 ---
 permalink: /posts/tags/
-layout: layouts/home.njk
+layout: layouts/no-sidebar.njk
 ---
 <h1>Post Tags</h1>
 
+<ul>
 {% for tag in collections.postTagList | filterTagList %}
   {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+  <li><a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a></li>
 {% endfor %}
+</ul>
