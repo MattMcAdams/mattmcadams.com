@@ -7,6 +7,6 @@ layout: layouts/no-sidebar.njk
 <ul>
 {% for tag in collections.postTagList | filterTagList %}
   {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-  <li><a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a></li>
+  <li><a href="{{ tagUrl | url }}">#{{ tag }}</a></li>
 {% endfor %}
 </ul>

@@ -34,34 +34,36 @@ Personal website of Matthew McAdams
 - [ ] Page build: projects
 - [ ] Page build: projects tag list
 - [ ] Page build: projects tag
+- [ ] Page build: project
 - [x] Page build: posts
 - [x] Page build: posts tag list
 - [x] Page build: posts tag
-- [ ] Page build: project
 - [x] Page build: post
-- [ ] Page build: about
 - [ ] Page build: 404
-- [ ] Page build: downloads
-- [ ] Page build: knowledge or resources or links or reference (link lists from ntp)
 
 - [x] Get font working
 - [x] Get new CSS working
 - [ ] Get programatic metadata working (page titles, social info, etc)
-
 - [ ] Test RSS feed
+- [x] Update repository files (package, gitignore, etc.)
+- [x] Update site meta files (robots, humans, redirects, etc)
+- [ ] Update readme
+- [x] Deploy to v6.mattmcadams.com for testing
+- [ ] Get analytics working
+- [ ] Add console.log easter egg
+
+### Future wishlist
+
+- [ ] Page build: about
+- [ ] Page build: downloads
+- [ ] Page build: knowledge or resources or links or reference (link lists from ntp)
+
 - [ ] Implement site search
+- [ ] Implement archive system / pages
 - [ ] Setup mailing list workflow
 - [ ] See if I can automate the "filter by tag" in the sidebar of posts and projects
 - [ ] Add lightboxes for images + code
 - [ ] Fancy code blocks w/ language marker, better syntax highlighting, copy button, pop-out
-
-- [x] Update repository files (package, gitignore, etc.)
-- [x] Update site meta files (robots, humans, redirects, etc)
-- [ ] Update readme
-
-- [x] Deploy to v6.mattmcadams.com for testing
-- [ ] Get analytics working
-- [ ] Add console.log easter egg
 
 ## A brief history of my personal website
 

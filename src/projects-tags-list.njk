@@ -4,7 +4,9 @@ layout: layouts/no-sidebar.njk
 ---
 <h1>Project Tags</h1>
 
+<ul>
 {% for tag in collections.projectTagList | filterTagList %}
   {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+  <li><a href="{{ tagUrl | url }}">#{{ tag }}</a></li>
 {% endfor %}
+</ul>

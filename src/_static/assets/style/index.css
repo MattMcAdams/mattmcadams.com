@@ -52,7 +52,7 @@
   --accent-color: var(--color-primary-500);
 
   /* Spacing */
-  --space: 1.6rem; /* Should equal body line-height */
+  --space: 1.8rem; /* Should equal body line-height */
   --section-space: calc(var(--space) * 4);
   --flow-space: var(--space);
   --gutter: var(--space);
@@ -1112,7 +1112,7 @@ input[type="button"][disabled] {
   .grid {
     --grid-gap: var(--space);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: var(--grid-gap);
   }
 }
@@ -1121,7 +1121,7 @@ input[type="button"][disabled] {
   .grid-portrait {
     --grid-gap: var(--space);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: var(--grid-gap);
   }
 }
@@ -1130,7 +1130,7 @@ input[type="button"][disabled] {
   .grid-landscape {
     --grid-gap: var(--space);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: var(--grid-gap);
   }
 }

@@ -1,14 +1,25 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (projectslistCounter or projectlist.length) + 1 }}">
+<style>
+.project-list img {
+  margin-bottom: 0;
+  transition: transform .2s;
+  border-radius: 0.5rem;
+}
+
+.project-list a:hover img {
+  transform: scale(1.05);
+}
+</style>
+
+<ul reversed class="project-list grid">
 {% for project in projectlist | reverse %}
 {% if project.data.type == "project" %}
+
   <li class="postlist-item{% if project.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ project.url | url }}" class="postlist-link">{% if project.data.title %}{{ project.data.title }}{% else %}<code>{{ project.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time>
-    {% for tag in project.data.tags | filterTagList %}
-      {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
+    <a href="{{ project.url | url }}" class="postlist-link">
+      <img src="{{ project.data.thumbnail }}" alt="{{ project.data.title }}">
+    </a>
   </li>
-  {% endif %}
+
+{% endif %}
 {% endfor %}
-</ol>
+</ul>

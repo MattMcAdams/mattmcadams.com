@@ -3,7 +3,38 @@ layout: layouts/base.njk
 permalink: /projects/
 ---
 
-<h1>Projects</h1>
+<div id="main" class="has-sidebar">
+  <div class="sidebar">
 
-{% set projectlist = collections.projects %}
-{% include "projectlist.njk" %}
+    <h3 style="margin-top: 0;">Filter by Tag</h3>
+    <ul class="tag-list">
+      <li><a href="/projects/tags/design/">#design</a> <span>6</span></li>
+      <li><a href="/projects/tags/web/">#web</a> <span>2</span></li>
+      <li><a href="/projects/tags/typography/">#typography</a> <span>2</span></li>
+      <li><a href="/projects/tags/illustration/">#illustration</a> <span>1</span></li>
+      <li><a href="/projects/tags/branding/">#branding</a> <span>2</span></li>
+      <li><a href="/projects/tags/packaging/">#packaging</a> <span>1</span></li>
+    </ul>
+
+    <h3>Quick Info</h3>
+    <ul>
+      <li>Bachelor of Fine Arts</li>
+      <li>7 years of design experience</li>
+      <li>2 awards / exhibitions</li>
+    </ul>
+
+    <h3>Links</h3>
+    <p><a href="https://github.com/MattMcAdams/">GitHub</a><br><a href="https://docs.google.com/document/d/1sIaX9Ixp5kGMlreyRg9CX_aXSw123y4ekV6RQ4riaiE/edit?usp=sharing">Resume</a></p>
+
+  </div>
+    <main class="content">
+      <div>
+        <h1>Creative work</h1>
+        <p>I’m a multi disciplinary designer with a variety of interests. My primary field is web design and development, but I feel it’s important to represent a larger sample of my work overall, so you’ll see some projects here that might be considered “left field” but they represent what I’m interested in as a creative. Please check out my GitHub to see my code projects, including this website!</p>
+
+        {% set projectlist = collections.projects %}
+        {% include "projectlist.njk" %}
+      </div>
+    </main>
+  </div>
+</div>
