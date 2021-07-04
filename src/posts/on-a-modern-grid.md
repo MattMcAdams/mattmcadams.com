@@ -115,6 +115,7 @@ Before I close out this article, I wanted to show one more grid solution that us
   grid-gap: 1rem;
 }
 ```
+
 ```html
 <!-- Larger content -->
 <div class="grid" style="--col-min-width: 500px">

@@ -22,6 +22,7 @@ Many developers I've seen attacking this problem think of the cascade as the ene
 For example, why define the typography for every component when you can rely on inheritence? If you decide to later change the typographical scale the project is built on, its much easier to change at the root level than have to hunt down every component you've used. Of course, you can leverage CSS variables, but we'll get into that later.
 
 ### The inverted triangle (ITCSS)
+
 This is a concept I read a few months back and really enjoied it's concept. It doesn't seem to be widely talked about, but it essentially shows how to arrange CSS based on specificity, leaning into the cascade to carry styles throughout the design.
 
 I think this is the most common-sense method of organizing a massive stylesheet or project. Consider this example index.scss
@@ -41,6 +42,7 @@ I think this is the most common-sense method of organizing a massive stylesheet 
 // Layer 4: Utilities
 @include 'helpers'
 ```
+
 In the first layer, we include libraries our project relies on, our Sass functions and mixins, and any configuration variables / setup needed for them to run.
 
 In the second layer, we include any CSS resets and lay down the base styles for all of the html elements. This layer should have the least specificity, relying almost exclusively on html element selectors.
@@ -62,6 +64,7 @@ The last layer includes style rules with `!important`. These are utility and hel
 Naming things are always hard. Too verbose and its a chore to type out, too short and its difficult to understand. For years, I tried to walk this fine line, to create abbriviations or short abstractions to make the code "cleaner" and easier to write. But as I've gotten more experience I've been leaning toward readability over writability because maintenance is a bigger chore than development.
 
 This is how I approach class names:
+
 ```
 component:        .noun
 child:            .noun__noun
@@ -95,4 +98,5 @@ If using a framework like Vue or React that allow you to store your HTML, CSS, a
 Remember that each component and their children should be mutually exclusive from any other component. That is to say, a `.card` can not also be a `.button`. If you have a use case for this, consider creating a card theme: `.card--button`.
 
 ## On CSS variables
+
 I think variables are fantastic and you should absolutely use them wherever possible. If you can afford to drop support for older browsers, CSS custom properties are the way to go. Otherwise, you can use Sass or other preprocessor variables throughout the code. Variables of any kind should be included in the first layer of the CSS, before resets or base styles are added.

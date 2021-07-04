@@ -38,12 +38,11 @@ Personal website of Matthew McAdams
 - [x] Page build: posts tag list
 - [x] Page build: posts tag
 - [ ] Page build: project
-- [ ] Page build: post
+- [x] Page build: post
 - [ ] Page build: about
 - [ ] Page build: 404
-- [ ] Page build: archive
 - [ ] Page build: downloads
-- [ ] Page build: knowledge or resources (link lists from ntp)
+- [ ] Page build: knowledge or resources or links or reference (link lists from ntp)
 
 - [x] Get font working
 - [x] Get new CSS working
@@ -54,7 +53,7 @@ Personal website of Matthew McAdams
 - [ ] Setup mailing list workflow
 - [ ] See if I can automate the "filter by tag" in the sidebar of posts and projects
 - [ ] Add lightboxes for images + code
-- [ ] Fancy code blocks w/ language marker, syntax highlighting, copy button, pop-out
+- [ ] Fancy code blocks w/ language marker, better syntax highlighting, copy button, pop-out
 
 - [x] Update repository files (package, gitignore, etc.)
 - [x] Update site meta files (robots, humans, redirects, etc)

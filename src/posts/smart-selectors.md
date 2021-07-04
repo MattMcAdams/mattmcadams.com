@@ -152,7 +152,7 @@ I firmly believe that EVERY project can benefit from having a design system. I d
 }
 ```
 
-This small section of design tokens can evolve to create a ton of visually robust UIs. Another huge part of having a great design system is great typography. I've [talked a lot about typography](https://www.mattmcadams.com/thoughts/tag/typography/) before, so I won't get on that soap box here, but do check out those articles.
+This small section of design tokens can evolve to create a ton of visually robust UIs. Another huge part of having a great design system is great typography. I've [talked a lot about typography](https://www.mattmcadams.com/posts/tags/typography/) before, so I won't get on that soap box here, but do check out those articles.
 
 ## Easy media queries
 

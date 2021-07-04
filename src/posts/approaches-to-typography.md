@@ -11,7 +11,7 @@ thumbnail: null
 cover_image: null
 ---
 
-There are a handful of ways we can use what we learned about [modular scales](/thoughts/typographical-scale/) when creating the typographical system of our website, from simple single scale systems to fully fluid typography. This article will take a look at each style and implementation, but all of these systems aim to address the question of how to handle text on both small and large screens.
+There are a handful of ways we can use what we learned about [modular scales](/posts/typographical-scale/) when creating the typographical system of our website, from simple single scale systems to fully fluid typography. This article will take a look at each style and implementation, but all of these systems aim to address the question of how to handle text on both small and large screens.
 
 ## Single Scale
 

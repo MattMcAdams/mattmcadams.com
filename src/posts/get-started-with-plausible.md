@@ -65,7 +65,6 @@ After you finish playing around with everything you may want to go ahead and res
 
 > **WARNING:** This will reset ALL collected data - not just your own, so I only recommend using this when you first finish setting things up.
 
-
 [Follow this doc to reset your site's data to date](https://docs.plausible.io/reset-site-data).
 
 ## Enjoy
