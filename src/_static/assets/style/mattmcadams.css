@@ -8,6 +8,10 @@
   --font-mono: 'Recursive', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
   --page-bg-color: #F8FAFC;
+
+  --text-color: #404C5D;
+
+  /*--color-primary-500: #38BDF8;*/
 }
 
 header nav ul {
@@ -25,11 +29,6 @@ header .level {
 }
 header p.level-item {
   margin-bottom: 0;
-}
-
-.home main {
-  display: flex;
-  align-items: flex-end;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,4 +75,31 @@ footer p {
   float: right;
   padding-left: 0.33em;
   background: var(--page-bg-color);
+}
+
+.postlist h3,
+.postlist .post-meta {
+  margin-bottom: calc(var(--space) / 2);
+}
+
+.post-meta,
+.post-meta a {
+  color: var(--color-gray-500);
+  text-decoration: none;
+}
+
+.post-meta a:hover,
+.post-meta a:focus {
+  text-decoration: underline;
+}
+
+.site-search {
+  display: flex;
+}
+.site-search button {
+  background: var(--text-color);
+}
+.site-search button,
+.site-search input {
+  border: 2px solid var(--text-color);
 }

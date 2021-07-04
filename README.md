@@ -27,11 +27,14 @@ Personal website of Matthew McAdams
 - [x] Get nested layouts working / understand how includes work
 - [x] Remove 11ty navigation
 
-- [ ] Page build: homepage (needs CSS)
-- [ ] Page build: projects (needs CSS)
+- [ ] Organize and upload images
+- [ ] Get gsync working
+
+- [x] Page build: homepage
+- [ ] Page build: projects
 - [ ] Page build: projects tag list
 - [ ] Page build: projects tag
-- [ ] Page build: posts
+- [x] Page build: posts
 - [x] Page build: posts tag list
 - [x] Page build: posts tag
 - [ ] Page build: project
@@ -39,20 +42,19 @@ Personal website of Matthew McAdams
 - [ ] Page build: about
 - [ ] Page build: 404
 - [ ] Page build: archive
-
-- [ ] Organize and upload images
-- [ ] Get gsync working
-- [ ] Import content from old site
-- [ ] Add content to pages
+- [ ] Page build: downloads
+- [ ] Page build: knowledge or resources (link lists from ntp)
 
 - [x] Get font working
-- [ ] Get new CSS working
+- [x] Get new CSS working
 - [ ] Get programatic metadata working (page titles, social info, etc)
 
 - [ ] Test RSS feed
 - [ ] Implement site search
 - [ ] Setup mailing list workflow
 - [ ] See if I can automate the "filter by tag" in the sidebar of posts and projects
+- [ ] Add lightboxes for images + code
+- [ ] Fancy code blocks w/ language marker, syntax highlighting, copy button, pop-out
 
 - [x] Update repository files (package, gitignore, etc.)
 - [x] Update site meta files (robots, humans, redirects, etc)
@@ -61,3 +63,11 @@ Personal website of Matthew McAdams
 - [x] Deploy to v6.mattmcadams.com for testing
 - [ ] Get analytics working
 - [ ] Add console.log easter egg
+
+## A brief history of my personal website
+
+I start with a new repo each time I make major architectual changes, usually accompanied by a more drastic redesign. This is the third repository, which starts at v6, with a shift away from netlify large media and gridsome in favor of 11ty and google cloud storage.
+
+Each major design change gets a new major version and I have kept zip archives of all previous major versions, but do not make those public.
+
+The first two versions of my website were raw html files with a little css hosted on github pages. The next version I moved to wordpress. Versions 4 and 5 were on Gridsome and hosted on Netlify. Version 6 uses 11ty, Netlify, and Google Cloud Storage.
