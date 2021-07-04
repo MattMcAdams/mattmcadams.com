@@ -27,30 +27,29 @@ Personal website of Matthew McAdams
 - [x] Get nested layouts working / understand how includes work
 - [x] Remove 11ty navigation
 
-- [ ] Organize and upload images
-- [ ] Get gsync working
+- [x] Organize and upload images
 
 - [x] Page build: homepage
-- [ ] Page build: projects
-- [ ] Page build: projects tag list
-- [ ] Page build: projects tag
-- [ ] Page build: project
+- [x] Page build: projects
+- [x] Page build: projects tag list
+- [x] Page build: projects tag
+- [x] Page build: project
 - [x] Page build: posts
 - [x] Page build: posts tag list
 - [x] Page build: posts tag
 - [x] Page build: post
-- [ ] Page build: 404
+- [x] Page build: 404
 
 - [x] Get font working
 - [x] Get new CSS working
-- [ ] Get programatic metadata working (page titles, social info, etc)
-- [ ] Test RSS feed
+- [x] Get programatic metadata working (page titles, social info, etc)
+- [x] Test RSS feed
 - [x] Update repository files (package, gitignore, etc.)
 - [x] Update site meta files (robots, humans, redirects, etc)
 - [ ] Update readme
 - [x] Deploy to v6.mattmcadams.com for testing
-- [ ] Get analytics working
-- [ ] Add console.log easter egg
+- [x] Get analytics working
+- [ ] Add favicon
 
 ### Future wishlist
 
@@ -64,6 +63,7 @@ Personal website of Matthew McAdams
 - [ ] See if I can automate the "filter by tag" in the sidebar of posts and projects
 - [ ] Add lightboxes for images + code
 - [ ] Fancy code blocks w/ language marker, better syntax highlighting, copy button, pop-out
+- [ ] Add console.log easter egg
 
 ## A brief history of my personal website
 

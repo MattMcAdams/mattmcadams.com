@@ -3,6 +3,7 @@
   "url": "https://mattmcadams.com/",
   "language": "en",
   "description": "I'm a creative writing about my interests in web design and development.",
+  "thumbnail": "https://www.mattmcadams.com/images/assets/screenshot.png",
   "feed": {
     "subtitle": "I'm a creative writing about my interests in web design and development.",
     "filename": "feed.xml",

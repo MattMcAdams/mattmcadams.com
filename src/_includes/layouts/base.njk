@@ -3,11 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Author / Humans.txt -->
+    <link type="text/plain" rel="author" href="/humans.txt" />
+
+    <!-- ANALYTICS -->
+    <script async defer data-domain="mattmcadams.com" src="https://analytics.mattmcadams.com/js/index.js"></script>
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    <!-- METADADA -->
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="og:title" content="{{title or metadata.title}}">
+    <meta name="og:description" content="{{ description or metadata.description }}">
+    <meta name="og:image" content="{{ thumbnail or metadata.thumbnail }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title or metadata.title}}">
+    <meta name="twitter:description" content="{{description or metadata.description}}">
+    <meta name="twitter:image" content="{{thumbnail or metadata.thumbnail}}">
+
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{{ '/assets/style/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/style/mattmcadams.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/style/prism-theme.css' | url }}">
+
+    <!-- FEEDS -->
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>

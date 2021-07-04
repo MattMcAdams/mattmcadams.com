@@ -1,0 +1,29 @@
+---
+layout: layouts/no-sidebar.njk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+title: 404
+---
+
+<h1>Content not found</h1>
+
+<p>Looks like the page or resource you were looking for wasn’t found at this address. This can happen if there was a mistake in the URL, if the content has moved, or if the content no longer exists.</p>
+
+<div id="404"></div>
+<p><a href="/" class="button">Return Home</a></p>
+
+<script>
+function notFoundMessage(id) {
+    let url = window.location.href
+    let errorMessage =  document.createTextNode("Error: 404\nFile not found at:\n"+url)
+    let code = document.createElement("code")
+    code.appendChild(errorMessage)
+    let pre = document.createElement("pre")
+    pre.appendChild(code)
+    let container = document.getElementById(id)
+    container.appendChild(pre)
+  }
+
+  notFoundMessage("404")
+  plausible("404",{ props: { path: document.location.pathname } })
+</script>
