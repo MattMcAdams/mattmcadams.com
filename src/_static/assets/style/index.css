@@ -1197,6 +1197,7 @@ input[type="button"][disabled] {
   flex: 1 0 auto;
   align-self: center;
   padding-top: clamp(var(--space), 10vw, calc(var(--space) * 5));
+  padding-bottom: clamp(var(--space), 10vw, calc(var(--space) * 5));
   /*padding-top: calc(var(--space) * 5);*/
   /*padding-bottom: calc(var(--space) * 5);*/
 }

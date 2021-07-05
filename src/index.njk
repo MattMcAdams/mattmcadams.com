@@ -6,6 +6,14 @@ layout: layouts/base.njk
   display: flex;
   align-items: flex-end;
 }
+.home .sidebar {
+  display: none;
+}
+@media ( min-width: 900px ) {
+  .home .sidebar {
+    display: block;
+  }
+}
 </style>
 <div id="main" class="has-sidebar home">
   <div class="sidebar"><img src="/images/portrait-full.png"></div>
