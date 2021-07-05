@@ -1196,8 +1196,9 @@ input[type="button"][disabled] {
   width: 100%;
   flex: 1 0 auto;
   align-self: center;
-  padding-top: calc(var(--space) * 5);
-  padding-bottom: calc(var(--space) * 5);
+  padding-top: clamp(var(--space), 10vw, calc(var(--space) * 5));
+  /*padding-top: calc(var(--space) * 5);*/
+  /*padding-bottom: calc(var(--space) * 5);*/
 }
 
 /* Ensure footer does not shrink */

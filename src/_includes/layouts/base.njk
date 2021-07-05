@@ -37,15 +37,11 @@
       <!--<div class="decorative-bar"></div>-->
 
       <header>
-        <div class="level container container-wide">
-          <p class="level-item">Current page: {{ page.url | url }}</p>
-          <div class="level-item">
-          <nav><ul class="nav">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/projects">Projects</a></li>
-            <li class="nav-item"><a href="/posts">Posts</a></li>
-          </ul></nav>
-        </div>
+        <nav class="top-nav"><ul class="nav container container-wide">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/projects">Projects</a></li>
+          <li class="nav-item"><a href="/posts">Posts</a></li>
+        </ul></nav>
       </header>
 
       {{ content | safe }}
