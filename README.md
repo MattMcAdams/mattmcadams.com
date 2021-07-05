@@ -1,4 +1,4 @@
-# website-v6
+# mattmcadams.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bcba8992-8a26-4144-9365-1377709d6420/deploy-status)](https://app.netlify.com/sites/mattmcadams/deploys)
 

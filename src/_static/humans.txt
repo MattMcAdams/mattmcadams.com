@@ -37,17 +37,14 @@ this website possible. You all are the true heros.
 ---------------------------------------
 
 USED TO WRITE
+- Nunjucks
+- CSS
 - Markdown
-- Sass
 - JavaScript
-- Vue
-- GraphQL
 
 USED TO BUILD
 - VS Code
-- Node
-- Gridsome
-- Remark
+- 11ty
 
 USED TO HOST
 - Hover
@@ -56,7 +53,7 @@ USED TO HOST
 - Netlify
 
 ---------------------------------------
-### OPEN SOURCE & MADE WITH LOVE
+### MADE WITH LOVE
 ---------------------------------------
 
 ```
