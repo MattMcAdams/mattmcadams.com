@@ -1108,7 +1108,7 @@ input[type="button"][disabled] {
  * This helps avoid grid blowout on screens smaller than the
  * preferred min-width of a grid item. */
 
-@media ( min-width: 400px ) {
+@media ( min-width: 200px ) {
   .grid {
     --grid-gap: var(--space);
     display: grid;
@@ -1117,7 +1117,7 @@ input[type="button"][disabled] {
   }
 }
 
-@media ( orientation: portrait ) and ( min-width: 400px ) {
+@media ( orientation: portrait ) and ( min-width: 200px ) {
   .grid-portrait {
     --grid-gap: var(--space);
     display: grid;
@@ -1126,7 +1126,7 @@ input[type="button"][disabled] {
   }
 }
 
-@media ( orientation: landscape ) and (min-width: 400px ) {
+@media ( orientation: landscape ) and (min-width: 200px ) {
   .grid-landscape {
     --grid-gap: var(--space);
     display: grid;
