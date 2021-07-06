@@ -35,7 +35,17 @@ Analytics will start rolling in as soon as you get 1 page view. You can test it 
 
 Plausible also lets you [track which URLs are going to 404 pages](https://docs.plausible.io/404-error-pages-tracking). This is a little more involved, but still extremely straight forward.
 
-If you're using one of the cool new frameworks like Vue (Gridsome in my case), you may have to put the 404 page script in a module export or something. [Check out how I did it here](https://github.com/MattMcAdams/Website/blob/78b085df4cbb85e8393daf485bd16af8b38cdeea/src/pages/404.vue#L33).
+If you're using one of the cool new frameworks like Vue (Gridsome in my case), you may have to put the 404 page script in a module export or something. Here's what that looks like:
+
+```html
+<script>
+export default {
+  mounted() {
+    plausible("404",{ props: { path: document.location.pathname } })
+  }
+}
+</script>
+```
 
 ## Track outbound links
 

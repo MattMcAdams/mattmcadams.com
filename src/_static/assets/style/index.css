@@ -187,7 +187,6 @@ table {
 :focus-visible {
   outline-color: var(--color-primary-500);
   outline-offset: 3px;
-  outline-style: solid;
   outline-width: 2px;
 }
 

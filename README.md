@@ -66,6 +66,7 @@ Personal website of Matthew McAdams
 - [ ] Add lightboxes for images + code
 - [ ] Fancy code blocks w/ language marker, better syntax highlighting, copy button, pop-out
 - [ ] Add console.log easter egg
+- [ ] Setup outbound links to open in new tab
 
 ## A brief history of my personal website
 
