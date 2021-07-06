@@ -66,7 +66,7 @@ This number needs to become your new best friend. Where I currently work, this v
 
 In the previous article, we looked at modular scales, so let's calculate the line height for each step of a scale. This would use a formula like this:
 
-```
+```txt
 X = Font Size
 Y = Base Line Height
 Z = Line Height

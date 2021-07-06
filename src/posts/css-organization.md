@@ -65,7 +65,7 @@ Naming things are always hard. Too verbose and its a chore to type out, too shor
 
 This is how I approach class names:
 
-```
+```txt
 component:        .noun
 child:            .noun__noun
 theme:            .noun--adjective

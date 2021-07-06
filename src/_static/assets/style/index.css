@@ -198,9 +198,9 @@ table {
   scroll-margin-bottom: var(--space);
 }
 
-::selection {
+/* ::selection {
   background-color: var(--color-primary-100);
-}
+} */
 
 /** -----------------------------------------------------------------
   * SECTION TYPOGRAPHY
@@ -628,51 +628,7 @@ tr:hover {
   * SECTION CODE
 ------------------------------------------------------------------ */
 
-code, samp, kbd, var {
-  font-family: var(--font-mono);
-  padding: 0.1em 0.3em;
-  font-variation-settings: "MONO" 1;
-}
 
-code, samp {
-  background-color: var(--element-bg-color);
-}
-
-var {
-  font-style: italic;
-  font-weight: bold;
-}
-
-kbd {
-  background-color: var(--text-color);
-  color: white;
-  border-radius: 5px;
-}
-
-pre {
-  margin-bottom: var(--flow-space);
-
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
-	tab-size: 2;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-
-  padding: var(--space);
-  border-radius: 0.5em;
-  background-color: var(--element-bg-color);
-}
-
-
-
-pre code,
-pre samp {
-  display: block;
-  overflow: auto;
-}
 
 /* END !SECTION CODE */
 /** -----------------------------------------------------------------

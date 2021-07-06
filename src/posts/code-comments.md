@@ -43,8 +43,7 @@ This could also be useful to use as a note-to-self tag if you’re working on an
 
 Sometimes considered bad practice, leaving experimental code in while developing is occasionally useful. I like to use this tag as a self reminder to delete code I’ve commented out before opening a PR. I like to do this in its own commit, so that those experimental blocks are logged in case they are needed in the future.
 
-```
-Working code
+```js
 // TEMP: Use JavaScript to X
 // commented out code
 ```
