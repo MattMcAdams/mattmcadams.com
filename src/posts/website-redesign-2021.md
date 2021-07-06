@@ -13,11 +13,11 @@ cover_image: null
 
 My website has always been a testing ground of new ideas, a place for me to experiment and learn new things, so it’s only natural I do a major redesign every other year or so. However this design marks a shift in how I talk about myself and my work.
 
-My previous website design, and all of those can came before it, had a more specific goal. I needed to market myself and put my best foot forward to get a job out of college. It was about showing fancy features and clever solutions and elegant design in the style I like to do for a living. It was about simplifying who I am and what I do into something easily understood and marketable.
+My previous website design, and all of those that came before it, had a more specific goal. I needed to market myself and put my best foot forward to get a job out of college. It was about showing fancy features and clever solutions and elegant design in the style I like to do for a living. It was about simplifying who I am and what I do into something easily understood and marketable.
 
 ## A new direction
 
-I’ve recently realized that my personal site doesn’t need a lot of bells and whistles. I’ve also never been good at talking about what I do or trying to market that. My hope is that if I’m ever being considered for a new job, they will hire me based on who I am, what I have to say, and the work I’ve done and continue to do.
+I’ve recently realized that my personal site doesn’t need a lot of bells and whistles. I’ve also never been good at (or enjoyed) talking about what I do or trying to market that. My hope is that if I’m ever being considered for a new job, they will hire me based on who I am, what I have to say, and the work I’ve done and continue to do.
 
 In light of this shift, I’ve made the decision to reevaluate the design and layout of my website. Looking at a utilitarian, almost brutalist aesthetic, back to the roots of what a website is at its core before designers like myself transform it into something else...
 
