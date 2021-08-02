@@ -1,9 +1,7 @@
-# Redirect for administration
-/admin                  https://app.netlify.com/sites/mattmcadams/overview
-
 # Redirects for actively maintained github projects
 /stratus                https://github.com/MattMcAdams/stratus
 /chipboard              https://github.com/MattMcAdams/chipboard
+/boilerplate            https://github.com/MattMcAdams/CSS-Boilerplate
 
 # Redirects for font downloads
 /downloads/attika                 https://drive.google.com/open?id=1Lujs5c_xCwoaP6_suoxiv3DcDrqh1SgZ
@@ -13,6 +11,7 @@
 /github                 https://github.com/MattMcAdams/
 /github/stratus         https://github.com/MattMcAdams/stratus
 /github/chipboard       https://github.com/MattMcAdams/chipboard
+/github/boilerplate     https://github.com/MattMcAdams/CSS-Boilerplate
 
 /linkedin               https://www.linkedin.com/in/mcadamsmatthew/
 /instagram              https://www.instagram.com/mattmcadams/
@@ -20,6 +19,7 @@
 /dribbble               https://dribbble.com/mattmcadams
 /kofi                   https://ko-fi.com/F2F77H9M
 /behance                https://www.behance.net/mattmcadams
+/codepen                https://codepen.io/mattmcadams
 
 # Redirects old portfolio page to new
 /portfolio              /projects
