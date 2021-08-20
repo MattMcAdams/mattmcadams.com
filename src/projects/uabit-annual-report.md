@@ -42,5 +42,3 @@ Designed and developed to adjust to device screen size
 <hr class="spacer">
 
 ![](/images/projects/annual-report-2018/960/ITAR2018-long.jpg)
-
-Check out the site live at [uab.edu/it/annualreport/2018](https://uab.edu/it/annualreport/2018), or check out the repo [on GitHub](https://github.com/UAB-IT/AnnualReport2018)
