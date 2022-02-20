@@ -1,0 +1,239 @@
+---
+layout: layouts/base.njk
+permalink: /about/
+title: About
+---
+
+<style>
+
+.cv-item {
+  display: grid;
+  grid-template-areas: "date" "title" "subtitle" "description";
+}
+
+.cv-item-description {
+  font-size: var(--ms--1);
+  line-height: 1.5;
+}
+
+.cv-item-title,
+.cv-item-subtitle,
+.cv-item-date,
+.cv-item-description {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.cv-item-description {
+  margin-top: var(--space);
+}
+
+.cv-item-subtitle,
+.cv-item-subtitle strong {
+  font-weight: normal;
+}
+
+.cv-item-description :last-child {
+  margin: 0;
+}
+
+.cv-list .cv-item {
+  margin-bottom: calc(var(--space) * 2);
+}
+
+@media (min-width: 700px) {
+  .cv-item {
+    display: grid;
+    grid-template-areas: "date title" "date subtitle" "date description";
+    grid-column-gap: calc(var(--space) * 2);
+    grid-template-columns: 10rem 1fr;
+  }
+
+}
+
+.cv-item-title { grid-area: title; }
+.cv-item-subtitle { grid-area: subtitle; }
+.cv-item-date { grid-area: date; }
+.cv-item-description { grid-area: description; }
+
+.print-only { display: none; }
+
+@media print {
+  :root {
+    --space: 1rem;
+    --ms-0: 0.75rem;
+  }
+  .top-nav { display: none; }
+  h1 { font-size: var(--ms-2); }
+  h2 { color: var(--color-primary-500); }
+
+  #main { padding: 0; margin: 0; }
+
+  .page-info {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .cv-item { break-inside: avoid-page; }
+  .print-only { display: initial; }
+  .page-break { break-before: page; }
+}
+
+@page {
+  size: auto;
+  margin: 0.75in;
+}
+
+.cv-section-title {
+  font-size: var(--ms-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--color-primary-500);
+  margin: calc(var(--space) * 2) 0;
+}
+
+.cv-item-title {
+  font-size: var(--ms-0);
+}
+
+.cv-item-description ul li {
+  display: inline-block;
+  margin: 0;
+}
+.cv-item-description ul li:not(:last-child)::after {
+  content: " |";
+}
+
+</style>
+
+  <main id="main" class="content container container-wide">
+      <h1>Matthew McAdams</h1>
+      <p>Senior Web & User Experience Designer <br>The University of Alabama<span class="print-only"><br>&nbsp;</span></p>
+      <p class="page-info"><span class="print-only">Matthew McAdams | </span>Curriculum Vitae | February 2022<span class="print-only"><br><a href="https://mattmcadams.com">mattmcadams.com</a> | <a href="mailto:mattmcadams@outlook.com">mattmcadams@outlook.com</a> | <a href="tel:12054355745">205.435.5745</a></span></p>
+
+      <section class="cv-section">
+        <h2 class="cv-section-title">Experience</h2>
+        <ol class="cv-list">
+          <li class="cv-item">
+            <h3 class="cv-item-title">Senior Web & User Experience Designer</h3>
+            <strong class="cv-item-subtitle">The University of Alabama<br>Division of Strategic Communications</strong>
+            <p class="cv-item-date">2020 - Present</p>
+            <div class="cv-item-description">
+              <p>Responsible for the definition of requirements, web design, front-end code, content, and development activities within UA's institutional web framework and content management system. Advising leadership on best practices, University standards in web content strategy, accessibility, information architecture, and user experience</p>
+              <p style="margin-bottom: 0;"><strong>Projects</strong></p>
+              <ul>
+                <li>Admissions website refresh</li>
+                <li>Capital Campaign website design (Gold ADDY)</li>
+                <li>Definition of new design system</li>
+                <li>Development of new institutional Wordpress theme</li>
+                <li>Technical and Design documentation</li>
+              </ul>
+            </div>
+          </li>
+          <li class="cv-item">
+            <h3 class="cv-item-title">Student Assistant - Web Development</h3>
+            <strong class="cv-item-subtitle">The University of Alabama at Brimingham<br>Department of Information Technology</strong>
+            <p class="cv-item-date">2016 - 2020</p>
+            <div class="cv-item-description">
+              <p>Responsible for maintaining website content, tracking analytics, and creating mockups, as well as developing new web pages using HTML, CSS, and JavaScript</p>
+              <p style="margin-bottom: 0"><strong>Projects</strong></p>
+              <ul>
+                <li>2017, 2018, and 2019 Annual Reports</li>
+                <li>TechConnect branding and website</li>
+                <li>Internal design system</li>
+                <li>Design documentation and graphics standards</li>
+                <li>Website rebuilds</li>
+              </ul>
+            </div>
+          </li>
+          <li class="cv-item">
+            <h3 class="cv-item-title">Print Technician</h3>
+            <strong class="cv-item-subtitle">OfficeMax</strong>
+            <p class="cv-item-date">2015 - 2016</p>
+            <p class="cv-item-description">Working with clients to design and print a variety of products, overseeing print orders and job progress, printing, cutting, laminating, and binding products. Responsible for maintaining printing equipment and tracking supplies</p>
+          </li>
+          <li class="cv-item">
+            <h3 class="cv-item-title">Silkscreen Printmaker</h3>
+            <strong class="cv-item-subtitle">Designs on You</strong>
+            <p class="cv-item-date">2013 - 2015</p>
+            <p class="cv-item-description">Developing and reclaiming screens before and after production, aligning and calibrating the printing press, as well as making prints on fabric and paper media</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="cv-item">
+          <h3 class="cv-item-title">The University of Alabama at Birmingham</h3>
+          <p class="cv-item-date">2020</p>
+          <p class="cv-item-subtitle"><strong>Bachelor of Fine Arts</strong></p>
+          <p class="cv-item-description">Cum Laude - Graphic and Web Design</p>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2 class="cv-section-title">Service</h2>
+        <div class="cv-item">
+          <h3 class="cv-item-title">Graphic Designer</h3>
+          <strong class="cv-item-subtitle">Bloom Studio</strong>
+          <p class="cv-item-date">2019</p>
+          <div class="cv-item-description">
+            <p>Student run design studio focusing on "Design for Good" projects for non-profits and underserved communities</p>
+            <p style="margin-bottom: 0;"><strong>Clients</strong></p>
+            <ul>
+              <li>Cahaba River Society</li>
+              <li>Birmingham Audubon Society</li>
+              <li>Historic 16th Street Baptist Church</li>
+              <li>Birmingham Botanical Gardens</li>
+              <li>Aveda Institute</li>
+              <li>Paddle the Gulf</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2 class="cv-section-title">Honors & Awards</h2>
+        <ol class="cv-list">
+          <li class="cv-item">
+            <h3 class="cv-item-title">Gold ADDY</h3>
+            <strong class="cv-item-subtitle">Consumer Website <br>The Rising Tide Capital Campaign</strong>
+            <p class="cv-item-date">2021</p>
+          </li>
+          <li class="cv-item">
+            <h3 class="cv-item-title">SIGGUS Communication Award</h3>
+            <strong class="cv-item-subtitle">Best in Show <br>UABIT 2017 Annual Report website</strong>
+            <p class="cv-item-date">2017</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="cv-section page-break">
+        <h2 class="cv-section-title">Exhibitions</h2>
+        <ol class="cv-list">
+          <li class="cv-item">
+            <h3 class="cv-item-title">BFA Exhibition</h3>
+            <strong class="cv-item-subtitle">Abroms-Engel Institute for the Visual Arts <br>Birmingham, Alabama</strong>
+            <p class="cv-item-date">2020</p>
+            <p class="cv-item-description">Attika Typeface & Veriable Font</p>
+          </li>
+          <li class="cv-item">
+            <h3 class="cv-item-title">Putnam Birds & Trees</h3>
+            <strong class="cv-item-subtitle">Abroms-Engel Institute for the Visual Arts <br>Birmingham, Alabama</strong>
+            <p class="cv-item-date">2018</p>
+            <p class="cv-item-description">Collaboration with Putnam Middle School, Desert Island Supply Co, and the Birmingham Audubon Society to produce a mobile app encouraging students to learn about nature and express    their creativity through poetry</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="cv-section">
+        <h2 class="cv-section-title">Professional Affiliations</h2>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li>AIGA Birmingham Chapter</li>
+          <li>Walker County Arts Alliance</li>
+        </ul>
+      </section>
+
+  </main>
+</div>
