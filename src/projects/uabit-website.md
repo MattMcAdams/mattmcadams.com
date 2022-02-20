@@ -36,7 +36,7 @@ In the end, we decided that it would be easier to rebuild the website from the g
 
 ## User focused design
 
-After we solved the website's technical problems, I turned my attention to the aspect of design. After several months of UX research, I presented several new mockups and the beginning of a design system for the website going forward. The new design was focused on intentional use of white space, thoughtful use of color, and clear typographical hierarchy.
+After we solved the website's technical problems, we turned our attention to the aspect of design. After several months of UX research, I presented several new mockups and the beginning of a design system for the website going forward. The new design was focused on intentional use of white space, thoughtful use of color, and clear typographical hierarchy. The final designs and illustrations were a collaborative effort involving our project manager Jessika Reed, graphic designer MJ Moon, and myself.
 
 ![Mockups of web pages](/images/projects/uabit-website/960/web-pages.jpg)
 
