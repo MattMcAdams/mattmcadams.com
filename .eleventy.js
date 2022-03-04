@@ -13,9 +13,6 @@ module.exports = function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
-  // Alias `layout: post` to `layout: layouts/post.njk`
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLLL yyyy"
@@ -55,7 +52,9 @@ module.exports = function(eleventyConfig) {
           "projectTagList",
         ].indexOf(tag) === -1
     );
-  }
+  };
+
+  eleventyConfig.addFilter("filterTagList", filterTagList);
 
   // Create an array of all project tags
   eleventyConfig.addCollection("projectTagList", function (collection) {
@@ -93,22 +92,22 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Override Browsersync defaults (used only with --serve)
-  // eleventyConfig.setBrowserSyncConfig({
-  //   callbacks: {
-  //     ready: function(err, browserSync) {
-  //       const content_404 = fs.readFileSync('dist/404.html');
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, browserSync) {
+        const content_404 = fs.readFileSync('dist/404.html');
 
-  //       browserSync.addMiddleware("*", (req, res) => {
-  //         // Provides the 404 content without redirect.
-  //         res.writeHead(404, {"Content-Type": "text/html; charset=UTF-8"});
-  //         res.write(content_404);
-  //         res.end();
-  //       });
-  //     },
-  //   },
-  //   ui: false,
-  //   ghostMode: false
-  // });
+        browserSync.addMiddleware("*", (req, res) => {
+          // Provides the 404 content without redirect.
+          res.writeHead(404, {"Content-Type": "text/html; charset=UTF-8"});
+          res.write(content_404);
+          res.end();
+        });
+      },
+    },
+    ui: false,
+    ghostMode: false
+  });
 
   return {
     // Control which files Eleventy will process
