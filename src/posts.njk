@@ -3,6 +3,8 @@ layout: layouts/base.njk
 permalink: /posts/
 title: Posts
 ---
+{% set postslist = collections.posts %}
+
 <div id="main" class="has-sidebar">
   <div class="sidebar">
     <p>
@@ -17,17 +19,22 @@ title: Posts
 
     <h3>Filter by Tag</h3>
     <ul class="tag-list">
-      <li><a href="/posts/tags/design/">#design</a> <span>3</span></li>
-      <li><a href="/posts/tags/code/">#code</a> <span>1</span></li>
-      <li><a href="/posts/tags/process/">#process</a> <span>2</span></li>
-      <li><a href="/posts/tags/tutorial/">#tutorial</a> <span>1</span></li>
-      <!--<li><a>#html</a> <span>5</span></li>-->
-      <li><a href="/posts/tags/css/">#css</a> <span>6</span></li>
-      <!--<li><a>#javascript</a> <span>5</span></li>-->
-      <li><a href="/posts/tags/typography/">#typography</a> <span>3</span></li>
-      <li><a href="/posts/tags/bookmaking/">#bookmaking</a> <span>2</span></li>
-      <li><a href="/posts/tags/analytics/">#analytics</a> <span>1</span></li>
-      <li><a href="/posts/tags/personal/">#personal</a> <span>1</span></li>
+      {# Loop through all tags in the post tag list #}
+      {% for tag in collections.postTagList %}
+        {# Set an item variable to keep track of the number of items that match the tag #}
+        {% set items = 0 %}
+        {# Loop through all items that match the tag (this will also pull projects) #}
+        {% for item in collections[tag] %}
+          {# Only increment the items variable if the item has the post type #}
+          {% if item.data.type == "post" %}
+            {% set items = items + 1 %}
+          {% endif %}
+        {% endfor %}
+        {# Set up the scheme for the tag url #}
+        {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
+        {# Print the list item with tag link and index #}
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ items }})</span></li>
+      {% endfor %}
     </ul>
 
     <!--<h3>Archive</h3>
@@ -42,7 +49,6 @@ title: Posts
 
         <h2>Latest Posts</h2>
 
-        {% set postslist = collections.posts %}
         {% include "postlist.njk" %}
       </div>
     </main>

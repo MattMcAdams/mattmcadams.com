@@ -1,19 +1,4 @@
 ---
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - nav
-    - post
-    - posts
-    - tagList
-    - project
-    - projects
-    - postTagList
-    - projectTagList
-  addAllPagesToCollections: true
 layout: layouts/no-sidebar.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”

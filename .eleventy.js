@@ -41,15 +41,21 @@ module.exports = function(eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
-  // Remove tags from collections ?
-  eleventyConfig.addFilter("filterTagList", (tags) => {
-    // should match the list in tags.njk
+  function filterTagList(tags) {
     return (tags || []).filter(
       (tag) =>
-        ["all", "nav", "post", "posts", "project", "projects", "postTagList", "projectTagList"].indexOf(tag) ===
-        -1
+        [
+          "all",
+          "nav",
+          "post",
+          "posts",
+          "project",
+          "projects",
+          "postTagList",
+          "projectTagList",
+        ].indexOf(tag) === -1
     );
-  });
+  }
 
   // Create an array of all project tags
   eleventyConfig.addCollection("projectTagList", function (collection) {
@@ -58,7 +64,7 @@ module.exports = function(eleventyConfig) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
 
-    return [...tagSet];
+    return filterTagList([...tagSet]);
   });
 
   // Create an array of all post tags
@@ -68,7 +74,7 @@ module.exports = function(eleventyConfig) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
 
-    return [...tagSet];
+    return filterTagList([...tagSet]);
   });
 
   // Enable static passthrough
