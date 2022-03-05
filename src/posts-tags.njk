@@ -6,7 +6,7 @@ title: Post Tags
 <h1>Post Tags</h1>
 
 <ul>
-{% for tag in collections.postTagList %}
+{% for tag in collections.posts.tags %}
   {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
   <li><a href="{{ tagUrl | url }}">#{{ tag }}</a></li>
 {% endfor %}

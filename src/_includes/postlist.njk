@@ -1,6 +1,7 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
-{% if post.data.type == "post" %}
+{# Required argument: collection | array of post objects #}
+
+<ol reversed class="postlist" style="counter-reset: start-from {{ collection.length + 1 }}">
+{% for post in collection | reverse %}
 
   <li class="postlist-item {% if post.url == url %}postlist-item-active{% endif %}">
 
@@ -30,6 +31,5 @@
   {% endif %}
   </li>
 
-{% endif %}
 {% endfor %}
 </ol>

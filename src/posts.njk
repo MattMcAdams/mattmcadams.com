@@ -3,7 +3,6 @@ layout: layouts/base.njk
 permalink: /posts/
 title: Posts
 ---
-{% set postslist = collections.posts %}
 
 <div id="main" class="has-sidebar">
   <div class="sidebar">
@@ -19,21 +18,9 @@ title: Posts
 
     <h3>Filter by Tag</h3>
     <ul class="tag-list">
-      {# Loop through all tags in the post tag list #}
-      {% for tag in collections.postTagList %}
-        {# Set an item variable to keep track of the number of items that match the tag #}
-        {% set items = 0 %}
-        {# Loop through all items that match the tag (this will also pull projects) #}
-        {% for item in collections[tag] %}
-          {# Only increment the items variable if the item has the post type #}
-          {% if item.data.type == "post" %}
-            {% set items = items + 1 %}
-          {% endif %}
-        {% endfor %}
-        {# Set up the scheme for the tag url #}
-        {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-        {# Print the list item with tag link and index #}
-        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ items }})</span></li>
+      {% for tag in collections.posts.tags %}
+      {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.posts.tag[tag] | length }})</span></li>
       {% endfor %}
     </ul>
 
@@ -51,7 +38,7 @@ title: Posts
         <p>I am, however, a creative with many interests. I may occasionally write about traditional art, illustration, printmaking, book making, productivity, organization, accessibility, ethics, and inclusion in design.</p>
 
         <h2>Latest Posts</h2>
-
+        {% set collection = collections.posts.all %}
         {% include "postlist.njk" %}
       </div>
     </main>

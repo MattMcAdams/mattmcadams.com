@@ -3,30 +3,24 @@ layout: layouts/base.njk
 permalink: /projects/
 title: Projects
 ---
-{% set projectlist = collections.projects %}
 
 <div id="main" class="has-sidebar">
   <div class="sidebar">
 
     <h3 style="margin-top: 0;">Filter by Tag</h3>
-     <ul class="tag-list">
-      {# Loop through all tags in the project tag list #}
-      {% for tag in collections.projectTagList %}
-        {# Set an item variable to keep track of the number of items that match the tag #}
-        {% set items = 0 %}
-        {# Loop through all items that match the tag (this will also pull projects) #}
-        {% for item in collections[tag] %}
-          {# Only increment the items variable if the item has the project type #}
-          {% if item.data.type == "project" %}
-            {% set items = items + 1 %}
-          {% endif %}
-        {% endfor %}
-        {# Set up the scheme for the tag url #}
-        {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
-        {# Print the list item with tag link and index #}
-        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ items }})</span></li>
+    <ul class="tag-list">
+      {% for tag in collections.projects.tags %}
+      {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.projects.tag[tag] | length }})</span></li>
       {% endfor %}
     </ul>
+
+    {# <section>
+      {%- for tag, posts in collections %}
+      tag: {{ tag }}, posts: {{ posts | length }}<br/>
+      {%- endfor %}
+      {% set localBook = apiBook | getLocalBook(collections.books) %}
+    </section> #}
 
     <h3>Quick Info</h3>
     <ul>
@@ -44,6 +38,7 @@ title: Projects
         <h1>Creative work</h1>
         <p>I’m a multidisciplinary designer with a variety of interests. My primary field is web design and development, but I feel it’s important to represent a larger sample of my work overall. You might see some projects here that could be considered a little “left field” but they represent what I’m interested in as a creative. Please check out my <a href="https://github.com/MattMcAdams/">GitHub</a> to see my code projects.</p>
 
+        {% set collection = collections.projects.all %}
         {% include "projectlist.njk" %}
       </div>
     </main>

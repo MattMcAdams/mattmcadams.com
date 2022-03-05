@@ -1,12 +1,16 @@
 ---
 layout: layouts/no-sidebar.njk
+pagination:
+  data: collections.postTags
+  size: 1
+  alias: tag
 eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /posts/tags/{{ tag | slug }}/
 ---
 <h1>Posts Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[ tag ] %}
+{% set collection = collections.posts.tag[ tag ] %}
 {% include "postlist.njk" %}
 
 <p>See <a href="{{ '/posts/tags/' | url }}">all post tags</a>.</p>

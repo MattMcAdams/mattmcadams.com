@@ -1,3 +1,5 @@
+{# Required argument: collection | array of project objects #}
+
 <style>
 .project-list img {
   margin-bottom: 0;
@@ -11,8 +13,7 @@
 </style>
 
 <ul reversed class="project-list grid">
-{% for project in projectlist | reverse %}
-{% if project.data.type == "project" %}
+{% for project in collection | reverse %}
 
   <li class="postlist-item{% if project.url == url %} postlist-item-active{% endif %}">
     <a href="{{ project.url | url }}" class="postlist-link">
@@ -20,6 +21,5 @@
     </a>
   </li>
 
-{% endif %}
 {% endfor %}
 </ul>

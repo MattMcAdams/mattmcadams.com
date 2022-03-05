@@ -1,7 +1,3 @@
 {
-  "tags": [
-    "projects"
-  ],
-  "type": "project",
   "layout": "layouts/project.njk"
 }
