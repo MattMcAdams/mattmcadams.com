@@ -4,7 +4,7 @@ date: 2019-11-02
 published: true
 series: false
 
-tags: ['code', 'process']
+tags: ['process']
 description: "One of the really cool plugins I found for VS Code is this tool called Comment Anchors. It’s a way of adding more visible, meaningful comments to your code. I’m a really big fan of writing documentation in the code itself, so its nice to have a way to highlight the most important notes."
 
 thumbnail: null
