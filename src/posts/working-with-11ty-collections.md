@@ -31,6 +31,8 @@ Now I can get a list of posts with `collections.posts`, which is a good starting
 
 Because I have to create two collections using the same logic, just pulling from a different source, I chose to make this a function that takes a collection as an argument.
 
+First, we create a new tag set and loop through each item in the collection, adding the tags as we go.
+
 ```js
 // Return a list of tags in a given collection
 function getTagList(collection) {
@@ -42,7 +44,19 @@ function getTagList(collection) {
 }
 ```
 
-First, we create a new tag set and loop through each item in the collection, adding the tags as we go. Now, we'll use the function to create the actual collection.
+You may notice I also run the result through a `filterTagList` function I declaired earlier. This is not doing anything in my code anymore, since I no longer use utility tags that need to be filtered out. I decided to leave it in though, just in case I need it later. You can create the tag filter like so:
+
+```js
+function filterTagList(tags) {
+  return (tags || []).filter(
+    (tag) => ["utility-tag", "unwanted-tag"].indexOf(tag) === -1
+  );
+}
+
+eleventyConfig.addFilter("filterTagList", filterTagList);
+```
+
+Next, we'll use the `getTagList` function to create the actual collection.
 
 ```js
 eleventyConfig.addCollection("postTags", function (collectionAPI) {
@@ -83,6 +97,8 @@ function createCollectionsByTag(collection) {
   return resultArrays;
 }
 ```
+
+> By this point, I no longer needed `filterTagList` and so the above snippet does not filter the tags it creates collections for. If you DO use a tag filter, you may want to add some logic to deal with that here.
 
 Now we can create the actual collection with this:
 
