@@ -143,7 +143,7 @@ module.exports = function (eleventyConfig) {
   // collections.projects.tags => Returns list of all tags
   // collections.projects.tag["tag-name"] => Returns list of all projects that match tag-name
   eleventyConfig.addCollection("projects", function (collectionAPI) {
-    let PROJECTS = collectionAPI.getFilteredByGlob("./src/projects/*.md");
+    let PROJECTS = collectionAPI.getFilteredByGlob("./src/projects/content/*.md");
     let collection = {};
 
     collection.all = PROJECTS;
@@ -154,7 +154,7 @@ module.exports = function (eleventyConfig) {
 
   //Create a collection for project tags (required for the generation of tag pages)
   eleventyConfig.addCollection("projectTags", function (collectionAPI) {
-    return getTagList(collectionAPI.getFilteredByGlob("./src/projects/*.md"));
+    return getTagList(collectionAPI.getFilteredByGlob("./src/projects/content/*.md"));
   });
 
   // Enable static passthrough
