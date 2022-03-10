@@ -3,11 +3,16 @@ layout: layouts/base.njk
 permalink: /posts/
 title: Posts
 ---
+<style>
+  .year-list li { display: inline }
+  .year-list li:not(:last-child)::after { content: " ·" }
+</style>
 
 <div id="main" class="has-sidebar">
   <div class="sidebar">
     <p>
       <a href="/feed/feed.xml">Subscribe via XML-RSS</a><br>
+      <a href="/feed/feed.json">Subscribe via JSON-RSS</a>
       <!--<a href="#">Subscribe via Email</a>-->
     </p>
 
@@ -24,11 +29,13 @@ title: Posts
       {% endfor %}
     </ul>
 
-    <!--<h3>Archive</h3>
-    <a href="/posts/2022">2021</a> &middot;
-    <a href="/posts/2021">2021</a> &middot;
-    <a href="/posts/2020">2020</a> &middot;
-    <a href="/posts/2019">2019</a>-->
+    <h3>Archive</h3>
+    <ul class="year-list">
+      {% for year in collections.postYears %}
+      {% set tagUrl %}/posts/{{ year | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ year }}</a></li>
+      {% endfor %}
+    </ul>
 
   </div>
     <main class="content">

@@ -121,7 +121,7 @@ But what if we wanted to kick it up a notch?
 
 ## Nested Collections
 
-> I've got to warn you that this may or may not be a good idea. As far as I know, there isn't a really good reason to do this, and 11ty doesn't always handle nested collections in the way you'd expect. For example, the 11ty pagination feature won't understand nested collections from my experiments. Hopefully these are classified as bugs and get worked out in the future.
+> I've got to warn you that this may or may not be a good idea. As far as I know, there isn't a really good reason to do this, and 11ty doesn't always handle nested collections in the way you'd expect. For example, the 11ty pagination feature won't understand nested collections from my experiments. Hopefully these are classified as bugs and get worked out in the future. I opened an [issue on the eleventy repo](https://github.com/11ty/eleventy/issues/2266) to ask about this behavior.
 
 I was inspired to do this after realizing the collection created by `addcollection` is essentially a javascript object that you can manipulate to your needs.
 

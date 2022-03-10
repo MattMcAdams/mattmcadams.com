@@ -38,3 +38,17 @@ https://mattmcadams.netlify.com/* https://www.mattmcadams.com/:splat 301!
 
 # Redirect image requests to my CDN
 /images/* https://storage.googleapis.com/mattmcadams.com/:splat 200!
+
+# Redirect old post URLs to new year based URLs
+/posts/css-organization                /posts/2019/css-organization                301!
+/posts/code-comments                   /posts/2019/code-comments                   301!
+/posts/get-started-with-plausible      /posts/2020/get-started-with-plausible      301!
+/posts/approaches-to-typography        /posts/2020/approaches-to-typography        301!
+/posts/vertical-rhythm                 /posts/2020/vertical-rhythm                 301!
+/posts/typographical-scale             /posts/2020/typographical-scale             301!
+/posts/on-a-modern-grid                /posts/2020/on-a-modern-grid                301!
+/posts/making-leather-discbound-cover  /posts/2021/making-leather-discbound-cover  301!
+/posts/website-redesign-2021           /posts/2021/website-redesign-2021           301!
+/posts/custom-notebook                 /posts/2021/custom-notebook                 301!
+/posts/smart-selectors                 /posts/2021/smart-selectors                 301!
+/posts/working-with-11ty-collections   /posts/2022/working-with-11ty-collections   301!

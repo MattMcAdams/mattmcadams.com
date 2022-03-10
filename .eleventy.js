@@ -29,7 +29,6 @@ module.exports = function (eleventyConfig) {
     if (n < 0) {
       return array.slice(n);
     }
-
     return array.slice(0, n);
   });
 
@@ -57,6 +56,16 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   }
 
+  function getYearList(collection) {
+    let years = new Set();
+    collection.forEach((item) => {
+      years.add(
+        DateTime.fromJSDate(item.data.date, { zone: "utc" }).toFormat("yyyy")
+      );
+    });
+    return [...years];
+  }
+
   // Return an object with arrays of posts by tag from the provided collection
   function createCollectionsByTag(collection) {
     // set the result as an object
@@ -66,10 +75,33 @@ module.exports = function (eleventyConfig) {
       // loop through the tags of each item
       item.data.tags.forEach((tag) => {
         // If the tag has not already been added to the object, add it as an empty array
-        if (!resultArrays[tag]) { resultArrays[tag] = []; }
+        if (!resultArrays[tag]) {
+          resultArrays[tag] = [];
+        }
         // Add the item to the tag's array
         resultArrays[tag].push(item);
       });
+    });
+    // Return the object containing tags and their arrays of posts
+    // { tag-name: [post-object, post-object], tag-name: [post-object, post-object] }
+    return resultArrays;
+  }
+
+  // Return an object with arrays of posts by year from the provided collection
+  function createCollectionsByYear(collection) {
+    // set the result as an object
+    let resultArrays = {};
+    // loop through each item in the provided collection
+    collection.forEach((item) => {
+      year = DateTime.fromJSDate(item.data.date, { zone: "utc" }).toFormat(
+        "yyyy"
+      );
+
+      if (!resultArrays[year]) {
+        resultArrays[year] = [];
+      }
+
+      resultArrays[year].push(item);
     });
     // Return the object containing tags and their arrays of posts
     // { tag-name: [post-object, post-object], tag-name: [post-object, post-object] }
@@ -81,7 +113,7 @@ module.exports = function (eleventyConfig) {
   // collections.posts.tags => Returns list of all tags
   // collections.posts.tag["tag-name"] => Returns list of all posts that match tag-name
   eleventyConfig.addCollection("posts", function (collectionAPI) {
-    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*.md");
+    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
     let collection = {};
     collection.all = POSTS;
     collection.tags = getTagList(POSTS);
@@ -91,7 +123,19 @@ module.exports = function (eleventyConfig) {
 
   // Create a collection for post tags (required for the generation of tag pages)
   eleventyConfig.addCollection("postTags", function (collectionAPI) {
-    return getTagList(collectionAPI.getFilteredByGlob("./src/posts/*.md"));
+    return getTagList(collectionAPI.getFilteredByGlob("./src/posts/*/*.md"));
+  });
+
+  // Create a collection for post years (required for the generation of archive pages)
+  eleventyConfig.addCollection("postYears", function (collectionAPI) {
+    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
+    return getYearList(POSTS);
+  });
+
+  // Create a collection for posts by year
+  eleventyConfig.addCollection("postsByYear", function (collectionAPI) {
+    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
+    return createCollectionsByYear(POSTS);
   });
 
   // Create the projects object that contains project and tag information
@@ -101,17 +145,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("projects", function (collectionAPI) {
     let PROJECTS = collectionAPI.getFilteredByGlob("./src/projects/*.md");
     let collection = {};
+
     collection.all = PROJECTS;
     collection.tags = getTagList(PROJECTS);
     collection.tag = createCollectionsByTag(PROJECTS);
     return collection;
   });
+
   //Create a collection for project tags (required for the generation of tag pages)
   eleventyConfig.addCollection("projectTags", function (collectionAPI) {
     return getTagList(collectionAPI.getFilteredByGlob("./src/projects/*.md"));
   });
-
-
 
   // Enable static passthrough
   eleventyConfig.addPassthroughCopy({ "src/_static/": "/" });

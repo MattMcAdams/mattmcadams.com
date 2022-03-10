@@ -1,0 +1,14 @@
+---
+layout: layouts/no-sidebar.njk
+pagination:
+  data: collections.postYears
+  size: 1
+  alias: year
+eleventyComputed:
+  title: {{ year }}
+permalink: /posts/{{ year }}/
+---
+<h1>{{ year }}</h1>
+
+{% set collection = collections.postsByYear[year] %}
+{% include "postlist.njk" %}
