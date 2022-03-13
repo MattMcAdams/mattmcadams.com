@@ -23,9 +23,9 @@ title: Posts
 
     <h3>Filter by Tag</h3>
     <ul class="tag-list">
-      {% for tag in collections.posts.tags %}
+      {% for tag in collections.postTags %}
       {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.posts.tag[tag] | length }})</span></li>
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.postsByTag[tag] | length }})</span></li>
       {% endfor %}
     </ul>
 
@@ -45,7 +45,7 @@ title: Posts
         <p>I am, however, a creative with many interests. I may occasionally write about traditional art, illustration, printmaking, book making, productivity, organization, accessibility, ethics, and inclusion in design.</p>
 
         <h2>Latest Posts</h2>
-        {% set collection = collections.posts.all %}
+        {% set collection = collections.posts %}
         {% include "postlist.njk" %}
       </div>
     </main>

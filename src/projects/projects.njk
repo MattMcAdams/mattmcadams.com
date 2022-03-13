@@ -9,9 +9,9 @@ title: Projects
 
     <h3 style="margin-top: 0;">Filter by Tag</h3>
     <ul class="tag-list">
-      {% for tag in collections.projects.tags %}
+      {% for tag in collections.projectTags %}
       {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
-        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.projects.tag[tag] | length }})</span></li>
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.projectsByTag[tag] | length }})</span></li>
       {% endfor %}
     </ul>
 
@@ -31,7 +31,7 @@ title: Projects
         <h1>Creative work</h1>
         <p>I’m a multidisciplinary designer with a variety of interests. My primary field is web design and development, but I feel it’s important to represent a larger sample of my work overall. You might see some projects here that could be considered a little “left field” but they represent what I’m interested in as a creative. Please check out my <a href="https://github.com/MattMcAdams/">GitHub</a> to see my code projects.</p>
 
-        {% set collection = collections.projects.all %}
+        {% set collection = collections.projects %}
         {% include "projectlist.njk" %}
       </div>
     </main>

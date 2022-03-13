@@ -6,24 +6,31 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
-  // Add plugins
+  /* ==================================================================
+  Add Plugins
+  ================================================================== */
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-
-  // https://www.11ty.dev/docs/data-deep-merge/
+  /* ==================================================================
+  Data Deep Merge
+  https://www.11ty.dev/docs/data-deep-merge/
+  ================================================================== */
   eleventyConfig.setDataDeepMerge(true);
-
+  /* ==================================================================
+  Date Filters
+  ================================================================== */
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLLL yyyy"
     );
   });
-
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
-
+  /* ==================================================================
+  General Filters
+  ================================================================== */
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if (n < 0) {
@@ -31,22 +38,23 @@ module.exports = function (eleventyConfig) {
     }
     return array.slice(0, n);
   });
-
   // Return the smallest number argument
   eleventyConfig.addFilter("min", (...numbers) => {
     return Math.min.apply(null, numbers);
   });
-
+  /* ==================================================================
+  Tag filter
+  Filters out unwanted / utility tags
+  ================================================================== */
   function filterTagList(tags) {
     return (tags || []).filter(
       (tag) => ["posts", "projects"].indexOf(tag) === -1
     );
   }
-
   eleventyConfig.addFilter("filterTagList", filterTagList);
-
-  // COLLECTION HELPERS
-
+  /* ==================================================================
+  Collection Functions
+  ================================================================== */
   // Return a list of tags in a given collection
   function getTagList(collection) {
     let tagSet = new Set();
@@ -55,7 +63,7 @@ module.exports = function (eleventyConfig) {
     });
     return filterTagList([...tagSet]);
   }
-
+  // Return a list of years in a given collection
   function getYearList(collection) {
     let years = new Set();
     collection.forEach((item) => {
@@ -65,7 +73,6 @@ module.exports = function (eleventyConfig) {
     });
     return [...years];
   }
-
   // Return an object with arrays of posts by tag from the provided collection
   function createCollectionsByTag(collection) {
     // set the result as an object
@@ -86,7 +93,6 @@ module.exports = function (eleventyConfig) {
     // { tag-name: [post-object, post-object], tag-name: [post-object, post-object] }
     return resultArrays;
   }
-
   // Return an object with arrays of posts by year from the provided collection
   function createCollectionsByYear(collection) {
     // set the result as an object
@@ -96,71 +102,65 @@ module.exports = function (eleventyConfig) {
       year = DateTime.fromJSDate(item.data.date, { zone: "utc" }).toFormat(
         "yyyy"
       );
-
       if (!resultArrays[year]) {
         resultArrays[year] = [];
       }
-
       resultArrays[year].push(item);
     });
     // Return the object containing tags and their arrays of posts
-    // { tag-name: [post-object, post-object], tag-name: [post-object, post-object] }
+    // { year: [post-object, post-object], year: [post-object, post-object] }
     return resultArrays;
   }
-
-  // Create the posts object that contains post and tag information
-  // collections.posts.all => Returns list of all posts
-  // collections.posts.tags => Returns list of all tags
-  // collections.posts.tag["tag-name"] => Returns list of all posts that match tag-name
+  /* ==================================================================
+  Collections
+  ================================================================== */
+  const POSTS = (collectionAPI) => {
+    return collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
+  };
+  // collections.posts => Returns list of all posts
   eleventyConfig.addCollection("posts", function (collectionAPI) {
-    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
-    let collection = {};
-    collection.all = POSTS;
-    collection.tags = getTagList(POSTS);
-    collection.tag = createCollectionsByTag(POSTS);
-    return collection;
+    return POSTS(collectionAPI);
   });
-
-  // Create a collection for post tags (required for the generation of tag pages)
+  // collections.postsByTag[tag] => Returns list of all posts that match tag-name
+  eleventyConfig.addCollection("postsByTag", function (collectionAPI) {
+    return createCollectionsByTag(POSTS(collectionAPI));
+  });
+  // collections.postTags => Returns list of all tags
   eleventyConfig.addCollection("postTags", function (collectionAPI) {
-    return getTagList(collectionAPI.getFilteredByGlob("./src/posts/*/*.md"));
+    return getTagList(POSTS(collectionAPI));
   });
-
   // Create a collection for post years (required for the generation of archive pages)
   eleventyConfig.addCollection("postYears", function (collectionAPI) {
-    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
-    return getYearList(POSTS);
+    return getYearList(POSTS(collectionAPI));
   });
-
   // Create a collection for posts by year
   eleventyConfig.addCollection("postsByYear", function (collectionAPI) {
-    let POSTS = collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
-    return createCollectionsByYear(POSTS);
+    return createCollectionsByYear(POSTS(collectionAPI));
   });
 
-  // Create the projects object that contains project and tag information
-  // collections.projects.all => Returns list of all projects
-  // collections.projects.tags => Returns list of all tags
-  // collections.projects.tag["tag-name"] => Returns list of all projects that match tag-name
+  const PROJECTS = (collectionAPI) => {
+    return collectionAPI.getFilteredByGlob("./src/projects/*/*.md");
+  };
+  // collections.projects => Returns list of all projects
   eleventyConfig.addCollection("projects", function (collectionAPI) {
-    let PROJECTS = collectionAPI.getFilteredByGlob("./src/projects/content/*.md");
-    let collection = {};
-
-    collection.all = PROJECTS;
-    collection.tags = getTagList(PROJECTS);
-    collection.tag = createCollectionsByTag(PROJECTS);
-    return collection;
+    return PROJECTS(collectionAPI);
   });
-
-  //Create a collection for project tags (required for the generation of tag pages)
+  // collections.projectsByTag[tag] => Returns list of all projects that match tag-name
+  eleventyConfig.addCollection("projectsByTag", function (collectionAPI) {
+    return createCollectionsByTag(PROJECTS(collectionAPI));
+  });
+  // collections.projectTags => Returns list of all tags
   eleventyConfig.addCollection("projectTags", function (collectionAPI) {
-    return getTagList(collectionAPI.getFilteredByGlob("./src/projects/content/*.md"));
+    return getTagList(PROJECTS(collectionAPI));
   });
 
-  // Enable static passthrough
+  /* ==================================================================
+  Enable static passthrough
+  ================================================================== */
   eleventyConfig.addPassthroughCopy({ "src/_static/": "/" });
-
-  // Customize Markdown library and settings:
+  /* ==================================================================
+  Customize Markdown library and settings
+  ================================================================== */
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
@@ -171,8 +171,9 @@ module.exports = function (eleventyConfig) {
     permalinkSymbol: "#",
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
-
-  // Override Browsersync defaults (used only with --serve)
+  /* ==================================================================
+  Override Browsersync defaults (used only with --serve)
+  ================================================================== */
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, browserSync) {
@@ -189,36 +190,24 @@ module.exports = function (eleventyConfig) {
     ui: false,
     ghostMode: false,
   });
-
+  /* ==================================================================
+  RETURN
+  ================================================================== */
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: ["md", "njk", "html", "liquid"],
 
-    // -----------------------------------------------------------------
-    // If your site deploys to a subdirectory, change `pathPrefix`.
-    // Don’t worry about leading and trailing slashes, we normalize these.
-
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-    // This is only used for link URLs (it does not affect your file structure)
-    // Best paired with the `url` filter: https://www.11ty.dev/docs/filters/url/
-
-    // You can also pass this in on the command line using `--pathprefix`
-
-    // Optional (default is shown)
-    pathPrefix: "/",
-    // -----------------------------------------------------------------
-
-    // Pre-process *.md files with: (default: `liquid`)
+    // Pre-process *.md files with:
     markdownTemplateEngine: "njk",
 
-    // Pre-process *.html files with: (default: `liquid`)
+    // Pre-process *.html files with:
     htmlTemplateEngine: "njk",
 
-    // Opt-out of pre-processing global data JSON files: (default: `liquid`)
+    // Opt-out of pre-processing global data JSON files:
     dataTemplateEngine: false,
 
-    // These are all optional (defaults are shown):
+    // Set directories
     dir: {
       input: "src",
       includes: "_includes",
