@@ -1,17 +1,4 @@
 {# Required argument: collection | array of project objects #}
-
-<style>
-.project-list img {
-  margin-bottom: 0;
-  transition: transform .2s;
-  border-radius: 0.5rem;
-}
-
-.project-list a:hover img {
-  transform: scale(1.05);
-}
-</style>
-
 <ul reversed class="project-list grid">
 {% for project in collection | reverse %}
 

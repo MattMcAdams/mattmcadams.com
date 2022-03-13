@@ -129,3 +129,30 @@ h2[id]:hover .direct-link,
 h3[id]:hover .direct-link {
   display: inline;
 }
+
+.home main {
+  display: flex;
+  align-items: flex-end;
+}
+.home .sidebar {
+  display: none;
+}
+@media ( min-width: 900px ) {
+  .home .sidebar {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.year-list li { display: inline }
+.year-list li:not(:last-child)::after { content: " ·" }
+
+.project-list img {
+  margin-bottom: 0;
+  transition: transform .2s;
+  border-radius: 0.5rem;
+}
+
+.project-list a:hover img {
+  transform: scale(1.05);
+}
