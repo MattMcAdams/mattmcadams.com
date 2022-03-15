@@ -1,16 +1,42 @@
 ---
-layout: layouts/no-sidebar.njk
+layout: layouts/base.njk
 permalink: 404.html
 eleventyExcludeFromCollections: true
 title: 404
 ---
 
-<h1>Content not found</h1>
+<div id="main" class="has-sidebar">
+  <div class="sidebar">
 
-<p>Looks like the page or resource you were looking for wasn’t found at this address. This can happen if there was a mistake in the URL, if the content has moved, or if the content no longer exists.</p>
+    <h3 style="margin-top: 0;">Post Tags</h3>
+    <ul class="tag-list">
+      {% for tag in collections.postTags %}
+      {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.postsByTag[tag] | length }})</span></li>
+      {% endfor %}
+    </ul>
 
-<div id="404"></div>
-<p><a href="/" class="button">Return Home</a></p>
+    <h3>Archive</h3>
+    <ul class="year-list">
+      {% for year in collections.postYears %}
+      {% set tagUrl %}/posts/{{ year | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ year }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+    <main class="content">
+      <div>
+        <h1>Content not found</h1>
+
+        <p>Looks like the page or resource you were looking for wasn’t found at this address. This can happen if there was a mistake in the URL, if the content has moved, or if the content no longer exists.</p>
+
+        <div id="404"></div>
+        <p><a href="/" class="button">Return Home</a></p>
+      </div>
+    </main>
+  </div>
+</div>
 
 <script>
 function notFoundMessage(id) {
