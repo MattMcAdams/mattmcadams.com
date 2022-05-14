@@ -48,8 +48,8 @@ In general, I have a few rules about comment formatting:
 
 I've yet to hear a definitive "right" answer to this age old controversy. My take is that you should setup your code editor to use soft tabs set to 2 spaces. My reason for this are:
 
-1. Spaces render more consistently across text editors and websites, basically anywhere monospaced text is supported.
-2. Two spaces is enough to see indention while still being fairly slim, allowing more nested code without weird line wraps.
+1. Spaces render more consistently across text editors and websites, basically anywhere monospaced text is supported
+2. Two spaces is enough to see indention while still being fairly slim, allowing more nested code without weird line wraps
 
 You can also set this setting up for individual workspaces if you work on projects with different indention rules. Ultimately, I don't think it matters too much, spaces have just never caused me problems while tabs have.
 
