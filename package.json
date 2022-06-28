@@ -21,6 +21,7 @@
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
+    "dev": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
   "homepage": "https://github.com/mattmcadams/website",
