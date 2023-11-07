@@ -7,9 +7,11 @@ series: false
 tags: ['tutorial', 'command line']
 description: "Creating a custom terminal experience is something of a rite of passage for software developers, especially those who use the terminal every day. In this post, I take a tour through my current setup."
 
-thumbnail: null
-cover_image: null
+thumbnail: https://mattmcadams.com/images/posts/customizing-zsh-prompt.png
+cover_image: https://mattmcadams.com/images/posts/customizing-zsh-prompt.png
 ---
+
+![screenshot of terminal](https://mattmcadams.com/images/posts/customizing-zsh-prompt.png)
 
 While I was learning about terminal customization, I found that many websites tend to leap straight to projects like "oh-my-zsh" where you can choose from many pre-configured themes. Don't get me wrong, these projects are impressive and show how wildly flexible ZSH can be, but I wanted to *learn* something along the way. Since I learn best by doing, I wanted to explore and build my configuration by hand.
 

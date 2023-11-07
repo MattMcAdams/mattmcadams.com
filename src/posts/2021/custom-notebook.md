@@ -15,7 +15,7 @@ I love stationary. I always have. In college, when I had to get a job and all I 
 
 Today though, I want to share one of my personal labors of love, a project I’ve worked on for a few years, and one that continues to evolve - my notebook.
 
-![Open notebook](/images/posts/notebook-open.jpg)
+![Open notebook](https://mattmcadams.com/images/posts/notebook-open.jpg)
 
 Oh and one last thing, I’m not affiliated with or sponsored by anyone. Everything I talk about or link to here, I do because I think they’re genuinely good products.
 
@@ -23,7 +23,7 @@ Oh and one last thing, I’m not affiliated with or sponsored by anyone. Everyth
 
 Disc binding is a relatively new and less recognized method of binding pages together. It takes everything that is good about binders, being able to rearrange pages, and combines it with the smaller form factor of a spiral bound notebook.
 
-![Notebook Discs](/images/posts/notebook-discs.jpg)
+![Notebook Discs](https://mattmcadams.com/images/posts/notebook-discs.jpg)
 
 Disc bound notebooks and note taking systems have gathered a cult following, attributed in part to the utility of such systems, but also to the level of customization and personalization each notebook can have. Ultimately, everything is truly modular.
 
@@ -50,7 +50,7 @@ Now that I’ve decided on paper size and paper type, it comes the time to fill 
 
 Its a lot of work for some paper, and it requires some extra equipment, but I find the activity relaxing and rewarding. For anyone that wants to follow in my footsteps, I use a basic [Xacto guillotine cutter](https://www.amazon.com/gp/product/B0006HVQH8/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) to cut the pages down to size. To round the corners, I use this [corner cutter](https://www.amazon.com/gp/product/B0076FJ7SS/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) - by far one of my best purchases in art school. And for the hole punch, I use the Staples brand [Arc hole punch](https://www.amazon.com/Staples-Desktop-Paper-8-Sheet-Capacity/dp/B00BJH0M3I). I like this punch because it has a setting specifically for A5 paper and it can punch though several pages with ease.
 
-![Notebook paper](/images/posts/notebook-paper.jpg)
+![Notebook paper](https://mattmcadams.com/images/posts/notebook-paper.jpg)
 
 An extra little note about my dot grid paper design. I initially just did a very standard dot grid design, but later had trouble locating the exact middle of the page. I then updated the paper design to darken the middle 4 dots, and the middle 2 dots on all 4 sides. This greatly helps with placing things in the page. I’ve uploaded the [printable dot grid paper](https://drive.google.com/file/d/1YzmfwKSaiSrdzcjKea89Sn503YXFmckg/view?usp=sharing) to Google Drive if you want to use it.
 
@@ -62,7 +62,7 @@ In the beginning of this journey, I made my own covers. I liked these a lot, but
 
 Later on, I decided I wanted the cover to be leather. I’ve looked at so many leather notebook cases I can’t begin to list them. I thought my best bet would be to get a case meant to wrap around any notebook. But I was always worried that my notebook wouldn’t fit because of the extra bulk the discs add. Last month on a whim, I decided to take my notebook in to Office Depot just see if the junior size covers were big enough for the A5 paper, and to my surprise they were!
 
-![Notebook Closed](/images/posts/notebook-cover.jpg)
+![Notebook Closed](https://mattmcadams.com/images/posts/notebook-cover.jpg)
 
 I might get a new cover one day, but I’m finally content with [this one from TUL](https://www.officedepot.com/a/products/573359/TUL-Discbound-Notebook-Junior-Size-Leather/).
 

@@ -17,7 +17,7 @@ Unfortunately, analytics have a bad rep, and I pin most of this on Google. Being
 
 This is where [Plausible](https://plausible.io/) comes in. It takes a more modern approach to web analytics. **It's beautiful, lightning fast, super affordable, and it's built around privacy.** This is increasingly important as new internet privacy laws are passed (think GDPR). With Plausible, you don't have to worry about a privacy statement or cookie banners or any of that garbage. Your users can focus on your content, and you can still get valuable stats.
 
-[![Screenshot of the Plausible website](/images/posts/plausible.png)](plausible.io)
+[![Screenshot of the Plausible website](https://mattmcadams.com/images/posts/plausible.png)](plausible.io)
 
 Now's a good time to qualify "super affordable". They charge $6/month or $4/month billed annually at the time of writing. Compare this to Netlify's $9/month server side analytics. Personally, I think it's well worth about 50 bucks a year for a great product like this.
 

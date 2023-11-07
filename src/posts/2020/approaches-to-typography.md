@@ -11,13 +11,13 @@ thumbnail: null
 cover_image: null
 ---
 
-There are a handful of ways we can use what we learned about [modular scales](/posts/typographical-scale/) when creating the typographical system of our website, from simple single scale systems to fully fluid typography. This article will take a look at each style and implementation, but all of these systems aim to address the question of how to handle text on both small and large screens.
+There are a handful of ways we can use what we learned about [modular scales](https://mattmcadams.com/posts/typographical-scale/) when creating the typographical system of our website, from simple single scale systems to fully fluid typography. This article will take a look at each style and implementation, but all of these systems aim to address the question of how to handle text on both small and large screens.
 
 ## Single Scale
 
 The simplest system here is what I call a "Single Scale System". These systems rely on a single typographical scale and use that scale on all screen types.
 
-![Diagram of the single scale system](/images/posts/single-scale.png)
+![Diagram of the single scale system](https://mattmcadams.com/images/posts/single-scale.png)
 
 This is the most common style of web typography, and could be setup so that there is absolutely no difference between the text on a phone or a desktop or it could be set up so that the scale is the same but the website text is overall larger or smaller on a specific screen size.
 
@@ -39,7 +39,7 @@ small { font-size: 0.8rem; }
 
 The dual scale uses two (or more) typographical scales, one for each range of screen sizes. These can be useful if you want massive headdings on desktop but need them to be smaller on mobile without changing the base font size.
 
-![Diagram of a dual scale system](/images/posts/dual-scale.png)
+![Diagram of a dual scale system](https://mattmcadams.com/images/posts/dual-scale.png)
 
 A dual scale system can be more difficult in that each scale creates a certain mood or feeling. It can be hard to ballance those in a single brand. This style is however extremely effective and relatively easy to setup.
 
@@ -65,7 +65,7 @@ small { font-size: 0.8rem; }
 
 This is a clever technique I learned from Medium. In this system, you would use a single scale but use only odd steps for mobile and even steps for desktop.
 
-![Diagram of a skip scale system](/images/posts/skip-scale.png)
+![Diagram of a skip scale system](https://mattmcadams.com/images/posts/skip-scale.png)
 
 This style of typography is great for creating a consistant mood across all platforms.
 
@@ -91,7 +91,7 @@ small { font-size: 0.8rem; }
 
 The downside to all of the above solutions is that they rely on a set breakpoint. Fluid typography changes all of that and presents typography relative to the size of the screen between a maximum and minimum threshold. This is where things get tricky - a fully fluid typographical system involves a lot of math.
 
-![Diagram of a fluid scale system](/images/posts/fluid-scale.png)
+![Diagram of a fluid scale system](https://mattmcadams.com/images/posts/fluid-scale.png)
 
 In a fluid scale, I highly recommend using a preprocessor such as Sass (SCSS) to help put names to the numbers. These systems are highly customizable and can augment any of the methods above. For this demo, I'll show the typography I use for my own website, based on the dual scale system.
 

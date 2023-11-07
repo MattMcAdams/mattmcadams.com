@@ -14,6 +14,7 @@ cover_image: null
 Back in October, [Marvin Danig](https://dev.to/marvindanig/toucaan-rethinking-css-frameworks-394p) made a fantastic blog post on the state of responsive web design and the future of CSS frameworks. I wanted to continue some of his points and see how a responsive first grid system might look.
 
 ## The current grid
+
 Before we get into the deep end of building a grid, I wanted to review some of the systems we have today and the pain points associated with them.
 
 - Multiple media queries are needed to control grid columns at multiple breakpoints
