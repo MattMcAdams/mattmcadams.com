@@ -11,19 +11,21 @@ thumbnail: https://mattmcadams.com/images/posts/git-prompt-info.png
 cover_image: https://mattmcadams.com/images/posts/git-prompt-info.png
 ---
 
-In my previous post, I looked at ways to customize the ZSH prompt. Now let's take it a bit further and show some version control information on the right side of the prompt as well.
+In my previous post, I looked at [ways to customize the ZSH prompt](/posts/2023/customizing-zsh-prompt/). Now let's take it a bit further and show some version control information on the right side of the prompt as well.
+
+![Screenshot of terminal with git info](https://mattmcadams.com/images/posts/git-prompt-info.png)
 
 First let's set up support for the version control system. To do this, we need to autoload the version control system with `autoload -Uz vcs_info`. Then we'll need to wrap that in a function and add that function to the builtin `precmd_functions`.
 
-```sh
+```shell
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 ```
 
-<!-- REVIEW RESEARCH THESE LINES -->
+We also need to tell the prompt string to first be subjected to parameter expansion, command substitution and arithmetic expansion. We do this with `setopt prompt_subst`. We need another line to let us style the git information.
 
-```sh
+```shell
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%b'
 ```
@@ -45,25 +47,23 @@ Now for the hard part, we need to use a variety of git commands to get informati
 
 First, we'll define some local veriables.
 
-```sh
+```shell
 local INDEX TRACKING AHEAD BEHIND STATUS EDITS
 ```
 
 Next, initialize the `STATUS` variable. This is where we'll store the string we want to display on the prompt.
 
-```sh
+```shell
 STATUS=""
 ```
 
 ### Indicating stashed commits
 
-For my use case, I don't care to know the number of stashes, only if a stash exists.
-
-<!-- REVIEW RESEARCH THIS IF STATEMENT -->
+For my use case, I don't care to know the number of stashes, only if a stash exists. We can do this by printing each stash entry and checking to see if anything is returned.
 
 We'll then add to the STATUS a cyan return icon `↩︎`.
 
-```sh
+```shell
 if $(command git rev-parse --verify refs/stash &>/dev/null); then
   STATUS="%F{cyan}↩︎%f $STATUS"
 fi
@@ -73,11 +73,11 @@ fi
 
 To display if the local branch is tracking a deleted branch, or no branch at all, we'll need to set up a variable `TRACKING`. Then, to see how many commits the branch is ahead or behind, we need to set up the variables `AHEAD` and `BEHIND`.
 
-Tracking will print a message from git that we can use later. Ahead and behind will store the number of commits the branch is ahead and/or behind respectively.
+Tracking will print a message from git that we can use later. If no upstream branch is found, the message will be `fatal: no upstream configured for branch 'BRANCH NAME'`. If the upstream branch has been deleted, the message will start with `fatal: ambiguous argument '@{upstream}': unknown revision or path not in the working tree.`. Otherwise the message will equal the name of the upstream branch.
 
-<!-- REVIEW RESEARCH THESE LINES -->
+Breaking down ahead and behind, the git command here will print the commit hash for each commit the branch is behind or ahead by. We can take this and count the lines, then remove extra space.
 
-```sh
+```shell
 TRACKING=$(git rev-parse --abbrev-ref @{upstream} 2>&1)
 AHEAD=$(git rev-list HEAD@{upstream}..HEAD 2> /dev/null | wc -l | awk '{$1=$1};1')
 BEHIND=$(git rev-list HEAD..HEAD@{upstream} 2> /dev/null | wc -l | awk '{$1=$1};1')
@@ -89,7 +89,7 @@ Check if there is no upstream by searching the return for "no upstream". In this
 
 Te detect if the upstream has been deleted, search the return for "@{upstream}" In this case, I want to display a red exclamation point `!` in the first part of the status.
 
-```sh
+```shell
 if $(echo "$TRACKING" | grep 'no upstream' &> /dev/null); then
   STATUS="%F{yellow}⌂%f $STATUS"
 elif $(echo "$TRACKING" | grep '@{upstream}' &> /dev/null); then
@@ -100,7 +100,7 @@ If neither of those points are true, we can continue to see how far behind and/o
 
 This is the second and final part of the if statement we started above.
 
-```sh
+```shell
 else
   if [[ $AHEAD -gt 0 ]]; then
     STATUS="$STATUS$AHEAD%F{green}↑%f "
@@ -113,18 +113,16 @@ fi
 
 ### Displaying uncommitted changes
 
-Lastly, we need to set up the variables `INDEX` to store <!-- REVIEW --> and `EDITS` to store the number of uncommitted changes.
+Lastly, we need to set up the variable `INDEX`, which stores a response from git which prints each uncommitted file with changes to it's own line. We'll use this variable to setup `EDITS` to store the number of uncommitted changes.
 
-```sh
+```shell
 INDEX=$(git status --porcelain 2> /dev/null)
 EDITS=$(echo $INDEX | wc -l | awk '{$1=$1};1')
 ```
 
-<!-- REVIEW what is this? -->
-
 Now to display the number of edits with a bold, blue asterisk `*` at the end of the status.
 
-```sh
+```shell
 if [[ ! -z "$INDEX" ]]; then
   STATUS="$STATUS$EDITS%B%F{blue}*%f%b "
 fi
@@ -134,7 +132,7 @@ fi
 
 The last step is to return the status string if it's not empty.
 
-```sh
+```shell
 if [[ ! -z "$STATUS" ]]; then
   echo "$STATUS"
 fi
@@ -142,7 +140,7 @@ fi
 
 ### Putting it all together
 
-```sh
+```shell
 __git_prompt_status() {
   local INDEX TRACKING AHEAD BEHIND STATUS EDITS
 
@@ -182,8 +180,16 @@ __git_prompt_status() {
 
 ## Displaying the status on the prompt
 
-This is all well and good, but all we've done is create a function that echos the git information. I like to display the git information to the right of my prompt, so we'll assign the function to the builtin `RPROMPT` variable.
+This is all well and good, but all we've done is create a function that echos the git information. First, we have to make sure we're in a directory with version control. I created this function to handle that, display the branch name followed by the branch status, all wrapped in brackets.
 
-```sh
-RPROMPT='$(__prompt_git_info)'
+```shell
+__prompt_git_info() {
+  [ ! -z "$vcs_info_msg_0_" ] && echo "[ $vcs_info_msg_0_ $(__git_prompt_status)]"
+}
+```
+
+I like to display the git information to the right of my prompt, so we'll assign the function to the builtin `RPROMPT` variable. I also added a timestamp with `%t`.
+
+```shell
+RPROMPT='$(__prompt_git_info) %t'
 ```
