@@ -17,7 +17,7 @@ Unfortunately, analytics have a bad rep, and I pin most of this on Google. Being
 
 This is where [Plausible](https://plausible.io/) comes in. It takes a more modern approach to web analytics. **It's beautiful, lightning fast, super affordable, and it's built around privacy.** This is increasingly important as new internet privacy laws are passed (think GDPR). With Plausible, you don't have to worry about a privacy statement or cookie banners or any of that garbage. Your users can focus on your content, and you can still get valuable stats.
 
-[![Screenshot of the Plausible website](https://mattmcadams.com/images/posts/plausible.png)](plausible.io)
+[![Screenshot of the Plausible website](/images/posts/2020/plausible.png)](plausible.io)
 
 Now's a good time to qualify "super affordable". They charge $6/month or $4/month billed annually at the time of writing. Compare this to Netlify's $9/month server side analytics. Personally, I think it's well worth about 50 bucks a year for a great product like this.
 
@@ -33,7 +33,7 @@ Analytics will start rolling in as soon as you get 1 page view. You can test it 
 
 ## Setting up 404 monitoring
 
-Plausible also lets you [track which URLs are going to 404 pages](https://docs.plausible.io/404-error-pages-tracking). This is a little more involved, but still extremely straight forward.
+Plausible also lets you [track which URLs are going to 404 pages](https://plausible.io/docs/error-pages-tracking-404). This is a little more involved, but still extremely straight forward.
 
 If you're using one of the cool new frameworks like Vue (Gridsome in my case), you may have to put the 404 page script in a module export or something. Here's what that looks like:
 
@@ -79,4 +79,4 @@ After you finish playing around with everything you may want to go ahead and res
 
 ## Enjoy
 
-Congrats, you're all set up with a pretty powerful little analytics tool for less than $50/year and you don't have to worry about it impacting performance or causing privacy headaches.
+Congrats, you're all set up with a pretty powerful little analytics tool and you don't have to worry about it impacting performance or causing privacy headaches.

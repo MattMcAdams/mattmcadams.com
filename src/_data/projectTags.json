@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Code",
+    "slug": "code",
+    "url": "/projects/tags/code/",
+    "description": "Apps, experiments, tools, websites, and anything else built with code."
+  },
+  {
+    "name": "Visual",
+    "slug": "visual",
+    "url": "/projects/tags/visual/",
+    "description": "Illustrations, animations, graphic design, and other visual art."
+  },
+  {
+    "name": "Typography",
+    "slug": "typography",
+    "url": "/projects/tags/typography/",
+    "description": "Typefaces, lettering, and other typographic work."
+  },
+  {
+    "name": "Client Work",
+    "slug": "client-work",
+    "url": "/projects/tags/client-work/",
+    "description": "Design and Development projects I've done professionally, or for clients."
+  },
+  {
+    "name": "Miscellanea",
+    "slug": "miscellanea",
+    "url": "/projects/tags/miscellanea/",
+    "description": "Random projects that interest me and that I think are worth displaying, but don't fit into a standard body of work."
+  }
+]

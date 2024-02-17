@@ -1,21 +1,12 @@
 ---
 title: UABIT Website
-date: 2020-05-01
-published: true
+date: 2020-03-01
 
-tags: ['web', 'design']
+tags: ['client-work']
 description: "In my third year as UAB IT's web developer, I had the great opportunity to the design and structure of the IT website."
 
-thumbnail: https://www.mattmcadams.com/images/projects/uabit-website/640/web-pages.jpg
-cover_image: https://www.mattmcadams.com/images/projects/uabit-website/1280/web-pages.jpg
-
-colors: ['#295135', '#1f6b52', '#80bc00']
-tools: ['XD', 'HTML', 'CSS', 'JavaScript', 'Joomla']
-
-cta: {
-  link: https://github.com/UAB-IT/linear,
-  text: GitHub Repo
-}
+thumbnail: /images/projects/uabit-website/640/web-pages.jpg
+cover_image: /images/projects/uabit-website/1280/web-pages.jpg
 ---
 
 In my third year as UAB IT's web developer, I had the great opportunity to make sweeping changes to the design and structure of the IT website. As we began a deeper dive into the website's architecture than we ever had, we found years of technical debt, patchwork solutions, and poor organization.

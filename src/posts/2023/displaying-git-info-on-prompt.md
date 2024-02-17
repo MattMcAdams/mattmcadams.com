@@ -7,13 +7,13 @@ series: false
 tags: ['tutorial', 'command line']
 description: "Let's look at how to display Git information as a part of the ZSH prompt."
 
-thumbnail: https://mattmcadams.com/images/posts/git-prompt-info.png
-cover_image: https://mattmcadams.com/images/posts/git-prompt-info.png
+thumbnail: /images/posts/2023/git-prompt-info.png
+cover_image: /images/posts/2023/git-prompt-info.png
 ---
 
 In my previous post, I looked at [ways to customize the ZSH prompt](/posts/2023/customizing-zsh-prompt/). Now let's take it a bit further and show some version control information on the right side of the prompt as well.
 
-![Screenshot of terminal with git info](https://mattmcadams.com/images/posts/git-prompt-info.png)
+![Screenshot of terminal with git info](/images/posts/2023/git-prompt-info.png)
 
 First let's set up support for the version control system. To do this, we need to autoload the version control system with `autoload -Uz vcs_info`. Then we'll need to wrap that in a function and add that function to the builtin `precmd_functions`.
 

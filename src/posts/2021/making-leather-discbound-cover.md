@@ -11,7 +11,7 @@ thumbnail: null
 cover_image: null
 ---
 
-I want to start with a disclaimer that I’m not a leather worker, so I can’t guarantee that this is all technically correct or good advice, but my [custom discbound notebook](https://www.mattmcadams.com/posts/custom-notebook/) has been a project of mine for a few years. I’ve tried all kinds of covers, both homemade and store-purchased, but none of them ever felt special or personal. Making a leather cover had been in the back of my mind for quite a while, but I never dived into actually making one because it was daunting and expensive.
+I want to start with a disclaimer that I’m not a leather worker, so I can’t guarantee that this is all technically correct or good advice, but my [custom discbound notebook](/posts/2021/custom-notebook/) has been a project of mine for a few years. I’ve tried all kinds of covers, both homemade and store-purchased, but none of them ever felt special or personal. Making a leather cover had been in the back of my mind for quite a while, but I never dived into actually making one because it was daunting and expensive.
 
 While I can’t say it wasn’t expensive, I would say it was worth it to me. If not for the final product, then for the learning experience, and the pride of making something tangible myself. It took three attempts and many weeks of trial and error, tests, and practice, but I finally got something I’m happy with.
 
@@ -19,9 +19,9 @@ While I’m going to focus on my final design and how I made it, I’m also goin
 
 ## What we’ll be making
 
-![notebook open to first page](https://mattmcadams.com/images/posts/making-leather-cover/open-notebook.jpg)
+![notebook open to first page](/images/posts/2021/leather-notebook/open-notebook.jpg)
 
-![notebook closed](https://mattmcadams.com/images/posts/making-leather-cover/closed-notebook.jpg)
+![notebook closed](/images/posts/2021/leather-notebook/closed-notebook.jpg)
 
 This will be a leather notebook cover for an A5 discbound notebook with half-inch discs. It will wrap completely around the notebook, instead of being two separate covers punched to use the rings. We’ll attach it to the notebook with two sleeve pockets for the notebook’s plastic cover to fit into. We’ll also have an elastic pen loop attachment and an elastic band to keep the book closed.
 
@@ -80,9 +80,9 @@ My notebook uses A5 paper and half inch discs, and the final dimensions of the d
 
 I also added marks for holes that the discs would slot into and two slots for an elastic band to go through. On another artboard, I made a template for the inside panels (not shown in screenshot).
 
-You can [download my template](https://drive.google.com/file/d/1KUrVFWlr_oD-vvxMP-hBMLvF6aDwI5IA/view?usp=sharing) if you’re making the same size notebook as I am.
+You can [download my template](https://drive.google.com/file/d/1DPBApp7GVUtmO85uC0NB5G-2x9iLmbUK/view?usp=sharing) if you’re making the same size notebook as I am.
 
-![template file open in Adobe Illustrator](https://mattmcadams.com/images/posts/making-leather-cover/illustrator-template.jpg)
+![template file open in Adobe Illustrator](/images/posts/2021/leather-notebook/illustrator-template.jpg)
 
 Print these, cut them out using an X-Acto knife, and staple around the edges where the stitching will be. Then fit it on the notebook to make sure the measurements are good (a bit larger than they need to be). Then print out a new copy on cardstock. Make adjustments as needed and make another mock until you get a template that fits. It’s much cheaper to waste cardstock than it is to waste leather.
 
@@ -117,7 +117,7 @@ Do, however, cut out the space for the pen loop. Notice we didn’t do this for 
 
 Before you remove the cardstock template from the back cover, it’s time to punch the slots for the discs to go through.
 
-![backside of the cover showing slots for the discs to fit through](https://mattmcadams.com/images/posts/making-leather-cover/back-cover.jpg)
+![backside of the cover showing slots for the discs to fit through](/images/posts/2021/leather-notebook/back-cover.jpg)
 
 You can buy a slot punch, but I wasn’t able to get one the width or length I needed. Instead, we’re going to cheat just a little. First, place the cover leather side up on the scrap wood. Then, punch a hole on either end of the slot using the punch and a mallet. You’ll notice I left circles on the template as a guide. Next, take your ruler and cut from the outside edge of one circle to the other, more or less following the lines on the template.
 
@@ -145,7 +145,7 @@ When all layers have been glued together, cut some strips of chipboard, or use s
 
 The next day, unclamp the inside panels. Identify the inside edge of the panels and use a ruler and the X-Acto knife to cut off a sliver of the edge. This will make sure all layers are flush and aligned perfectly.
 
-![the inside panels](https://mattmcadams.com/images/posts/making-leather-cover/inside-panels.jpg)
+![the inside panels](/images/posts/2021/leather-notebook/inside-panels.jpg)
 
 ## Stitching
 
@@ -155,7 +155,7 @@ Now place the panel on the scrap wood and use the cross stitch punches and rubbe
 
 The plastic backing is to help give the chipboard strength during this step, as the process of punching the holes causes some damage to the chipboard. This punching causes its fibers to separate or tear apart from one another. I’m unsure how big of a problem this is long term, but so far, it seems to hold up alright with the added plastic backing.
 
-![edge of the inside panel showing holes punched for stitching](https://mattmcadams.com/images/posts/making-leather-cover/stitch-punches.jpg)
+![edge of the inside panel showing holes punched for stitching](/images/posts/2021/leather-notebook/stitch-punches.jpg)
 
 Next, thread your needles and cross stitch the inside seam. This was extremely difficult and frustrating for me, so be patient. Explaining how to cross stitch is probably outside the scope of this tutorial (I gotta draw the line somewhere) so here’s the [saddle stitch video](https://www.youtube.com/watch?v=EIGT_RXi8ZM) I used to learn how.
 
@@ -165,7 +165,7 @@ After the stitching is done, measure a length of elastic that will securely hold
 
 Glue the edges together flat, then glue the elastic band to the outside edge of the inside flap where we made the cutout earlier.
 
-![pen loop glued to edge of right inside panel](https://mattmcadams.com/images/posts/making-leather-cover/pen-loop.jpg)
+![pen loop glued to edge of right inside panel](/images/posts/2021/leather-notebook/pen-loop.jpg)
 
 ## Outside cover
 
@@ -177,7 +177,7 @@ Next, you can round the corners if you want. Find something with a rounded corne
 
 Score a guide for the stitching holes, then punch the holes just as we did before. Stitch the edges to complete the look.
 
-![inside of notebook](https://mattmcadams.com/images/posts/making-leather-cover/inside-notebook.jpg)
+![inside of notebook](/images/posts/2021/leather-notebook/inside-notebook.jpg)
 
 Fit the cover to the notebook again to ensure the stitches are good. You might need to trim down the plastic covers on the notebook again to make sure they slide in the pockets.
 
@@ -185,7 +185,7 @@ Fit the cover to the notebook again to ensure the stitches are good. You might n
 
 Measure a length of elastic that will fit around the notebook and guide it through the holes we made in the outside cover. Glue the ends together to create the elastic band.
 
-![closed notebook with elastic strap](https://mattmcadams.com/images/posts/making-leather-cover/strap.jpg)
+![closed notebook with elastic strap](/images/posts/2021/leather-notebook/strap.jpg)
 
 Fit the cover back onto the notebook and enjoy!
 

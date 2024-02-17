@@ -1,24 +1,16 @@
 ---
 title: Cahaba River
-date: 2018-03-23
-published: false
+date: 2020-03-23
 
-tags: ['illustration', 'silkscreen']
+tags: ['visual', 'client-work']
 description: "This silkscreen print was designed for the Cahaba River Society as a fundraising opportunity. The Cahaba River is a large waterway running through the heart of Alabama and is home to a wide range of wildlife. It fosters one of the most diverse ecosystems in the state. The print is designed to be easily mass-produced using a single color design and draws inspiration from the ripples of the river itself."
 
-thumbnail: https://assets.mattmcadams.com/Cahaba_Print-detail1.jpg
-cover_image: https://assets.mattmcadams.com/Cahaba_Print-detail1.jpg
-
-colors: ['#fff', '#fff', '#fff']
-tools: ['Illustrator']
-
-cta: null
+thumbnail: /images/projects/cahaba-river-print/640/cahaba-thumb.jpg
+cover_image: /images/projects/cahaba-river-print/1280/cahaba-thumb.jpg
 ---
 
 This silkscreen print was designed for the Cahaba River Society as a fundraising opportunity. The Cahaba River is a large waterway running through the heart of Alabama and is home to a wide range of wildlife. It fosters one of the most diverse ecosystems in the state. The print is designed to be easily mass-produced using a single color design and draws inspiration from the ripples of the river itself.
 
-![](https://assets.mattmcadams.com/Cahaba-Print.jpg)
+![](/images/projects/cahaba-river-print/960/cahaba-detail.jpg)
 
-![](https://assets.mattmcadams.com/Cahaba_Print-detail1-square.jpg)
-
-![](https://assets.mattmcadams.com/Cahaba_Print-detail2-square.jpg)
+![](/images/projects/cahaba-river-print/960/cahaba-full.jpg)

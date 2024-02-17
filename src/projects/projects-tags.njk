@@ -4,10 +4,13 @@ layout: layouts/no-sidebar.njk
 title: Project Tags
 ---
 <h1>Project Tags</h1>
-
-<ul>
-{% for tag in collections.projectTags %}
-  {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
-  <li><a href="{{ tagUrl | url }}">#{{ tag }}</a></li>
+<hr>
+{% for item in collections.projectTags %}
+  {% for tag in projectTags %}
+    {% if item === tag.slug %}
+      <h2><a href="{{ tag.url }}">{{ tag.name }}</a></h2>
+      <p>{{ tag.description }}</p>
+      <hr>
+    {% endif %}
+  {% endfor %}
 {% endfor %}
-</ul>

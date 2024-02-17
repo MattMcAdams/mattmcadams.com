@@ -114,6 +114,7 @@ module.exports = function (eleventyConfig) {
   /* ==================================================================
   Collections
   ================================================================== */
+  // set up collections for posts
   const POSTS = (collectionAPI) => {
     return collectionAPI.getFilteredByGlob("./src/posts/*/*.md");
   };
@@ -138,6 +139,7 @@ module.exports = function (eleventyConfig) {
     return createCollectionsByYear(POSTS(collectionAPI));
   });
 
+  // Set up collections for projects
   const PROJECTS = (collectionAPI) => {
     return collectionAPI.getFilteredByGlob("./src/projects/*/*.md");
   };

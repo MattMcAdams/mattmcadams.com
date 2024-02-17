@@ -33,26 +33,6 @@ for the fantastic documentation and learning materials I relied on to make
 this website possible. You all are the true heros.
 
 ---------------------------------------
-### TECHNOLOGY COLOPHON
----------------------------------------
-
-USED TO WRITE
-- Nunjucks
-- CSS
-- Markdown
-- JavaScript
-
-USED TO BUILD
-- VS Code
-- 11ty
-
-USED TO HOST
-- Hover
-- GitHub
-- Google Cloud Services
-- Netlify
-
----------------------------------------
 ### MADE WITH LOVE
 ---------------------------------------
 
