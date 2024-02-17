@@ -156,3 +156,10 @@ h3[id]:hover .direct-link {
 .project-list a:hover img {
   transform: scale(1.05);
 }
+
+.sketch-list img {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0;
+  object-fit: cover;
+  width: 100%;
+}

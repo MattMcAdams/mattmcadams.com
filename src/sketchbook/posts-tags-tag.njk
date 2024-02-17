@@ -1,0 +1,16 @@
+---
+layout: layouts/no-sidebar.njk
+pagination:
+  data: collections.sketchbookTags
+  size: 1
+  alias: tag
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /sketchbook/tags/{{ tag | slug }}/
+---
+<h1>Sketches Tagged “{{ tag }}”</h1>
+
+{% set collection = collections.sketchbookByTag[ tag ] %}
+{% include "sketchlist.njk" %}
+
+<p>See <a href="{{ '/sketchbook/tags/' | url }}">all sketchbook tags</a>.</p>

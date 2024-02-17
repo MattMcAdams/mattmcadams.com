@@ -2,8 +2,8 @@
 <ul reversed class="project-list grid">
 {% for project in collection | reverse %}
 
-  <li class="postlist-item{% if project.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ project.url | url }}" class="postlist-link">
+  <li class="project-list_item{% if project.url == url %} project-list_item-active{% endif %}">
+    <a href="{{ project.url | url }}" class="project-list_link">
       <img src="{{ project.data.thumbnail }}" alt="{{ project.data.title }}">
     </a>
   </li>

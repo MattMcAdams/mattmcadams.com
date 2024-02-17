@@ -1,0 +1,15 @@
+---
+layout: layouts/no-sidebar.njk
+pagination:
+  data: collections.sketchbookYears
+  size: 1
+  alias: year
+eleventyComputed:
+  title: {{ year }}
+permalink: /sketchbook/{{ year }}/
+---
+
+<h1>{{ year }}</h1>
+
+{% set collection = collections.sketchbookByYear[year] %}
+{% include "sketchlist.njk" %}

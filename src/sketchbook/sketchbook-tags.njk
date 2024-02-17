@@ -1,0 +1,13 @@
+---
+permalink: /sketchbook/tags/
+layout: layouts/no-sidebar.njk
+title: Sketchbook Tags
+---
+<h1>Sketchbook Tags</h1>
+
+<ul>
+{% for tag in collections.sketchbookTags %}
+  {% set tagUrl %}/sketchbook/tags/{{ tag | slug }}/{% endset %}
+  <li><a href="{{ tagUrl | url }}">#{{ tag }}</a></li>
+{% endfor %}
+</ul>

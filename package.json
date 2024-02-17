@@ -23,9 +23,8 @@
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "upload": "gsutil rsync -r src/_static/google gs://mattmcadams.com/",
     "download": "gcloud storage cp -r gs://mattmcadams.com/* src/_static/images/",
-    "upload-new": "gcloud storage cp -r src/_static/images/* gs://mattmcadams.com/"
+    "upload": "gcloud storage cp -r src/_static/images/* gs://mattmcadams.com/"
   },
   "homepage": "https://github.com/mattmcadams/website",
   "devDependencies": {
@@ -34,7 +33,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
     "luxon": "^2.5.2",
     "markdown-it": "^12.3.2",
-    "markdown-it-anchor": "^7.1.0",
-    "markdown-it-attribution": "^0.1.4"
+    "markdown-it-anchor": "^7.1.0"
   }
 }

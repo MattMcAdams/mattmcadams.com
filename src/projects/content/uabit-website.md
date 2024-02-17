@@ -2,7 +2,7 @@
 title: UABIT Website
 date: 2020-03-01
 
-tags: ['client-work']
+tags: ['client work']
 description: "In my third year as UAB IT's web developer, I had the great opportunity to the design and structure of the IT website."
 
 thumbnail: /images/projects/uabit-website/640/web-pages.jpg

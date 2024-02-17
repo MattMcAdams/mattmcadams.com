@@ -156,6 +156,31 @@ module.exports = function (eleventyConfig) {
     return getTagList(PROJECTS(collectionAPI));
   });
 
+  // Setup collections for sketchbook
+  const SKETCHBOOK = (collectionAPI) => {
+    return collectionAPI.getFilteredByGlob("./src/sketchbook/*/*.md");
+  };
+  // collections.sketchbook => Returns list of all sketches
+  eleventyConfig.addCollection("sketchbook", function (collectionAPI) {
+    return SKETCHBOOK(collectionAPI);
+  });
+  // collections.sketchbookByTag[tag] => Returns list of all sketches that match tag-name
+  eleventyConfig.addCollection("sketchbookByTag", function (collectionAPI) {
+    return createCollectionsByTag(SKETCHBOOK(collectionAPI));
+  });
+  // collections.sketchbookTags => Returns list of all tags
+  eleventyConfig.addCollection("sketchbookTags", function (collectionAPI) {
+    return getTagList(SKETCHBOOK(collectionAPI));
+  });
+  // Create a collection for sketchbook years (required for the generation of archive pages)
+  eleventyConfig.addCollection("sketchbookYears", function (collectionAPI) {
+    return getYearList(SKETCHBOOK(collectionAPI));
+  });
+  // Create a collection for sketches by year
+  eleventyConfig.addCollection("sketchbookByYear", function (collectionAPI) {
+    return createCollectionsByYear(SKETCHBOOK(collectionAPI));
+  });
+
   /* ==================================================================
   Enable static passthrough
   ================================================================== */

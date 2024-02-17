@@ -2,7 +2,7 @@
 title: Minerva Web Framework
 date: 2023-11-19
 
-tags: ['client-work']
+tags: ['client work']
 description: "Minerva is the third iteration of the University of Alabama's web framework and is used to build the institutional Wordpress theme among other enterprise applications."
 
 thumbnail: /images/projects/minerva/640/wireframes.jpg

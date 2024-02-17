@@ -2,7 +2,7 @@
 title: UABIT Annual Report
 date: 2018-12-15
 
-tags: ['client-work']
+tags: ['client work']
 description: "2018 was a great year for the University of Alabama at Birmingham’s Department of Information Technology and we wanted to create a website to showcase the team’s efforts and achievements throughout the year."
 
 thumbnail: /images/projects/annual-report-2018/640/ITAR2018-cards.jpg

@@ -1,0 +1,12 @@
+{# Required argument: collection | array of sketchbook objects #}
+<ul reversed class="sketch-list grid">
+{% for sketch in collection | reverse %}
+
+  <li class="sketch-list_item{% if sketch.url == url %} sketch-list_item-active{% endif %}">
+    <a href="{{ sketch.url | url }}" class="sketch-list_link">
+      <img src="{{ sketch.data.thumbnail }}" alt="{{ sketch.data.title }}">
+    </a>
+  </li>
+
+{% endfor %}
+</ul>

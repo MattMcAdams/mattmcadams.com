@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+permalink: /sketchbook/
+title: Sketchbook
+---
+<div id="main" class="has-sidebar">
+  <div class="sidebar">
+    <h3>Filter by Tag</h3>
+    <ul class="tag-list">
+      {% for tag in collections.sketchbookTags %}
+      {% set tagUrl %}/sketchbook/tags/{{ tag | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.sketchbookByTag[tag] | length }})</span></li>
+      {% endfor %}
+    </ul>
+
+    <h3>Archive</h3>
+    <ul class="year-list">
+      {% for year in collections.sketchbookYears %}
+      {% set tagUrl %}/sketchbook/{{ year | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ year }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+    <main class="content">
+      <div>
+        <h1>Sketchbook</h1>
+        <p>This is the space I use to show one-off concepts, sketches, doodles, and other minor works.</p>
+
+        {% set collection = collections.sketchbook %}
+        {% include "sketchlist.njk" %}
+      </div>
+    </main>
+  </div>
+</div>
