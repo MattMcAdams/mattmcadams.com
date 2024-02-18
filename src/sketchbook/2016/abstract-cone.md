@@ -2,7 +2,7 @@
 title: Abstract cone
 date: 2016-01-05
 
-tags: ['analog', 'black and white']
+tags: ['digital', 'black and white']
 description: "A cone surrounded by fragmented lines and shapes."
 
 thumbnail: /images/sketchbook/2016/640/abstract-cone.jpg

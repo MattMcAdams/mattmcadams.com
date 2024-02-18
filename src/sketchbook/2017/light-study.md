@@ -2,7 +2,7 @@
 title: Light study
 date: 2017-08-30
 
-tags: ['analog', 'black and white']
+tags: ['digital', 'black and white']
 description: "A cone, sphere, and cube lit from various angles."
 
 thumbnail: /images/sketchbook/2017/640/light-study.jpg

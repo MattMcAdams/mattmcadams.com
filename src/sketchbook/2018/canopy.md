@@ -2,7 +2,7 @@
 title: Canopy
 date: 2018-08-22
 
-tags: ['analog', 'black and white']
+tags: ['digital', 'black and white']
 description: "Leaves and branches obscure the sun on the horizon."
 
 thumbnail: /images/sketchbook/2018/640/canopy.jpg

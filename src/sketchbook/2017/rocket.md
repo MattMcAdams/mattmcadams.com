@@ -2,7 +2,7 @@
 title: Rocket
 date: 2017-06-03
 
-tags: ['analog', 'black and white']
+tags: ['digital', 'black and white']
 description: "A rocket zips past mountain ranges and orbits a planet."
 
 thumbnail: /images/sketchbook/2017/640/rocket.jpg
