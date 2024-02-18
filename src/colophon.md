@@ -4,9 +4,15 @@ layout: layouts/no-sidebar.njk
 
 # Colophon
 
-This site is a small static site built with [11ty](https://www.11ty.dev/). The pages are written in either markdown or nunjucks. I write all of my content in [iA Writer](https://ia.net/writer), and develop this website with [VS Code](https://code.visualstudio.com/). For hosting, I use [Netlify](https://www.netlify.com/) and [Google Cloud Storage](https://cloud.google.com/storage). My domains are all registered through [Hover](https://www.hover.com/), but I generally use Netlify's DNS. This website's code is hosted on [GitHub](https://github.com/MattMcAdams/mattmcadams.com).</p>
+This site is a small static site built with [11ty](https://www.11ty.dev/). The pages are written in either markdown or nunjucks. I write all of my content in [iA Writer](https://ia.net/writer), and develop this website with [VS Code](https://code.visualstudio.com/).
 
-Other tools I use as part of my daily workflow are:
+This website's code is stored on [GitHub](https://github.com/MattMcAdams/mattmcadams.com)and hosted by [Netlify](https://www.netlify.com/). Images are optimized with [Squoosh](https://squoosh.app/) and hosted on [Google Cloud Storage](https://cloud.google.com/storage) for all images.
+
+My domains are all registered through [Hover](https://www.hover.com/), but I generally use Netlify's DNS.
+
+## Other tools
+
+These weren't strictly used for the creation of this website, but I do use these quite a lot and they remain important to my work.
 
 - [Bruno](https://www.usebruno.com/)
 - [Bear](https://bear.app/)
