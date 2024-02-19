@@ -1,0 +1,20 @@
+---
+layout: layouts/no-sidebar.njk
+permalink: /log/
+title: Logs
+---
+<h1>Adventure Log</h1>
+
+These are a collection of personal logs where I chronical my day to day life, generally on a weekly basis. For my long form, more formal thoughts on a topic, see my <a href="/posts">posts</a>.
+
+{% for year in collections.logYears %}
+  <h2>{{ year }}</h2>
+  {% set collection = collections.logsByYear[year] %}
+    <ol class="log-entry_list">
+      {% for log in collection  | reverse %}
+        <li>
+          <a href="{{ log.url }}">{{ log.date | readableDate }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+{% endfor %}

@@ -1,0 +1,24 @@
+---
+layout: layouts/no-sidebar.njk
+---
+
+<p><a href="{{ '/log/' | url }}">← back to adventure log</a></p>
+
+<h1>{{ title }}</h1>
+
+<div class="post-content">
+{{ content | safe }}
+</div>
+
+{% if prev or next %}
+  <div class="journal-pagination">
+    {% if prev %}
+      <a href="{{ prev }}">← previous</a>
+      {% else %}
+      <span>&nbsp;</span>
+    {% endif %}
+    {% if next %}
+      <a href="{{ next }}">next →</a>
+    {% endif %}
+  </div>
+{% endif %}

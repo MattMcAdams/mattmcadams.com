@@ -3,8 +3,10 @@ Disallow: /admin
 Disallow: /cms
 Disallow: /images/
 Disallow: /cdn/
+Disallow: /log/
 Noindex: /admin
 Noindex: /cms
 Noindex: /success
 Noindex: /images/
 Noindex: /cdn/
+Noindex: /log/

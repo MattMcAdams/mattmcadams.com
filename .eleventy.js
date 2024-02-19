@@ -181,6 +181,23 @@ module.exports = function (eleventyConfig) {
     return createCollectionsByYear(SKETCHBOOK(collectionAPI));
   });
 
+  // Setup collection for logs
+  const LOGS = (collectionAPI) => {
+    return collectionAPI.getFilteredByGlob("./src/log/*/*.md");
+  };
+  // collections.logs => Returns list of all journal entries
+  eleventyConfig.addCollection("logs", function (collectionAPI) {
+    return LOGS(collectionAPI);
+  });
+  // Create a collection for journal years (required for the generation of archive pages)
+  eleventyConfig.addCollection("logYears", function (collectionAPI) {
+    return getYearList(LOGS(collectionAPI));
+  });
+  // Create a collection for log entries by year
+  eleventyConfig.addCollection("logsByYear", function (collectionAPI) {
+    return createCollectionsByYear(LOGS(collectionAPI));
+  });
+
   /* ==================================================================
   Enable static passthrough
   ================================================================== */

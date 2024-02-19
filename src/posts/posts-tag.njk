@@ -5,10 +5,10 @@ pagination:
   size: 1
   alias: tag
 eleventyComputed:
-  title: Tagged “{{ tag }}”
+  title: 'Posts tagged "{{ tag }}"'
 permalink: /posts/tags/{{ tag | slug }}/
 ---
-<h1>Posts Tagged “{{ tag }}”</h1>
+<h1>Posts Tagged "{{ tag }}"</h1>
 
 {% set collection = collections.postsByTag[ tag ] %}
 {% include "postlist.njk" %}

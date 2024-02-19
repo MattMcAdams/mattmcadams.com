@@ -163,3 +163,8 @@ h3[id]:hover .direct-link {
   object-fit: cover;
   width: 100%;
 }
+
+.journal-pagination {
+  display: flex;
+  justify-content: space-between;
+}
