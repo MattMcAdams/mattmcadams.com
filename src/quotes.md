@@ -19,7 +19,7 @@ This is a collection of quotes I've collected over the years that I think about 
 ---
 
 "Elegance is articulating the value of absence."
-*&mdash; Devine Lu Linvega*
+*&mdash; Anonymous*
 
 ---
 
