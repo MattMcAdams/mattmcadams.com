@@ -1,10 +1,16 @@
 ---
 layout: layouts/no-sidebar.njk
+description: This is a collection of quotes I've collected over the years that I think about occasionally, in no particular order.
 ---
 
 # Quotes
 
 This is a collection of quotes I've collected over the years that I think about occasionally, in no particular order.
+
+---
+
+"I think we'd all feel much better if we instead saw bad code as a form of contemporary art. Unused functions? Surrealism. Mixing tabs and spaces? Postmodern. My code isn't spaghetti, it's avant-garde"
+*&mdash; Kat Maddox*
 
 ---
 

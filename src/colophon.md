@@ -1,5 +1,6 @@
 ---
 layout: layouts/no-sidebar.njk
+description: A list of the tools and technologies I use to build and maintain this site.
 ---
 
 # Colophon

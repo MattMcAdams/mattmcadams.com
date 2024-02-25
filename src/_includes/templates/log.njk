@@ -10,8 +10,8 @@ layout: layouts/no-sidebar.njk
 {{ content | safe }}
 </div>
 
-{% if prev or next %}
-  <div class="journal-pagination">
+{# {% if prev or next %}
+  <div class="log-pagination">
     {% if prev %}
       <a href="{{ prev }}">← previous</a>
       {% else %}
@@ -19,6 +19,27 @@ layout: layouts/no-sidebar.njk
     {% endif %}
     {% if next %}
       <a href="{{ next }}">next →</a>
+    {% endif %}
+  </div>
+{% endif %} #}
+
+{# {% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Next Page</a>
+{% endif %} #}
+
+{% set previousPost = collections.logs | getPreviousCollectionItem %}
+{% set nextPost = collections.logs | getNextCollectionItem %}
+{% if previousPost or nextPost %}
+  <div class="log-pagination">
+    {% if previousPost %}
+      <a href="{{ previousPost.url }}">← Previous</a>
+    {% endif %}
+    <span>&nbsp;</span>
+    {% if nextPost %}
+      <a href="{{ nextPost.url }}">Next →</a>
     {% endif %}
   </div>
 {% endif %}

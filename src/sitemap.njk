@@ -1,0 +1,85 @@
+---
+layout: layouts/no-sidebar.njk
+eleventyExcludeFromCollections: true
+---
+
+<h1>Are ya lost?</h1>
+<p>Let me help you out. Here are some links to get you back on track</p>
+
+<h2>Home</h2>
+<p><a href="/"><code>mattmcadams.com</code></a></p>
+<p>This is the front page. If you want to learn more about me, this is probably the place to go. It's also a great starting point for exploration.</p>
+
+<h2>Adventure Log</h2>
+<p><a href="/log/"><code>/log</code></a></p>
+{%- set pageQuery = collections.all | find("/log/") -%}
+<p>{{ pageQuery.data.description }}</p>
+{%- for log in collections.logs -%}
+  {%- if loop.last -%}
+    <p>Latest entry: <a href="{{ log.url }}">{{ log.data.title }}</a></p>
+  {%- endif -%}
+{%- endfor -%}
+
+<h2>Bookshelf</h2>
+<p><a href="/bookshelf/"><code>/bookshelf</code></a></p>
+{%- set pageQuery = collections.all | find("/bookshelf/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
+<h2>Colophon</h2>
+<p><a href="/colophon/"><code>/colophon</code></a></p>
+{%- set pageQuery = collections.all | find("/colophon/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
+<h2>Curriculum Vitae</h2>
+<p><a href="/cv/"><code>/cv</code></a></p>
+{%- set pageQuery = collections.all | find("/cv/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
+{# <h2>Lists</h2>
+<p><a href="/lists/"><code>/lists</code></a></p>
+<p>A collection of lists I've made, including <a href="/lists/bookshelf">books</a>, <a href="/lists/anime">anime</a>, and <a href="/lists/quotes">quotes</a>.</p> #}
+
+<h2>Now</h2>
+<p><a href="/now/"><code>/now</code></a></p>
+{%- set pageQuery = collections.all | find("/now/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
+<h2>Objects</h2>
+<p><a href="/objects/"><code>/objects</code></a></p>
+{%- set pageQuery = collections.all | find("/objects/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
+<h2>Posts</h2>
+<p><a href="/posts/"><code>/posts</code></a></p>
+{%- set pageQuery = collections.all | find("/posts/") -%}
+<p>{{ pageQuery.data.description }} You can subscrible to this list via <a href="/feed.xml">XML RSS</a> or <a href="/feed.json">JSON RSS</a>.</p>
+{%- for entry in collections.posts -%}
+  {%- if loop.last -%}
+    <p>Latest entry: <a href="{{ entry.url }}">{{ entry.data.title }}</a></p>
+  {%- endif -%}
+{%- endfor -%}
+
+<h2>Projects</h2>
+<p><a href="/projects/"><code>/projects</code></a></p>
+{%- set pageQuery = collections.all | find("/projects/") -%}
+<p>{{ pageQuery.data.description }}</p>
+{%- for entry in collections.projects -%}
+  {%- if loop.last -%}
+    <p>Latest entry: <a href="{{ entry.url }}">{{ entry.data.title }}</a></p>
+  {%- endif -%}
+{%- endfor -%}
+
+<h2>Quotes</h2>
+<p><a href="/quotes/"><code>/quotes</code></a></p>
+{%- set pageQuery = collections.all | find("/quotes/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
+<h2>Sketchbook</h2>
+<p><a href="/sketchbook/"><code>/sketchbook</code></a></p>
+{%- set pageQuery = collections.all | find("/sketchbook/") -%}
+<p>{{ pageQuery.data.description }}</p>
+{%- for entry in collections.sketchbook -%}
+  {%- if loop.last -%}
+    <p>Latest entry: <a href="{{ entry.url }}">{{ entry.data.title }}</a></p>
+  {%- endif -%}
+{%- endfor -%}

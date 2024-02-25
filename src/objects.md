@@ -1,5 +1,6 @@
 ---
 layout: layouts/no-sidebar.njk
+description: My favorite items are the things I carry and rely on every day. This is a list of those items.
 ---
 
 # Objects

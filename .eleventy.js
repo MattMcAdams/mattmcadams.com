@@ -73,6 +73,12 @@ module.exports = function (eleventyConfig) {
     });
     return [...years];
   }
+  // Find collection item by URL
+  // {%- set page1 = collections.projects | find("/slug/") -%}
+  // <h2>{{ page1.data.title }}</h2>
+  eleventyConfig.addFilter("find", function find(collection = [], slug = "") {
+    return collection.find((post) => post.url === slug);
+  });
   // Return an object with arrays of posts by tag from the provided collection
   function createCollectionsByTag(collection) {
     // set the result as an object
@@ -196,6 +202,20 @@ module.exports = function (eleventyConfig) {
   // Create a collection for log entries by year
   eleventyConfig.addCollection("logsByYear", function (collectionAPI) {
     return createCollectionsByYear(LOGS(collectionAPI));
+  });
+
+  // Setup collection for all content
+  const ALL_CONTENT = (collectionAPI) => {
+    return [
+      ...POSTS(collectionAPI),
+      ...PROJECTS(collectionAPI),
+      ...SKETCHBOOK(collectionAPI),
+      ...LOGS(collectionAPI),
+    ];
+  };
+  // collections.allContent => Returns list of all content
+  eleventyConfig.addCollection("allContent", function (collectionAPI) {
+    return ALL_CONTENT(collectionAPI);
   });
 
   /* ==================================================================

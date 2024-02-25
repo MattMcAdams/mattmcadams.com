@@ -1,5 +1,6 @@
 ---
 layout: layouts/no-sidebar.njk
+description: A periodically updated, high level overview of what I'm currently doing, experimenting with, learning, reading, or am otherwise interested in.
 ---
 
 # Now
@@ -14,15 +15,15 @@ I am currently working as the Associate Director of Web Strategy at The Universi
 
 Thanks to work, I'm learning a lot more about WordPress and the Customizer. The majority of my development work for UA has been in the design system, but I've wanted to get more familiar with how our WordPress theme works too.
 
-Outside of work, I'm learning more about [Open Data](https://0data.app/) and how I can implement it in my own apps.
+Outside of work, I'm learning more about [RemoteStorage](https://github.com/remotestorage/remotestorage.js) and how I can implement it in my own apps.
 
 ## Reading
 
-I'm currently reading *I'm OK - You're OK* by Thomas A. Harris. It's a book about Transactional Analysis, which is a theory of personality and a systematic psychotherapy for personal growth and personal change.
+I'm currently reading *I hate you, don't leave me*. It is a book about Borderline Personality Disorder, which is a condition of one of my loved ones.
 
 ## Down Time
 
-In my down time, I'm watching *Spy x Family* and playing with my [color palette generator](https://color.mattmcadams.com), Colorful.
+In my down time, I'm watching *Spy x Family* and playing with my [color palette generator](https://colorscale.app), ColorScale.
 
 ## Interests
 

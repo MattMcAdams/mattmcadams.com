@@ -1,5 +1,6 @@
 ---
 layout: layouts/no-sidebar.njk
+description: A directory of what I've read and recommend others read, ordered by the year I read them.
 ---
 
 # Bookshelf
@@ -10,7 +11,7 @@ If you're interested in this, you may also like my [quotes page](/quotes) which 
 
 ## 2024
 
-- *I'm Ok &mdash; You're Ok* &mdash; Thomas A Harris
+- *I'm Ok - You're Ok* &mdash; Thomas A Harris
 - *The Creative Act: A Way of Bring* &mdash; Rick Rubin
 
 ## Earlier

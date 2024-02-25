@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 permalink: /sketchbook/
 title: Sketchbook
+description: This is the space I use to show one-off concepts, sketches, doodles, and other minor works.
 ---
 <div id="main" class="has-sidebar">
   <div class="sidebar">
@@ -24,8 +25,8 @@ title: Sketchbook
   </div>
     <main class="content">
       <div>
-        <h1>Sketchbook</h1>
-        <p>This is the space I use to show one-off concepts, sketches, doodles, and other minor works.</p>
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
 
         {% set collection = collections.sketchbook %}
         {% include "sketchlist.njk" %}

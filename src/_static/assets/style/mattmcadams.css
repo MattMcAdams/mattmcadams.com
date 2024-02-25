@@ -166,7 +166,7 @@ h3[id]:hover .direct-link {
   width: 100%;
 }
 
-.journal-pagination {
+.log-pagination {
   display: flex;
   justify-content: space-between;
 }
