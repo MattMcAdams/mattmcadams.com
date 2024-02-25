@@ -83,3 +83,11 @@ eleventyExcludeFromCollections: true
     <p>Latest entry: <a href="{{ entry.url }}">{{ entry.data.title }}</a></p>
   {%- endif -%}
 {%- endfor -%}
+
+<h2>Social Media</h2>
+<p>Other than this humble website, you can find me on the following platforms:</p>
+<ul>
+  {%- for platform in socialMedia -%}
+    <li><a href="{{ platform.url }}">{{ platform.name }}</a></li>
+  {%- endfor -%}
+</ul>

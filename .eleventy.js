@@ -215,7 +215,7 @@ module.exports = function (eleventyConfig) {
   };
   // collections.allContent => Returns list of all content
   eleventyConfig.addCollection("allContent", function (collectionAPI) {
-    return ALL_CONTENT(collectionAPI);
+    return collectionAPI.getFilteredByGlob(["./src/sketchbook/*/*.md", "./src/posts/*/*.md", "./src/projects/*/*.md", "./src/log/*/*.md"]);
   });
 
   /* ==================================================================
