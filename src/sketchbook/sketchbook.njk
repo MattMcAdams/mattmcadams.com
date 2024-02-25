@@ -6,7 +6,12 @@ description: This is the space I use to show one-off concepts, sketches, doodles
 ---
 <div id="main" class="has-sidebar">
   <div class="sidebar">
-    <h3 style="margin-top: 0;">Filter by Tag</h3>
+    <p>
+      <a href={{metadata.feed.sketchbook.xml.path}}>Subscribe via XML-RSS</a><br>
+      <a href={{metadata.feed.sketchbook.json.path}}>Subscribe via JSON-RSS</a>
+      <!--<a href="#">Subscribe via Email</a>-->
+    </p>
+    <h3>Filter by Tag</h3>
     <ul class="tag-list">
       {% for tag in collections.sketchbookTags %}
       {% set tagUrl %}/sketchbook/tags/{{ tag | slug }}/{% endset %}

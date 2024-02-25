@@ -8,7 +8,13 @@ description: A collection of my creative work including design, development, cli
 <div id="main" class="has-sidebar">
   <div class="sidebar">
 
-    <h3 style="margin-top: 0;">Filter by Tag</h3>
+    <p>
+      <a href={{metadata.feed.projects.xml.path}}>Subscribe via XML-RSS</a><br>
+      <a href={{metadata.feed.projects.json.path}}>Subscribe via JSON-RSS</a>
+      <!--<a href="#">Subscribe via Email</a>-->
+    </p>
+
+    <h3>Filter by Tag</h3>
     <ul class="tag-list">
       {% for tag in collections.projectTags %}
       {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
