@@ -1,0 +1,33 @@
+---
+permalink: "/feed/posts.json"
+eleventyExcludeFromCollections: true
+feedURL: "/feed/posts.json"
+---
+{%- set post = collections.all | find('/posts/') -%}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ metadata.title }}",
+  "language": "{{ metadata.language }}",
+  "home_page_url": "{{ metadata.url }}",
+  "feed_url": "{{ feedURL }}",
+  "description": "{{ post.description }}",
+  "author": {
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "items": [
+    {%- for entry in collections.posts | reverse %}
+    {%- set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(metadata.url) }}{% endset -%}
+    {
+      "id": "{{ absoluteEntryUrl }}",
+      "url": "{{ absoluteEntryUrl }}",
+      "title": "{{ entry.data.title }}",
+      "content_html": {% if entry.templateContent %}{{ entry.templateContent | dump | safe }}{% else %}""{% endif %},
+      "date_published": "{{ entry.date | rssDate }}"
+    }
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+    {%- endfor %}
+  ]
+}
