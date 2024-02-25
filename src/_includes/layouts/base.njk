@@ -32,8 +32,15 @@
     <link rel="stylesheet" href="{{ '/assets/style/prism-theme.css' | url }}">
 
     <!-- FEEDS -->
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.feed.default.xml.path | url }}" type="application/atom+xml" title="{{ metadata.feed.default.title }} (XML)">
+    <link rel="alternate" href="{{ metadata.feed.default.json.path | url }}" type="application/json" title="{{ metadata.feed.default.title }} (JSON)">
+    <link rel="alternate" href="{{ metadata.feed.posts.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.posts.title }} (XML)">
+    <link rel="alternate" href="{{ metadata.feed.posts.json.path | url }}" type="application/json" title="{{ metadata.feed.posts.title }} (JSON)">
+    <link rel="alternate" href="{{ metadata.feed.projects.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.projects.title }} (XML)">
+    <link rel="alternate" href="{{ metadata.feed.projects.json.path | url }}" type="application/json" title="{{ metadata.feed.projects.title }} (JSON)">
+    <link rel="alternate" href="{{ metadata.feed.sketchbook.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.sketchbook.title }} (XML)">
+    <link rel="alternate" href="{{ metadata.feed.sketchbook.json.path | url }}" type="application/json" title="{{ metadata.feed.sketchbook.title }} (JSON)">
+    <link rel="alternate" href="{{ metadata.feed.log.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.log.title }} (XML)">
   </head>
   <body>
     <div id="app" class="page">
