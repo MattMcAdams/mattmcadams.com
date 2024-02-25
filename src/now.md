@@ -4,7 +4,7 @@ layout: layouts/no-sidebar.njk
 
 # Now
 
-A periodically updated, high level overview of what I'm currently doing, experimenting with, learning, reading, or am otherwise interested in.
+A periodically updated, high level overview of what I'm currently doing, experimenting with, learning, reading, or am otherwise interested in. For my weekly check-ins, take a look through my [adventure log](/log).
 
 ## Occupation
 

@@ -2,7 +2,7 @@
 title: Abyss
 date: 2018-06-15
 
-tags: ['analog', 'black and white']
+tags: ['digital', 'black and white']
 description: "Tentacles rise out of the murky depths and reach out to a glowing orb."
 
 thumbnail: /images/sketchbook/2018/640/abyss.jpg
