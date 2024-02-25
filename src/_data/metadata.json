@@ -4,19 +4,75 @@
   "language": "en",
   "description": "I'm a creative writing about my interests in web design and development.",
   "thumbnail": "https://www.mattmcadams.com/images/assets/screenshot.png",
-  "feed": {
-    "subtitle": "I'm a creative writing about my interests in web design and development.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://mattmcadams.com/"
-  },
-  "jsonfeed": {
-    "path": "/feed/feed.json",
-    "url": "https://mattmcadams.com/feed/feed.json"
-  },
   "author": {
     "name": "Matthew McAdams",
     "email": "mattmcadams@outlook.com",
     "url": "https://mattmcadams.com/"
+  },
+  "feed": {
+    "default": {
+      "title": "Matt Mcadams",
+      "subtitle": "",
+      "description": "",
+      "id": "https://mattmcadams.com/",
+      "json": {
+        "filename": "feed.json",
+        "path": "/feed/feed.json",
+        "url": "https://mattmcadams.com/feed/feed.json"
+      },
+      "xml": {
+        "filename": "feed.xml",
+        "path": "/feed/feed.xml",
+        "url": "https://mattmcadams.com/feed/feed.xml"
+      }
+    },
+    "posts": {
+      "title": "Matt Mcadams - Posts",
+      "subtitle": "",
+      "description": "",
+      "id": "https://mattmcadams.com/posts/",
+      "json": {
+        "filename": "posts.json",
+        "path": "/feed/posts.json",
+        "url": "https://mattmcadams.com/feed/posts.json"
+      },
+      "xml": {
+        "filename": "posts.xml",
+        "path": "/feed/posts.xml",
+        "url": "https://mattmcadams.com/feed/posts.xml"
+      }
+    },
+    "projects": {
+      "title": "Matt Mcadams - Projects",
+      "subtitle": "",
+      "description": "",
+      "id": "https://mattmcadams.com/projects/",
+      "json": {
+        "filename": "projects.json",
+        "path": "/feed/projects.json",
+        "url": "https://mattmcadams.com/feed/projects.json"
+      },
+      "xml": {
+        "filename": "projects.xml",
+        "path": "/feed/projects.xml",
+        "url": "https://mattmcadams.com/feed/projects.xml"
+      }
+    },
+    "sketchbook": {
+      "title": "Matt Mcadams - Sketchbook",
+      "subtitle": "",
+      "description": "",
+      "id": "https://mattmcadams.com/sketchbook/",
+      "json": {
+        "filename": "sketchbook.json",
+        "path": "/feed/sketchbook.json",
+        "url": "https://mattmcadams.com/feed/sketchbook.json"
+      },
+      "xml": {
+        "filename": "sketchbook.xml",
+        "path": "/feed/sketchbook.xml",
+        "url": "https://mattmcadams.com/feed/sketchbook.xml"
+      }
+    }
   }
 }

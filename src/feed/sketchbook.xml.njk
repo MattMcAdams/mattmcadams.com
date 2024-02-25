@@ -1,22 +1,22 @@
 ---
 # Metadata comes from _data/metadata.json
-permalink: "{{ metadata.feed.default.xml.path }}"
+permalink: "{{ metadata.feed.sketchbook.xml.path }}"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ metadata.feed.default.title }}</title>
-	<subtitle>{{ metadata.feed.default.subtitle }}</subtitle>
-	{% set absoluteUrl %}{{ metadata.feed.default.xml.path | url | absoluteUrl(metadata.url) }}{% endset %}
+	<title>{{ metadata.feed.sketchbook.title }}</title>
+	<subtitle>{{ metadata.feed.sketchbook.subtitle }}</subtitle>
+	{% set absoluteUrl %}{{ metadata.feed.sketchbook.xml.path | url | absoluteUrl(metadata.url) }}{% endset %}
 	<link href="{{ absoluteUrl }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.allContent | rssLastUpdatedDate }}</updated>
-	<id>{{ metadata.feed.default.id }}</id>
+	<updated>{{ collections.sketchbook | rssLastUpdatedDate }}</updated>
+	<id>{{ metadata.feed.sketchbook.id }}</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
 	</author>
-	{%- for entry in collections.allContent | reverse %}
+	{%- for entry in collections.sketchbook | reverse %}
 	{% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(metadata.url) }}{% endset %}
 	<entry>
 		<title>{{ entry.data.title }}</title>

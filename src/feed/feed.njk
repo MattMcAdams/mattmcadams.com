@@ -1,0 +1,36 @@
+---
+layout: layouts/no-sidebar.njk
+title: Feeds
+description: A list of all RSS feeds available from this website.
+---
+
+<h1>Feeds</h1>
+
+<p>Here's a list of all of the feeds available from this website. Every feed is available in XML and JSON format.</p>
+
+<h2>Everything</h2>
+<a href={{metadata.feed.default.xml.path}}>XML</a> | <a href={{metadata.feed.default.json.path}}>JSON</a>
+<p>A combined feed with everything from the site.</p>
+
+<h2>Posts</h2>
+<a href={{metadata.feed.posts.xml.path}}>XML</a> | <a href={{metadata.feed.posts.json.path}}>JSON</a>
+<p>A feed with all of the long form posts from the <a href="/posts">Posts</a> section.</p>
+
+<h2>Projects</h2>
+<a href={{metadata.feed.projects.xml.path}}>XML</a> | <a href={{metadata.feed.projects.json.path}}>JSON</a>
+<p>A feed with all of my published <a href="/projects">Projects</a>.</p>
+
+<h2>Sketchbook</h2>
+<a href={{metadata.feed.sketchbook.xml.path}}>XML</a> | <a href={{metadata.feed.sketchbook.json.path}}>JSON</a>
+<p>A feed with all of the sketches from my <a href="/sketchbook">Sketchbook</a>.</p>
+
+<h2>Log</h2>
+<a href={{metadata.feed.log.xml.path}}>XML</a> | <a href={{metadata.feed.log.json.path}}>JSON</a>
+<p>A feed with all of the short form posts from my <a href="/log">Adventure Log</a>.</p>
+
+{#
+- [Everything XML](/feed/feed.xml) | [Everything JSON](/feed/feed.json)
+- [Posts XML](/feed/posts.xml) | [Posts JSON](/feed/posts.json)
+- [Projects XML](/feed/projects.xml) | [Projects JSON](/feed/projects.json)
+- [Sketchbook XML](/feed/sketchbook.xml) | [Sketchbook.json](/feed/sketchbook.json)
+- [Log XML](/feed/log.xml) | [Log JSON](/feed/log.json) #}
