@@ -24,7 +24,8 @@
     "dev": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
     "download": "gcloud storage cp -r gs://mattmcadams.com/* src/_static/images/",
-    "upload": "gcloud storage cp -r src/_static/images/* gs://mattmcadams.com/"
+    "upload": "gcloud storage cp -r src/_static/images/* gs://mattmcadams.com",
+    "upload-sketchbook": "gcloud storage cp -r src/_static/sketchbook/* gs://mattmcadams.com/sketchbook"
   },
   "homepage": "https://github.com/mattmcadams/website",
   "devDependencies": {

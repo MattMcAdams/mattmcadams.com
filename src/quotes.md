@@ -43,5 +43,5 @@ This is a collection of quotes I've collected over the years that I think about 
 
 ---
 
-"You owe your company nothing. You are the asset they need to keep not the other way around. You have to put yourself first, because your company won't."
-*&mdash; Anonymous*
+"Good design is as little design as possible. Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity."
+*&mdash; Dieter Rams*
