@@ -73,6 +73,22 @@
         "path": "/feed/sketchbook.xml",
         "url": "https://mattmcadams.com/feed/sketchbook.xml"
       }
+    },
+    "Log": {
+      "title": "Matt Mcadams - Log",
+      "subtitle": "",
+      "description": "",
+      "id": "https://mattmcadams.com/log/",
+      "json": {
+        "filename": "log.json",
+        "path": "/feed/log.json",
+        "url": "https://mattmcadams.com/feed/log.json"
+      },
+      "xml": {
+        "filename": "log.xml",
+        "path": "/feed/log.xml",
+        "url": "https://mattmcadams.com/feed/log.xml"
+      }
     }
   }
 }
