@@ -51,11 +51,20 @@ header .level.container {
   margin: 0;
 } */
 
-footer {
-  padding: 1em;
-}
 footer p {
+  padding: 1em;
   margin-bottom: 0;
+}
+
+footer a[href] {
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a[href]:hover,
+footer a[href]:focus {
+  text-decoration: underline;
 }
 
 .sidebar ul.tag-list {
@@ -64,6 +73,7 @@ footer p {
   overflow-x: hidden;
   list-style: none;
 }
+
 .sidebar ul.tag-list li:before {
   float: left;
   width: 0;
@@ -74,10 +84,12 @@ footer p {
  ". . . . . . . . . . . . . . . . . . . . "
  ". . . . . . . . . . . . . . . . . . . . ";
  }
+
 .sidebar ul.tag-list a {
   padding-right: 0.33em;
   background: var(--page-bg-color);
 }
+
 .sidebar ul.tag-list span {
   float: right;
   padding-left: 0.33em;
