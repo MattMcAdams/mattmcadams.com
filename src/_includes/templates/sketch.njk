@@ -4,8 +4,8 @@ layout: layouts/no-sidebar.njk
 
 <h1>{{ title }}</h1>
 
-<p class="sketch-meta">
-  <time class="sketch-list_date" datetime="{{ page.date | htmlDateString }}">
+<p class="post-meta">
+  <time class="postlist_date" datetime="{{ page.date | htmlDateString }}">
     {{ page.date | readableDate }}
   </time>
 
@@ -13,7 +13,7 @@ layout: layouts/no-sidebar.njk
     &middot;
     {% for tag in tags | filterTagList %}
       {% set tagUrl %}/sketchbook/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="sketch-tag">#{{ tag }}</a>
+      <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
     {% endfor %}
   {% endif %}
 </p>
