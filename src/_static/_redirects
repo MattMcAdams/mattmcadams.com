@@ -1,54 +1,61 @@
 # Redirects for actively maintained github projects
-/stratus                https://github.com/MattMcAdams/stratus
-/chipboard              https://github.com/MattMcAdams/chipboard
-/boilerplate            https://github.com/MattMcAdams/CSS-Boilerplate
+
+/stratus                <https://github.com/MattMcAdams/stratus>
+/chipboard              <https://github.com/MattMcAdams/chipboard>
+/boilerplate            <https://github.com/MattMcAdams/CSS-Boilerplate>
 
 # Redirects for social media
-/github                 https://github.com/MattMcAdams/
-/github/stratus         https://github.com/MattMcAdams/stratus
-/github/chipboard       https://github.com/MattMcAdams/chipboard
-/github/boilerplate     https://github.com/MattMcAdams/CSS-Boilerplate
 
-/linkedin               https://www.linkedin.com/in/mcadamsmatthew/
-/instagram              https://www.instagram.com/mattmcadams/
-/twitter                https://twitter.com/mattmakesart
-/dribbble               https://dribbble.com/mattmcadams
-/kofi                   https://ko-fi.com/F2F77H9M
-/behance                https://www.behance.net/mattmcadams
-/codepen                https://codepen.io/mattmcadams
+/github                 <https://github.com/MattMcAdams/>
+/github/stratus         <https://github.com/MattMcAdams/stratus>
+/github/chipboard       <https://github.com/MattMcAdams/chipboard>
+/github/boilerplate     <https://github.com/MattMcAdams/CSS-Boilerplate>
+
+/linkedin               <https://www.linkedin.com/in/mcadamsmatthew/>
+/instagram              <https://www.instagram.com/mattmcadams/>
+/twitter                <https://twitter.com/mattmakesart>
+/dribbble               <https://dribbble.com/mattmcadams>
+/kofi                   <https://ko-fi.com/F2F77H9M>
+/behance                <https://www.behance.net/mattmcadams>
+/codepen                <https://codepen.io/mattmcadams>
 
 # Redirects old portfolio page to new
+
 /portfolio              /projects
-/portfolio/*            /projects/:splat
+/portfolio/*/projects/:splat
 /work                   /projects
 /work/*                 /projects/:splat
 
 # Redirects old blog page to new
+
 /blog                   /posts
-/blog/*                 /posts/:splat
+/blog/*/posts/:splat
 /thoughts               /posts
 /thoughts/*             /posts/:splat
 
 # Redirect default Netlify subdomain to primary domain
-https://mattmcadams.netlify.com/* https://www.mattmcadams.com/:splat 301!
+<https://mattmcadams.netlify.com/>* <https://www.mattmcadams.com/:splat> 301
 
 # Redirect image requests to my CDN
-/images/* https://storage.googleapis.com/mattmcadams.com/:splat 200!
+
+/images/* <https://storage.googleapis.com/mattmcadams.com/:splat> 200
 
 # Redirect for donations
-/support https://donate.stripe.com/7sIeVd6E2dAbdeU5kk
-/donate https://donate.stripe.com/7sIeVd6E2dAbdeU5kk
+
+/support <https://donate.stripe.com/7sIeVd6E2dAbdeU5kk>
+/donate <https://donate.stripe.com/7sIeVd6E2dAbdeU5kk>
 
 # Redirect old post URLs to new year based URLs
-/posts/css-organization                /posts/2019/css-organization                301!
-/posts/code-comments                   /posts/2019/code-comments                   301!
-/posts/get-started-with-plausible      /posts/2020/get-started-with-plausible      301!
-/posts/approaches-to-typography        /posts/2020/approaches-to-typography        301!
-/posts/vertical-rhythm                 /posts/2020/vertical-rhythm                 301!
-/posts/typographical-scale             /posts/2020/typographical-scale             301!
-/posts/on-a-modern-grid                /posts/2020/on-a-modern-grid                301!
-/posts/making-leather-discbound-cover  /posts/2021/making-leather-discbound-cover  301!
-/posts/website-redesign-2021           /posts/2021/website-redesign-2021           301!
-/posts/custom-notebook                 /posts/2021/custom-notebook                 301!
-/posts/smart-selectors                 /posts/2021/smart-selectors                 301!
-/posts/working-with-11ty-collections   /posts/2022/working-with-11ty-collections   301!
+
+/posts/css-organization                /posts/2019/css-organization                301
+/posts/code-comments                   /posts/2019/code-comments                   301
+/posts/get-started-with-plausible      /posts/2020/get-started-with-plausible      301
+/posts/approaches-to-typography        /posts/2020/approaches-to-typography        301
+/posts/vertical-rhythm                 /posts/2020/vertical-rhythm                 301
+/posts/typographical-scale             /posts/2020/typographical-scale             301
+/posts/on-a-modern-grid                /posts/2020/on-a-modern-grid                301
+/posts/making-leather-discbound-cover  /posts/2021/making-leather-discbound-cover  301
+/posts/website-redesign-2021           /posts/2021/website-redesign-2021           301
+/posts/custom-notebook                 /posts/2021/custom-notebook                 301
+/posts/smart-selectors                 /posts/2021/smart-selectors                 301
+/posts/working-with-11ty-collections   /posts/2022/working-with-11ty-collections   301
