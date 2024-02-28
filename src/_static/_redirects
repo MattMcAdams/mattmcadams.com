@@ -39,7 +39,7 @@ https://mattmcadams.netlify.com/* https://www.mattmcadams.com/:splat 301
 
 # Redirect image requests to my CDN
 
-/images/* https://storage.googleapis.com/mattmcadams.com/:splat
+/images/* https://storage.googleapis.com/mattmcadams.com/:splat 307
 
 # Redirect for donations
 
