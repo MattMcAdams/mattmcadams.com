@@ -1,23 +1,23 @@
 # Redirects for actively maintained github projects
 
-/stratus                <https://github.com/MattMcAdams/stratus>
-/chipboard              <https://github.com/MattMcAdams/chipboard>
-/boilerplate            <https://github.com/MattMcAdams/CSS-Boilerplate>
+/stratus                https://github.com/MattMcAdams/stratus
+/chipboard              https://github.com/MattMcAdams/chipboard
+/boilerplate            https://github.com/MattMcAdams/CSS-Boilerplate
 
 # Redirects for social media
 
-/github                 <https://github.com/MattMcAdams/>
-/github/stratus         <https://github.com/MattMcAdams/stratus>
-/github/chipboard       <https://github.com/MattMcAdams/chipboard>
-/github/boilerplate     <https://github.com/MattMcAdams/CSS-Boilerplate>
+/github                 https://github.com/MattMcAdams/
+/github/stratus         https://github.com/MattMcAdams/stratus
+/github/chipboard       https://github.com/MattMcAdams/chipboard
+/github/boilerplate     https://github.com/MattMcAdams/CSS-Boilerplate
 
-/linkedin               <https://www.linkedin.com/in/mcadamsmatthew/>
-/instagram              <https://www.instagram.com/mattmcadams/>
-/twitter                <https://twitter.com/mattmakesart>
-/dribbble               <https://dribbble.com/mattmcadams>
-/kofi                   <https://ko-fi.com/F2F77H9M>
-/behance                <https://www.behance.net/mattmcadams>
-/codepen                <https://codepen.io/mattmcadams>
+/linkedin               https://www.linkedin.com/in/mcadamsmatthew/
+/instagram              https://www.instagram.com/mattmcadams/
+/twitter                https://twitter.com/mattmakesart
+/dribbble               https://dribbble.com/mattmcadams
+/kofi                   https://ko-fi.com/F2F77H9M
+/behance                https://www.behance.net/mattmcadams
+/codepen                https://codepen.io/mattmcadams
 
 # Redirects old portfolio page to new
 
@@ -34,16 +34,17 @@
 /thoughts/*             /posts/:splat
 
 # Redirect default Netlify subdomain to primary domain
-<https://mattmcadams.netlify.com/>* <https://www.mattmcadams.com/:splat> 301
+
+https://mattmcadams.netlify.com/* https://www.mattmcadams.com/:splat 301
 
 # Redirect image requests to my CDN
 
-/images/* <https://storage.googleapis.com/mattmcadams.com/:splat> 200
+/images/* https://storage.googleapis.com/mattmcadams.com/:splat 200
 
 # Redirect for donations
 
-/support <https://donate.stripe.com/7sIeVd6E2dAbdeU5kk>
-/donate <https://donate.stripe.com/7sIeVd6E2dAbdeU5kk>
+/support https://donate.stripe.com/7sIeVd6E2dAbdeU5kk
+/donate https://donate.stripe.com/7sIeVd6E2dAbdeU5kk
 
 # Redirect old post URLs to new year based URLs
 
