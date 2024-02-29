@@ -2,7 +2,7 @@
 layout: layouts/no-sidebar.njk
 ---
 
-<p><a href="{{ '/log/' | url }}">← back to adventure log</a></p>
+<p><a href="{{ '/log/' | url }}">&larr; back to adventure log</a></p>
 
 <h1>{{ title }}</h1>
 
@@ -10,36 +10,16 @@ layout: layouts/no-sidebar.njk
 {{ content | safe }}
 </div>
 
-{# {% if prev or next %}
-  <div class="log-pagination">
-    {% if prev %}
-      <a href="{{ prev }}">← previous</a>
-      {% else %}
-      <span>&nbsp;</span>
-    {% endif %}
-    {% if next %}
-      <a href="{{ next }}">next →</a>
-    {% endif %}
-  </div>
-{% endif %} #}
-
-{# {% if pagination.href.previous %}
-  <a href="{{pagination.href.previous}}">Previous Page</a>
-{% endif %}
-{% if pagination.href.next %}
-  <a href="{{pagination.href.next}}">Next Page</a>
-{% endif %} #}
-
 {% set previousPost = collections.logs | getPreviousCollectionItem %}
 {% set nextPost = collections.logs | getNextCollectionItem %}
 {% if previousPost or nextPost %}
-  <div class="log-pagination">
+  <nav class="log-pagination" aria-label="Pagination">
     {% if previousPost %}
-      <a href="{{ previousPost.url }}">← Previous</a>
+      <a href="{{ previousPost.url }}">&larr; Previous</a>
     {% endif %}
     <span>&nbsp;</span>
     {% if nextPost %}
-      <a href="{{ nextPost.url }}">Next →</a>
+      <a href="{{ nextPost.url }}">Next &rarr;</a>
     {% endif %}
-  </div>
+  </nav>
 {% endif %}

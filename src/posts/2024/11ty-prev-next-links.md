@@ -45,11 +45,11 @@ Now let's add the links. Here we're using if statements to prevent rendering emp
 ```liquid
 <!-- template.njk -->
 {% openBracket %}% if previousPost %{% closeBracket %}
-  <a href="{% openBracket %}{ previousPost.url }{% closeBracket %}">← Previous</a>
+  <a href="{% openBracket %}{ previousPost.url }{% closeBracket %}">&larr; Previous</a>
 {% openBracket %}% endif %{% closeBracket %}
 <span>&nbsp;</span>
 {% openBracket %}% if nextPost %{% closeBracket %}
-  <a href="{% openBracket %}{ nextPost.url }{% closeBracket %}">Next →</a>
+  <a href="{% openBracket %}{ nextPost.url }{% closeBracket %}">Next &rarr;</a>
 {% openBracket %}% endif %{% closeBracket %}
 ```
 

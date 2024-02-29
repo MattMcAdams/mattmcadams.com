@@ -19,13 +19,13 @@
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
-    "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
     "download": "gcloud storage cp -r gs://mattmcadams.com/* src/_static/images/",
     "upload": "gcloud storage cp -r src/_static/images/* gs://mattmcadams.com",
-    "upload-sketchbook": "gcloud storage cp -r src/_static/images/sketchbook/* gs://mattmcadams.com/sketchbook"
+    "upload-sketchbook": "gcloud storage cp -r src/_static/images/sketchbook/* gs://mattmcadams.com/sketchbook",
+    "upload-posts": "gcloud storage cp -r src/_static/images/posts/* gs://mattmcadams.com/posts",
+    "upload-projects": "gcloud storage cp -r src/_static/images/projects/* gs://mattmcadams.com/projects"
   },
   "homepage": "https://github.com/mattmcadams/website",
   "devDependencies": {
