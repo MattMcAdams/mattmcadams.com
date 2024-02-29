@@ -9,7 +9,7 @@ This site is a small static site built with [11ty](https://www.11ty.dev/). The p
 
 This website's code is stored on [GitHub](https://github.com/MattMcAdams/mattmcadams.com) and hosted by [Cloudflare Pages](https://pages.cloudflare.com/). Images are optimized with [Squoosh](https://squoosh.app/) and hosted on [Google Cloud Storage](https://cloud.google.com/storage) for all images.
 
-My domains are all registered through [Hover](https://www.hover.com/), but I generally use Cloudflare's DNS.
+My domains are all registered through [Hover](https://www.hover.com/), but I generally use Cloudflare's DNS. For analytics, I use [Plausible](https://plausible.io/).
 
 ## Other tools
 
