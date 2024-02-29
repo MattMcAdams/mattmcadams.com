@@ -35,6 +35,11 @@ eleventyExcludeFromCollections: true
 {%- set pageQuery = collections.all | find("/cv/") -%}
 <p>{{ pageQuery.data.description }}</p>
 
+<h2>Feeds</h2>
+<p><a href="/feed/"><code>/feed</code></a></p>
+{%- set pageQuery = collections.all | find("/feed/") -%}
+<p>{{ pageQuery.data.description }}</p>
+
 {# <h2>Lists</h2>
 <p><a href="/lists/"><code>/lists</code></a></p>
 <p>A collection of lists I've made, including <a href="/lists/bookshelf">books</a>, <a href="/lists/anime">anime</a>, and <a href="/lists/quotes">quotes</a>.</p> #}

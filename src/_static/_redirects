@@ -1,41 +1,30 @@
-# Redirects for actively maintained github projects
-
-/stratus                https://github.com/MattMcAdams/stratus
-/chipboard              https://github.com/MattMcAdams/chipboard
-/boilerplate            https://github.com/MattMcAdams/CSS-Boilerplate
+# https://developers.cloudflare.com/pages/how-to/redirect-to-custom-domain/
+# https://developers.cloudflare.com/pages/configuration/redirects/
 
 # Redirects for social media
 
 /github                 https://github.com/MattMcAdams/
-/github/stratus         https://github.com/MattMcAdams/stratus
-/github/chipboard       https://github.com/MattMcAdams/chipboard
-/github/boilerplate     https://github.com/MattMcAdams/CSS-Boilerplate
-
 /linkedin               https://www.linkedin.com/in/mcadamsmatthew/
 /instagram              https://www.instagram.com/mattmcadams/
 /twitter                https://twitter.com/mattmakesart
 /dribbble               https://dribbble.com/mattmcadams
-/kofi                   https://ko-fi.com/F2F77H9M
+/kofi                   https://ko-fi.com/mattmcadams
 /behance                https://www.behance.net/mattmcadams
 /codepen                https://codepen.io/mattmcadams
 
 # Redirects old portfolio page to new
 
 /portfolio              /projects
-/portfolio/*/projects/:splat
+/portfolio/*            /projects/:splat
 /work                   /projects
 /work/*                 /projects/:splat
 
 # Redirects old blog page to new
 
 /blog                   /posts
-/blog/*/posts/:splat
+/blog/*                 /posts/:splat
 /thoughts               /posts
 /thoughts/*             /posts/:splat
-
-# Redirect default Netlify subdomain to primary domain
-
-https://mattmcadams.netlify.com/* https://www.mattmcadams.com/:splat 301
 
 # Redirect image requests to my CDN
 
