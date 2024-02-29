@@ -47,4 +47,4 @@ Special characters
 
 The typeface includes uppercase and lowercase letters A-Z, numbers, punctuation, and special characters. Rebar is available for free, and can be downloaded below.
 
-<a class="button" href="[/downloads/rebar](https://drive.google.com/file/d/1QAU1nVgjiDTROG5rtIXMQ6ukTKfjVB-u/view?usp=sharing)">Download</a>
+<a class="button" href="https://mattmcadams.gumroad.com/l/rebar">Download</a>

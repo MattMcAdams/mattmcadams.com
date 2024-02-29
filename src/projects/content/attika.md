@@ -61,4 +61,4 @@ Attika was part of the 2020 BFA Exhibition at the University of Alabama at Birmi
 
 The typeface includes uppercase and lowercase letters A-Z, punctuation, and special characters. Attika is available for free for personal and commercial use, and can be downloaded below.
 
-<a class="button" href="https://drive.google.com/file/d/1QAU1nVgjiDTROG5rtIXMQ6ukTKfjVB-u/view?usp=sharing" target="_blank" rel="noopener">Download</a>
+<a class="button" href="https://mattmcadams.gumroad.com/l/attika" target="_blank" rel="noopener">Download</a>
