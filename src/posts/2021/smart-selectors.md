@@ -1,8 +1,6 @@
 ---
 title: Writing Smarter CSS
 date: 2021-01-14
-published: true
-series: false
 
 tags: ['css']
 description: "Authoring more robust CSS with smart selectors"

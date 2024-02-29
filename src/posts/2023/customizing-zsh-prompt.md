@@ -1,8 +1,6 @@
 ---
 title: Customizing ZSH
 date: 2023-11-05
-published: true
-series: false
 
 tags: ['tutorial', 'command line']
 description: "Creating a custom terminal experience is something of a rite of passage for software developers, especially those who use the terminal every day. In this post, I take a tour through my current setup."

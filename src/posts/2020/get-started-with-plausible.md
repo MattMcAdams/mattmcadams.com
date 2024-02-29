@@ -1,8 +1,6 @@
 ---
 title: Getting Started with Plausible
 date: 2020-12-02
-published: true
-series: false
 
 tags: ['analytics', 'tutorial']
 description: "Plausible is a fantastic alternative to existing JS based analytics solutions. Inexpensive, lightning fast, and build around privacy."

@@ -254,6 +254,19 @@ module.exports = function (eleventyConfig) {
     ui: false,
     ghostMode: false,
   });
+  /* =================================================================
+  /* SECTION Shortcodes
+  ================================================================= */
+
+  eleventyConfig.addShortcode("openBracket", function () {
+    return `{`;
+  });
+
+  eleventyConfig.addShortcode("closeBracket", function () {
+    return `}`;
+  });
+
+  /* !SECTION Shortcodes */
   /* ==================================================================
   RETURN
   ================================================================== */

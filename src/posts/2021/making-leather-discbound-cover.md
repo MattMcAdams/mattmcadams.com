@@ -1,8 +1,6 @@
 ---
 title: Making a leather discbound notebook cover
 date: 2021-08-20
-published: true
-series: false
 
 tags: ['tutorial', 'bookmaking']
 description: "My custom discbound notebook has been a project of mine for a few years. I’ve tried all kinds of covers, both homemade and store-purchased, but none of them ever felt special or personal. Making a leather cover had been in the back of my mind for quite a while, so let's make one."

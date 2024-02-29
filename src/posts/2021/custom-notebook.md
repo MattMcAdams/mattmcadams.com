@@ -1,8 +1,6 @@
 ---
 title: Custom Discbound Notebook
 date: 2021-03-12
-published: true
-series: false
 
 tags: ['bookmaking']
 description: "Today I share one of my personal labors of love, a project I’ve worked on for a few years, and one that continues to evolve - my notebook."

@@ -1,8 +1,6 @@
 ---
 title: Typographical Scales
 date: 2020-06-30
-published: true
-series: "Typography"
 
 tags: ['typography', 'design', 'css']
 description: "In any form of design, one uses a series of measures to plan and layout the product. Measurements create precision, consistency, and promote trustworthiness. In print, common measurements are inches, centimeters, points, and picas. In the world of digital and web design we use pixels and more relative measurements such as percentages."

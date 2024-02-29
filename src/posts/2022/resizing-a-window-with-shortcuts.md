@@ -1,8 +1,6 @@
 ---
 title: Resizing a MacOS window with the Shortcuts app
 date: 2022-04-05
-published: true
-series: null
 
 tags: ['tutorial', 'process']
 description: "If you ever record or share your screen you may have wanted to get the window you were sharing to be a specific size or aspect ratio. Let's look at how to achieve this with Shortcuts."

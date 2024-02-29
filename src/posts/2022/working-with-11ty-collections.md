@@ -1,8 +1,6 @@
 ---
 title: Working with 11ty Collections
 date: 2022-03-06
-published: true
-series: null
 
 tags: ['11ty', 'tutorial']
 description: "Create complex and nested collections to handle multiple taxonomies in a site built with 11ty"

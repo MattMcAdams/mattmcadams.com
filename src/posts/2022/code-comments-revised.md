@@ -1,8 +1,6 @@
 ---
 title: Code Comments Revisited
 date: 2022-05-01
-published: true
-series: false
 
 tags: ['process']
 description: "Back in 2019 I made a post about a code comment plugin I had found for VS Code, and how I configured it to fit my needs. Today I wanted to expand on that to show how I go about commenting my code in general."

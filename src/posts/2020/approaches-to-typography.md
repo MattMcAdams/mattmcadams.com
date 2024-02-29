@@ -1,8 +1,6 @@
 ---
 title: Approaches to Web Typography
 date: 2020-08-20
-published: true
-series: "Typography"
 
 tags: ['typography', 'design', 'css']
 description: "There are a handful of ways we can use what we learned about modular scales when creating the typographical system of our website, from simple single scale systems to fully fluid typography. This article will take a look at each style and implementation, but all of these systems aim to address the question of how to handle text on both small and large screens."

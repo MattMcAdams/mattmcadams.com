@@ -1,8 +1,6 @@
 ---
 title: Website Redesign 2021
 date: 2021-07-05
-published: true
-series: false
 
 tags: ['personal']
 description: "My website has always been a testing ground of new ideas, a place for me to experiment and learn new things, so it’s only natural I do a major redesign every other year or so. However this design marks a shift in how I talk about myself and my work."
