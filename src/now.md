@@ -27,4 +27,4 @@ In my down time, I'm watching *Spy x Family* and playing with my [color palette 
 
 ## Interests
 
-I'm currently really interested in sustainable and portable technology. I recently watched a really cool [talk at Strange Loop by Devine Lu Linvega](https://www.youtube.com/watch?v=T3u7bGgVspM) that has had me really inspired.
+I'm currently really interested in sustainable and portable technology. I recently watched a really cool [talk at Strange Loop by Devine Lu Linvega](https://www.youtube.com/watch?v=T3u7bGgVspM) that has had me really inspired. I've been looking into [permacomputing](https://wiki.xxiivv.com/site/permacomputing.html) as a result of my recent delves into the internet rabbit hole.
