@@ -1,34 +1,47 @@
 [
   {
     "name": "GitHub",
-    "url": "https://github.com/MattMcAdams/"
+    "url": "https://github.com/MattMcAdams/",
+    "active": true
   },
   {
     "name": "CodePen",
-    "url": "https://codepen.io/mattmcadams"
+    "url": "https://codepen.io/mattmcadams",
+    "active": true
   },
   {
     "name": "Twitter",
-    "url": "https://twitter.com/mattmakesart"
+    "url": "https://twitter.com/mattmakesart",
+    "active": false
+  },
+  {
+    "name": "Bluesky",
+    "url": "https://bsky.app/profile/mattmcadams.com",
+    "active": true
   },
   {
     "name": "Instagram",
-    "url": "https://www.instagram.com/mattmcadams/"
+    "url": "https://www.instagram.com/mattmcadams/",
+    "active": false
   },
   {
     "name": "Behance",
-    "url": "https://www.behance.net/mattmcadams"
+    "url": "https://www.behance.net/mattmcadams",
+    "active": false
   },
   {
     "name": "Dribbble",
-    "url": "https://dribbble.com/mattmcadams"
+    "url": "https://dribbble.com/mattmcadams",
+    "active": false
   },
   {
     "name": "Gumroad",
-    "url": "https://mattmcadams.gumroad.com/"
+    "url": "https://mattmcadams.gumroad.com/",
+    "active": true
   },
   {
     "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/mcadamsmatthew/"
+    "url": "https://www.linkedin.com/in/mcadamsmatthew/",
+    "active": true
   }
 ]

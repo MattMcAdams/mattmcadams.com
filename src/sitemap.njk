@@ -93,6 +93,16 @@ eleventyExcludeFromCollections: true
 <p>Other than this humble website, you can find me on the following platforms:</p>
 <ul>
   {%- for platform in socialMedia -%}
-    <li><a href="{{ platform.url }}">{{ platform.name }}</a></li>
+    {%- if platform.active -%}
+      <li><a href="{{ platform.url }}">{{ platform.name }}</a></li>
+    {%- endif -%}
+  {%- endfor -%}
+</ul>
+<p>I have an account but am not active on these platforms:</p>
+<ul>
+  {%- for platform in socialMedia -%}
+    {%- if not platform.active -%}
+      <li><a href="{{ platform.url }}">{{ platform.name }}</a></li>
+    {%- endif -%}
   {%- endfor -%}
 </ul>

@@ -10,10 +10,12 @@ layout: layouts/base.njk
         <p>I’m an advocate for creating a more accessible and inclusive web through thoughtful design and great experiences. I'm interested in the sustainability, portability, and preservation of technology. On this website, you can see my design work, code projects, and read my thoughts on technology, design, and whatever else inspires me.</p>
         <p>While I'm not very active on social media, you can also find me on
           {%- for platform in socialMedia -%}
-            {%- if not loop.last -%}
-              {{' '}}<a href="{{ platform.url }}">{{ platform.name }}</a>{{','}}
-            {%- else -%}
-              {{' and '}}<a href="{{ platform.url }}">{{ platform.name }}</a>
+            {%- if platform.active -%}
+              {%- if not loop.last -%}
+                {{' '}}<a href="{{ platform.url }}">{{ platform.name }}</a>{{','}}
+              {%- else -%}
+                {{' and '}}<a href="{{ platform.url }}">{{ platform.name }}</a>
+              {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
         .</p>

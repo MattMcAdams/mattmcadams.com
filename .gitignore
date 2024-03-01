@@ -1,24 +1,110 @@
-# System Junk
+# ===============================
+# General
+# ===============================
 
-*.log
-.cache
+# System Files
+
 .DS_Store
-src/.temp
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment files
+
 .env
 .env.*
 
-# Project junk
+# Common build directories
 
-node_modules
+out
 dist
-static/temp
+build
 
-# Large media
+# Testing
 
-src/_static/cdn/
-!src/_static/cdn/.gitkeep
+/coverage
+
+# Logs
+
+[Dd]ebug
+logs
+*.log
+
+# Cache
+
+.cache
+cache
+.tmp/
+.temp
+
+# Scratch directories
+
+temp/
+ideas/
+
+# ===============================
+# Large Media
+# ===============================
+
+*.tgz
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# ===============================
+# GitHub
+# ===============================
+
+# Secrets variable file
+
+.github/workflows/.env
+
+# ===============================
+# IDE
+# ===============================
+
+# VS Code
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/*.code-snippets
+
+# ===============================
+# Node
+# ===============================
+
+# Dependencies
+
+**/node_modules
+.npm
+.pnp
+.pnp.js
+
+# Cache
+
+.eslintcache
+
+# Typescript
+
+*.tsbuildinfo
+next-env.d.ts
+
+# next.js
+**/.next/
+mocks/out/
+mocks/build/
+
+# ===============================
+# Large Media
+# ===============================
+
 src/_static/images/
 !src/_static/images/.gitkeep
-
-# Local Netlify folder
-.netlify
