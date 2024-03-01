@@ -19,6 +19,6 @@ If you're interested in this, you may also like my [quotes page](/quotes) which 
 - *Typography* &mdash; Denise Gonzales Crisp, William F. Temple, Thames and Hudson
 - *Tales from the Loop* &mdash; Simon Stalenhag
 - *Ready Player One* &mdash; Ernest Cline
-- *The Morpho Series* &mdash; Michel Lauricella
+- The *Morpho* Series &mdash; Michel Lauricella
 - *Art/Work - Revised & Updated* &mdash; Heather Darcy Bhandari, Jonathan Melber
-- *The Eragon Series* &mdash; Christopher Paolini
+- The *Eragon* Series &mdash; Christopher Paolini

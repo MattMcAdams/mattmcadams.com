@@ -1,6 +1,6 @@
 ---
 title: 11ty - Previous and Next links
-date: 2024-02-29
+date: 2024-02-28
 
 tags: ['tutorial', '11ty']
 description: "Let's add previous and next links to a page template using 11ty collections."
