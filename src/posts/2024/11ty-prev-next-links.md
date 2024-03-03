@@ -3,7 +3,7 @@ title: 11ty - Previous and Next links
 date: 2024-02-28
 
 tags: ['tutorial', '11ty']
-description: "Let's add previous and next links to a page template using 11ty collections."
+description: "Linking to pervious and next post in a collection is a somewhat common feature that I didn't need until recently. It took me a little bit to work out how to do it since the docs were a little ambiguous, so let's build it together using 11ty collections."
 
 thumbnail: /images/posts/2024/11ty-prev-next.png
 cover_image: /images/posts/2024/11ty-prev-next.png
@@ -19,8 +19,8 @@ The first and really only challenge to this method is getting the collection ite
 
 ```liquid
 <!-- template.njk -->
-{% openBracket %}% set previousPost = collections.logs | getPreviousCollectionItem %{% closeBracket %}
-{% openBracket %}% set nextPost = collections.logs | getNextCollectionItem %{% closeBracket %}
+{%lbrace%}% set previousPost = collections.logs | getPreviousCollectionItem %{%rbrace%}
+{%lbrace%}% set nextPost = collections.logs | getNextCollectionItem %{%rbrace%}
 ```
 
 This will setup two variables called `previousPost` and `nextPost` with each holding a single collection item or being empty if there was no collection item found.
@@ -33,24 +33,24 @@ I'm using a `nav` element here, which [requires a label](https://www.aditus.io/p
 
 ```liquid
 <!-- template.njk -->
-{% openBracket %}% if previousPost or nextPost %{% closeBracket %}
+{%lbrace%}% if previousPost or nextPost %{%rbrace%}
   <nav aria-label="pagination">
     <!-- Links will go here -->
   </nav>
-{% openBracket %}% endif %{% closeBracket %}
+{%lbrace%}% endif %{%rbrace%}
 ```
 
 Now let's add the links. Here we're using if statements to prevent rendering empty html tags if the variable is empty.
 
 ```liquid
 <!-- template.njk -->
-{% openBracket %}% if previousPost %{% closeBracket %}
-  <a href="{% openBracket %}{ previousPost.url }{% closeBracket %}">&larr; Previous</a>
-{% openBracket %}% endif %{% closeBracket %}
+{%lbrace%}% if previousPost %{%rbrace%}
+  <a href="{%lbrace%}{ previousPost.url }{%rbrace%}">&larr; Previous</a>
+{%lbrace%}% endif %{%rbrace%}
 <span>&nbsp;</span>
-{% openBracket %}% if nextPost %{% closeBracket %}
-  <a href="{% openBracket %}{ nextPost.url }{% closeBracket %}">Next &rarr;</a>
-{% openBracket %}% endif %{% closeBracket %}
+{%lbrace%}% if nextPost %{%rbrace%}
+  <a href="{%lbrace%}{ nextPost.url }{%rbrace%}">Next &rarr;</a>
+{%lbrace%}% endif %{%rbrace%}
 ```
 
 Notice that I've included a span with a non breaking space. This is just here because I want to justify the links with space between. Adding the span makes sure that the next link is always on the right even if the previous link doesn't exist.
@@ -59,19 +59,19 @@ Here's it all together:
 
 ```liquid
 <!-- template.njk -->
-{% openBracket %}% set previousPost = collections.logs | getPreviousCollectionItem %{% closeBracket %}
-{% openBracket %}% set nextPost = collections.logs | getNextCollectionItem %{% closeBracket %}
-{% openBracket %}% if previousPost or nextPost %{% closeBracket %}
+{%lbrace%}% set previousPost = collections.logs | getPreviousCollectionItem %{%rbrace%}
+{%lbrace%}% set nextPost = collections.logs | getNextCollectionItem %{%rbrace%}
+{%lbrace%}% if previousPost or nextPost %{%rbrace%}
   <nav aria-label="pagination">
-    {% openBracket %}% if previousPost %{% closeBracket %}
-      <a href="{% openBracket %}{ previousPost.url }{% closeBracket %}">← Previous</a>
-    {% openBracket %}% endif %{% closeBracket %}
+    {%lbrace%}% if previousPost %{%rbrace%}
+      <a href="{%lbrace%}{ previousPost.url }{%rbrace%}">← Previous</a>
+    {%lbrace%}% endif %{%rbrace%}
     <span>&nbsp;</span>
-    {% openBracket %}% if nextPost %{% closeBracket %}
-      <a href="{% openBracket %}{ nextPost.url }{% closeBracket %}">Next →</a>
-    {% openBracket %}% endif %{% closeBracket %}
+    {%lbrace%}% if nextPost %{%rbrace%}
+      <a href="{%lbrace%}{ nextPost.url }{%rbrace%}">Next →</a>
+    {%lbrace%}% endif %{%rbrace%}
   </nav>
-{% openBracket %}% endif %{% closeBracket %}
+{%lbrace%}% endif %{%rbrace%}
 ```
 
 ## Styling the links

@@ -32,12 +32,12 @@ module.exports = function (eleventyConfig) {
   General Filters
   ================================================================== */
   // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter("head", (array, n) => {
-    if (n < 0) {
-      return array.slice(n);
-    }
-    return array.slice(0, n);
-  });
+  // eleventyConfig.addFilter("head", (array, n) => {
+  //   if (n < 0) {
+  //     return array.slice(n);
+  //   }
+  //   return array.slice(0, n);
+  // });
   // Return the smallest number argument
   eleventyConfig.addFilter("min", (...numbers) => {
     return Math.min.apply(null, numbers);
@@ -204,15 +204,6 @@ module.exports = function (eleventyConfig) {
     return createCollectionsByYear(LOGS(collectionAPI));
   });
 
-  // Setup collection for all content
-  const ALL_CONTENT = (collectionAPI) => {
-    return [
-      ...POSTS(collectionAPI),
-      ...PROJECTS(collectionAPI),
-      ...SKETCHBOOK(collectionAPI),
-      ...LOGS(collectionAPI),
-    ];
-  };
   // collections.allContent => Returns list of all content
   eleventyConfig.addCollection("allContent", function (collectionAPI) {
     return collectionAPI.getFilteredByGlob(["./src/sketchbook/*/*.md", "./src/posts/*/*.md", "./src/projects/*/*.md", "./src/log/*/*.md"]);
@@ -258,11 +249,11 @@ module.exports = function (eleventyConfig) {
   /* SECTION Shortcodes
   ================================================================= */
 
-  eleventyConfig.addShortcode("openBracket", function () {
+  eleventyConfig.addShortcode("lbrace", function () {
     return `{`;
   });
 
-  eleventyConfig.addShortcode("closeBracket", function () {
+  eleventyConfig.addShortcode("rbrace", function () {
     return `}`;
   });
 
