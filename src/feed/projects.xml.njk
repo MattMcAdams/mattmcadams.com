@@ -4,26 +4,37 @@ permalink: "{{ metadata.feed.projects.xml.path }}"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ metadata.feed.projects.title }}</title>
-	<subtitle>{{ metadata.feed.projects.subtitle }}</subtitle>
-	{% set absoluteUrl %}{{ metadata.feed.projects.xml.path | url | absoluteUrl(metadata.url) }}{% endset %}
-	<link href="{{ absoluteUrl }}" rel="self"/>
-	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.projects | rssLastUpdatedDate }}</updated>
-	<id>{{ metadata.feed.projects.id }}</id>
-	<author>
-		<name>{{ metadata.author.name }}</name>
-		<email>{{ metadata.author.email }}</email>
-	</author>
-	{%- for entry in collections.projects | reverse %}
-	{% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(metadata.url) }}{% endset %}
-	<entry>
-		<title>{{ entry.data.title }}</title>
-		<link href="{{ absoluteEntryUrl }}"/>
-		<updated>{{ entry.data.date | rssDate }}</updated>
-		<id>{{ absoluteEntryUrl }}</id>
-		<content type="html">{{ entry.templateContent | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
-	</entry>
-	{%- endfor %}
-</feed>
+{%- set absoluteUrl -%}
+	{{ metadata.feed.projects.xml.path | url | absoluteUrl(metadata.url) }}
+{% endset %}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ metadata.feed.projects.title }}</title>
+		<description>{{ metadata.feed.projects.description }}</description>
+		<pubDate>{{ collections.projects | rssLastUpdatedDate }}</pubDate>
+		<language>en-US</language>
+
+		<link>{{ absoluteUrl }}</link>
+		<atom:link href="{{ absoluteUrl }}" rel="self" type="application/rss+xml" />
+
+		<author>
+			<name>{{ metadata.author.name }}</name>
+			<email>{{ metadata.author.email }}</email>
+		</author>
+
+		{%- for entry in collections.projects | reverse -%}
+			{% set absoluteEntryUrl %}
+				{{ entry.url | url | absoluteUrl(metadata.url) }}
+			{% endset %}
+			<item>
+				<title>{{ entry.data.title }}</title>
+				<link>{{ absoluteEntryUrl }}</link>
+				<description>
+					<![CDATA[{{ entry.templateContent | htmlToAbsoluteUrls(absoluteEntryUrl) | safe }}]]>
+				</description>
+				<guid isPermalink="true">{{ absoluteEntryUrl }}</guid>
+				<pubDate>{{ entry.data.date | rssDate }}</pubDate>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
