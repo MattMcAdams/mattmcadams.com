@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
 	<channel>
 		<title>{{ metadata.feed.default.title }}</title>
 		<description>{{ metadata.feed.default.description }}</description>
-		<pupDate>{{ collections.allContent | rssLastUpdatedDate }}</pubDate>
+		<pubDate>{{ collections.allContent | rssLastUpdatedDate }}</pubDate>
 		<language>en-US</language>
 
 		<link>{{ absoluteUrl }}</link>
