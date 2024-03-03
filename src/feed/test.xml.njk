@@ -3,10 +3,10 @@
 permalink: "/feed/test.xml"
 eleventyExcludeFromCollections: true
 ---
+<?xml version="1.0" encoding="utf-8"?>
 {% set absoluteUrl %}
 	{{ "/feed/test.xml" | url | absoluteUrl(metadata.url) }}
 {% endset %}
-<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>{{ metadata.feed.default.title }}</title>
