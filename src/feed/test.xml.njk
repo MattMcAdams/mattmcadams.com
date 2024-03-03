@@ -1,0 +1,56 @@
+---
+# Metadata comes from _data/metadata.json
+permalink: "/feed/test.xml"
+eleventyExcludeFromCollections: true
+---
+{% set absoluteUrl %}
+	{{ "/feed/test.xml" | url | absoluteUrl(metadata.url) }}
+{% endset %}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ metadata.feed.default.title }}</title>
+		<description>{{ metadata.feed.default.description }}</description>
+		<pupDate>{{ collections.allContent | rssLastUpdatedDate }}</pubDate>
+		<language>en-US</language>
+
+		<link>{{ absoluteUrl }}</link>
+		<atom:link href={{ absoluteUrl }} rel="self" type="application/rss+xml" />
+
+		<author>
+			<name>{{ metadata.author.name }}</name>
+			<email>{{ metadata.author.email }}</email>
+		</author>
+
+		{%- for entry in collections.allContent | reverse %}
+			{% set absoluteEntryUrl %}
+				{{ entry.url | url | absoluteUrl(metadata.url) }}
+			{% endset %}
+			<item>
+				<title>{{ entry.data.title }}</title>
+				<link>{{ absoluteEntryUrl }}</link>
+				{% if entry.data.description %}
+					<description>
+						{{ entry.data.description }}
+					</description>
+					<content:encoded>
+						<![CDATA[{{ entry.templateContent | htmlToAbsoluteUrls(absoluteEntryUrl) | safe }}]]>
+					</content:encoded>
+				{% else %}
+					<description>
+						<![CDATA[{{ entry.templateContent | htmlToAbsoluteUrls(absoluteEntryUrl) | safe }}]]>
+					</description>
+				{% endif %}
+				<guid isPermalink="true">{{ absoluteEntryUrl }}</guid>
+				<pubDate>{{ entry.data.date | rssDate }}</pubDate>
+			</item>
+		{%- endfor %}
+
+	</channel>
+</rss>
+{#
+	<subtitle>{{ metadata.feed.default.subtitle }}</subtitle>
+	{% set absoluteUrl %}{{ metadata.feed.default.xml.path | url | absoluteUrl(metadata.url) }}{% endset %}
+	<link href="{{ absoluteUrl }}" rel="self"/>
+	<link href="{{ metadata.url }}"/>
+</feed> #}
