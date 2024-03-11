@@ -9,6 +9,26 @@ This is a collection of quotes I've collected over the years that I think about 
 
 ---
 
+"Perfection is finally obtained not when there is no longer anything to add, but when there's no longer anything to take away."
+*&mdash; Antoine de Saint-Exupery*
+
+---
+
+"Compairison is the thief of joy"
+*&mdash; Theodore Roosevelt*
+
+---
+
+"Beware of the assumption that the way you work is the best way simply because it's the way you've done it before"
+*&mdash; Rick Rubin*
+
+---
+
+"On those overcast days, it helps to tune into the fact that the sun is still there. It's just hidden behind a thicker layer of clouds."
+*&mdash; Rick Rubin*
+
+---
+
 "I think we'd all feel much better if we instead saw bad code as a form of contemporary art. Unused functions? Surrealism. Mixing tabs and spaces? Postmodern. My code isn't spaghetti, it's avant-garde"
 *&mdash; Kat Maddox*
 
