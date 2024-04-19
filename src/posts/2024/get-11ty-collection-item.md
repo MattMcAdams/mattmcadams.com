@@ -63,11 +63,11 @@ eleventyConfig.addFilter("find", function find(collection = [], slug = "") {
 To use this, we only need to supply the collection and the item's relative url.
 
 ```liquid
-{% openBracket %}%- set pageQuery = collections.projects | find("/path/to/page") -%{% closeBracket %}
+{% lbrace %}%- set pageQuery = collections.projects | find("/path/to/page") -%{% rbrace %}
 ```
 
 Now we have a variable called `pageQuery` that we can use to access that page's metadata.
 
 ```liquid
-<h2>{% openBracket %}{ pageQuery.data.title }{% closeBracket %}</h2>
+<h2>{% lbrace %}{ pageQuery.data.title }{% rbrace %}</h2>
 ```
