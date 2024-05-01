@@ -4,7 +4,7 @@ layout: layouts/no-sidebar.njk
 
 # License
 
-All of my work (with the exception of work made for clients) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+All of my written and visual work (with the exception of work made for clients) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Projects may be subject to different licenses, please check individual projects for license information.
 
 ## Share
 
