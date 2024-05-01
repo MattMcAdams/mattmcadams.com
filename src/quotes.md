@@ -9,6 +9,11 @@ This is a collection of quotes I've collected over the years that I think about 
 
 ---
 
+"You've got to look deep to find the deep things. If all you do in your life is stay at the surface, you'll never find anything worth exploring."
+*&mdash; Unknown*
+
+---
+
 "Perfection is finally obtained not when there is no longer anything to add, but when there's no longer anything to take away."
 *&mdash; Antoine de Saint-Exupery*
 
