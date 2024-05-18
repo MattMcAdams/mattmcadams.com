@@ -7,6 +7,10 @@ description: A list of my work experience, education, and other professional inf
 
 <style>
 
+main > p {
+  margin-bottom: calc(var(--space) / 2);
+}
+
 .cv-item {
   display: grid;
   grid-template-areas: "date" "title" "subtitle" "description";
@@ -15,6 +19,7 @@ description: A list of my work experience, education, and other professional inf
 .cv-item-description {
   font-size: var(--ms--1);
   line-height: 1.5;
+  margin-top: var(--space);
 }
 
 .cv-item-title,
@@ -23,10 +28,6 @@ description: A list of my work experience, education, and other professional inf
 .cv-item-description {
   margin: 0;
   line-height: 1.8;
-}
-
-.cv-item-description {
-  margin-top: var(--space);
 }
 
 .cv-item-subtitle,
@@ -56,6 +57,10 @@ description: A list of my work experience, education, and other professional inf
 .cv-item-subtitle { grid-area: subtitle; }
 .cv-item-date { grid-area: date; }
 .cv-item-description { grid-area: description; }
+
+#summary li:not(:last-child) {
+  margin-bottom: calc(var(--space) / 2 );
+}
 
 .print-only { display: none; }
 
@@ -112,10 +117,31 @@ description: A list of my work experience, education, and other professional inf
 
   <main id="main" class="content container container-wide">
       <h1>Matthew McAdams</h1>
-      <p>Web & User Experience Designer<span class="print-only"><br>&nbsp;</span></p>
-      <p class="page-info"><span class="print-only">Matthew McAdams | </span>Curriculum Vitae | March 2024<span class="print-only"><br><a href="https://mattmcadams.com">mattmcadams.com</a> | <a href="mailto:mattmcadams@outlook.com">mattmcadams@outlook.com</a> | <a href="tel:12054355745">205.435.5745</a></span></p>
+      <p>Front-End Engineer, Designer, and Developer Advocate<span class="print-only"><br>&nbsp;</span></p>
+      <p class="page-info"><span class="print-only">Matthew McAdams | </span>Curriculum Vitae | May 2024<span class="print-only"><br><a href="https://mattmcadams.com">mattmcadams.com</a> | <a href="mailto:mattmcadams@outlook.com">mattmcadams@outlook.com</a> | <a href="tel:12054355745">205.435.5745</a></span></p>
 
-      <section class="cv-section">
+      <section class="cv-section" id="summary">
+        <h2 class="cv-section-title">Summary</h2>
+        <ul class="cv-summary">
+          <li>
+            Firmly established developer advocate currently working in the front-end user experience field as a designer, developer, user advocate, and now leader, having been in the creative and design industry for over ten years.
+          </li>
+          <li>
+            Directed a system to assist clients in refining their web architecture, as well as establishing and maintaining quality control, CI/CD workflows, and client-developer relationships.
+          </li>
+          <li>
+            Worked with all stages of the product lifecycle and collaborating with leaders involved to ensure a realistic, well-tested, and delightful end user experience.
+          </li>
+          <li>
+            Experience training developers, hosting workshops, and adivising stakeholders on the development team's behalf.
+          </li>
+          <li>
+            Passionate about technology, best practices, and always learning the latest industry developments and viability; with several personal open source code projects.
+          </li>
+        </ul>
+      </section>
+
+      <section class="cv-section" id="experience">
         <h2 class="cv-section-title">Experience</h2>
         <ol class="cv-list">
           <li class="cv-item">
@@ -181,7 +207,7 @@ description: A list of my work experience, education, and other professional inf
         </ol>
       </section>
 
-      <section class="cv-section">
+      <section class="cv-section page-break" id="service">
         <h2 class="cv-section-title">Service</h2>
         <ol class="cv-list">
           <li class="cv-item">
@@ -213,7 +239,7 @@ description: A list of my work experience, education, and other professional inf
         </ol>
       </section>
 
-      <section class="cv-section page-break">
+      <section class="cv-section" id="education">
         <h2 class="cv-section-title">Education</h2>
         <div class="cv-item">
           <h3 class="cv-item-title">The University of Alabama at Birmingham</h3>
@@ -223,7 +249,7 @@ description: A list of my work experience, education, and other professional inf
         </div>
       </section>
 
-      <section class="cv-section">
+      <section class="cv-section page-break" id="honors-awards">
         <h2 class="cv-section-title">Honors & Awards</h2>
         <ol class="cv-list">
           <li class="cv-item">
@@ -244,7 +270,7 @@ description: A list of my work experience, education, and other professional inf
         </ol>
       </section>
 
-      <section class="cv-section">
+      <section class="cv-section" id="exibitions">
         <h2 class="cv-section-title">Exhibitions</h2>
         <ol class="cv-list">
           <li class="cv-item">
@@ -261,9 +287,15 @@ description: A list of my work experience, education, and other professional inf
         </ol>
       </section>
 
-      <section class="cv-section page-break">
+      <section class="cv-section page-break" id="projects">
         <h2 class="cv-section-title">Personal Projects</h2>
         <ol class="cv-list">
+          <li class="cv-item">
+            <h3 class="cv-item-title">Color Scale app</h3>
+            <strong class="cv-item-subtitle">A web app designed to make harmoneous color scales using various digital color mixing techniques, easing, and graphing.</strong>
+            <p class="cv-item-date">2024 - Present</p>
+            <p class="cv-item-description">Check out <a href="https://colorscale.app">colorscale.app</a> and it's <a href="https://github.com/MattMcAdams/colorscale">GitHub source</a>.</p>
+          </li>
           <li class="cv-item">
             <h3 class="cv-item-title">Dotfiles</h3>
             <strong class="cv-item-subtitle">Backup system for dotfiles, common system configurations, and scripts to make my life a little easier. Very much a work in progress, but an interesting project none the less.</strong>

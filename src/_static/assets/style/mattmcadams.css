@@ -58,7 +58,7 @@ header .level.container {
 } */
 
 footer p {
-  padding: 1em;
+  padding-block: 1em;
   margin-bottom: 0;
 }
 
