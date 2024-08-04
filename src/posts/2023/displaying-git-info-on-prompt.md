@@ -2,7 +2,7 @@
 title: Displaying Git info on the command prompt
 date: 2023-12-01
 
-tags: ['tutorial', 'command line']
+tags: ['tutorial', 'command line', 'git']
 description: "Let's look at how to display Git information as a part of the ZSH prompt."
 
 thumbnail: /images/posts/2023/git-prompt-info.png
