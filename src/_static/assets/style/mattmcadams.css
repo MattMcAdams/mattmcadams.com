@@ -1,133 +1,237 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CRSV,MONO@-15..0,300..800,0..1,0..1&display=swap'); */
-
 @font-face {
   font-family: 'Recursive';
   src: url('/assets/fonts/recursive/Recursive_VF_1.085.woff2');
   font-weight: 300 1000;
 }
 
+/* =================================================================
+/* SECTION Tokens
+================================================================= */
+
 :root {
-  --content-width: 800px;
-  --sidebar-width: 300px;
+  /* Spacing */
+  --space_05: 0.25rem; /* 4px   - utility to substitute 0 margins */
+  --space_1: 0.5rem;   /* 8px   - utility for tight paddings etc */
+  --space_2: 1rem;     /* 16px  - 1/2 line height, for closely related elements */
+  --space_4: 2rem;     /* 32px  - 1 line height, for related elements */
+  --space_8: 4rem;     /* 64px  - 2 line heights, for loosely related elements */
+  --space_16: 8rem;    /* 128px - 4 line heights, for unrelated elements */
 
-  --font-body: 'Recursive', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'Recursive', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  /* Semantic Space */
+  --space_flow: var(--space_4);
+  --space_gutter: var(--space_2);
+  --space_section: var(--space_8);
+  --space_grid-gap: var(--space_4);
+  --space_flex-gap: var(--space_2);
+  --space_layout-gap: var(--space_8);
 
-  --color-gray-100: #F3F4F6;
-	--color-gray-500: #667791;
-	--color-gray-800: #334155;
-	--color-gray-900: #1E293B;
-	--text-color: var(--color-gray-800);
+  /* Layout Widths */
+  --width_content: 50rem;
+  --width_sidebar: 20rem;
+  --width_wide: calc(
+    var(--width_content) +
+    var(--width_sidebar) +
+    var(--space_layout-gap)
+  );
 
-	--page-bg-color: white;
-	--element-bg-color: var(--color-gray-100);
+  /* Colors */
+  --color_text--default: #374151;
+  --color_text--subtle: #6b7280;
+  --color_text--link: #0074E0;
+  --color_text--link-alt: #0263BC;
+  --color_text--accent: var(--color_text--link);
+  --color_background--surface: #f9fafb;
+  --color_background--element: #f3f4f6;
+  --color_background--chip: #e5e7eb;
+  --color_accent: var(--color_text--link);
+
+  /* Font Families */
+  --font_body: 'Recursive', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font_head: inherit;
+  --font_mono: 'Recursive', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  /* Font Weights */
+  --font_weight--thin: 100;
+  --font_weight--extralight: 200;
+  --font_weight--light: 300;
+  --font_weight--normal: 400;
+  --font_weight--medium: 500;
+  --font_weight--semibold: 600;
+  --font_weight--bold: 700;
+  --font_weight--extrabold: 800;
+  --font_weight--black: 900;
+
+  /* Font Sizes & Line Heights */
+  /* Based on a modular scale 1.125 by 1.2 */
+  /* Exact values have been refined to be a whole pixel value */
+  --font_size--small: 0.9375rem;    /* 15px */
+  --font_size--normal: 1.125rem;    /* 18px */
+  --font_size--medium: 1.375rem;    /* 22px */
+  --font_size--large: 1.625rem;     /* 26px */
+  --font_size--xlarge: 1.9375rem;   /* 31px */
+  --font_size--xxlarge: 2.3125rem;  /* 37px */
+  --font_size--xxxlarge: 2.8125rem; /* 45px */
+
+  /* Line heights */
+  --font_height--small: 1.2;
+  --font_height--normal: 1.8;
+  --font_height--medium: 1.5;
+  --font_height--large: 1.3;
+  --font_height--xlarge: 1.2;
+  --font_height--xxlarge: 1.1;
+  --font_height--xxxlarge: 1;
 }
 
-header nav ul.nav {
+del {
+  --color_background--element: #fdebeb;
+}
+
+ins {
+  --color_background--element: #e3fcec;
+}
+
+/* !SECTION Tokens */
+/* =================================================================
+/* SECTION Top Navigation
+================================================================= */
+
+#app > header nav ul {
   display: flex;
-  margin: auto;
   flex-wrap: wrap;
-  padding: 0;
+  column-gap: var(--space_flow);
+  padding: var(--space_2) 0;
 }
 
-@media ( min-width: 900px ) {
-  header nav ul {
+@media (min-width: 55rem) {
+  #app > header nav ul {
     justify-content: flex-end;
   }
 }
 
-header nav ul li {
-  padding: 0 1em;
+/* !SECTION Top Navigation */
+/* =================================================================
+/* SECTION Footer
+================================================================= */
+
+#app > footer {
+  padding-block-start: var(--space_2);
+  padding-block-end: var(--space_2);
 }
 
-header nav {
-  padding: 1em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-
-/* #main {
-  align-self: start;
+#app > footer img {
+  height: 1em;
+  width: 1em;
   margin: 0;
+  display: inline-block;
+  position: relative;
+  top: 0.15em;
 }
 
-header .level.container {
-  margin: 0;
-} */
+/* !SECTION Footer */
+/* =================================================================
+/* SECTION Content
+================================================================= */
 
-footer p {
-  padding-block: 1em;
-  margin-bottom: 0;
+.page {
+  padding: var(--space_section) 0;
 }
 
-footer a[href] {
-  font-weight: inherit;
-  color: inherit;
-  text-decoration: none;
+#app > :nth-child(2) {
+  place-content: center;
 }
 
-footer a[href]:hover,
-footer a[href]:focus {
-  text-decoration: underline;
-}
+/* !SECTION Content */
+/* =================================================================
+/* SECTION Sidebar
+================================================================= */
 
-.sidebar ul.tag-list {
+.page__sidebar ul.tag-list {
   max-width: 40em;
   padding: 0;
   overflow-x: hidden;
   list-style: none;
 }
 
-.sidebar ul.tag-list li:before {
+.page__sidebar ul.tag-list li:before {
   float: left;
   width: 0;
   white-space: nowrap;
   content:
- ". . . . . . . . . . . . . . . . . . . . "
- ". . . . . . . . . . . . . . . . . . . . "
- ". . . . . . . . . . . . . . . . . . . . "
- ". . . . . . . . . . . . . . . . . . . . ";
- }
-
-.sidebar ul.tag-list a {
-  padding-right: 0.33em;
-  background: var(--page-bg-color);
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . ";
 }
 
-.sidebar ul.tag-list span {
+.page__sidebar ul.tag-list a {
+  padding-right: 0.33em;
+  background: var(--color_background--surface);
+}
+
+.page__sidebar ul.tag-list span {
   float: right;
   padding-left: 0.33em;
-  background: var(--page-bg-color);
+  background: var(--color_background--surface);
 }
 
-.postlist h3,
-.postlist .post-meta {
-  margin-bottom: calc(var(--space) / 2);
+.page__sidebar .year-list li {
+  display: inline
 }
 
-.post-meta,
-.post-meta a {
-  color: var(--color-gray-500);
+.page__sidebar .year-list li:not(:last-child)::after {
+  content: " ·"
+}
+
+/* !SECTION Sidebar */
+/* =================================================================
+/* SECTION Homepage
+================================================================= */
+
+.home-sidebar {
+  display: none;
+}
+
+.home-sidebar + .page__content {
+  grid-column-start: sidebar;
+  grid-column-end: content;
+}
+
+@media (min-width: 80rem) {
+  .home-sidebar {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .home-sidebar + .page__content {
+    grid-column-start: content;
+  }
+}
+
+/* !SECTION Homepage */
+/* =================================================================
+/* SECTION Components
+================================================================= */
+/* ==============================
+/* SECTION Metadata
+============================== */
+
+.metadata {
+  color: var(--color_text--subtle);
+}
+
+.metadata a {
+  color: inherit;
   text-decoration: none;
 }
 
-.post-meta a:hover,
-.post-meta a:focus {
+.metadata a:hover {
   text-decoration: underline;
 }
 
-.site-search {
-  display: flex;
-}
-.site-search button {
-  background: var(--text-color);
-}
-.site-search button,
-.site-search input {
-  border: 2px solid var(--text-color);
-}
+/* !SECTION Metadata */
+/* ==============================
+/* SECTION Anchor Links
+============================== */
 
 .direct-link {
   display: inline-block;
@@ -141,7 +245,8 @@ footer a[href]:focus {
   top: 0.1em;
 }
 
-h2[id], h3[id] {
+h2[id],
+h3[id] {
   position: relative;
 }
 
@@ -150,30 +255,20 @@ h3[id]:hover .direct-link {
   display: inline;
 }
 
-.home main {
-  display: flex;
-  align-items: flex-end;
-}
-.home .sidebar {
-  display: none;
-}
-@media ( min-width: 900px ) {
-  .home .sidebar {
-    display: flex;
-    align-items: flex-end;
-  }
-}
+/* !SECTION Anchor Links */
+/* !SECTION Components */
+/* =================================================================
+/* SECTION Projects & Sketchbook
+================================================================= */
 
-.year-list li { display: inline }
-.year-list li:not(:last-child)::after { content: " ·" }
-
-.project-list img {
-  margin-bottom: 0;
+.project-list img,
+.sketch-list img {
   transition: transform .2s;
   border-radius: 0.5rem;
 }
 
-.project-list a:hover img {
+.project-list a:hover img,
+.sketch-list a:hover img {
   transform: scale(1.05);
 }
 
@@ -184,7 +279,4 @@ h3[id]:hover .direct-link {
   width: 100%;
 }
 
-.log-pagination {
-  display: flex;
-  justify-content: space-between;
-}
+/* !SECTION Projects */

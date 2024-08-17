@@ -4,8 +4,8 @@ layout: layouts/no-sidebar.njk
 
 <h1>{{ title }}</h1>
 
-<p class="post-meta">
-  <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">
+<p class="metadata">
+  <time datetime="{{ page.date | htmlDateString }}">
     {{ page.date | readableDate }}
   </time>
 
@@ -13,11 +13,9 @@ layout: layouts/no-sidebar.njk
     &middot;
     {% for tag in tags | filterTagList %}
       {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+      <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
     {% endfor %}
   {% endif %}
 </p>
 
-<div class="post-content">
 {{ content | safe }}
-</div>

@@ -11,12 +11,11 @@
     <link type="text/plain" rel="author" href="/humans.txt" />
 
     <!-- METADADA -->
-      {% if title %}
-        <title>{{title}} | {{metadata.title}}</title>
-      {%else%}
-        <title>{{metadata.title}}</title>
-      {%endif%}
-    {# <title>{{ title or metadata.title }}</title> #}
+    {% if title %}
+      <title>{{title}} | {{metadata.title}}</title>
+    {%else%}
+      <title>{{metadata.title}}</title>
+    {%endif%}
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="og:title" content="{{title or metadata.title}}">
     <meta name="og:description" content="{{ description or metadata.description }}">
@@ -38,32 +37,37 @@
     <link rel="alternate" href="{{ metadata.feed.sketchbook.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.sketchbook.title }}">
     <link rel="alternate" href="{{ metadata.feed.log.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.log.title }}">
   </head>
-  <body>
-    <div id="app" class="page">
+  <body id="app">
+    <header class="container--wide">
+      <nav aria-label="Primary Navigation">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/now">Now</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/posts">Posts</a></li>
+          <li><a href="/bookshelf">Bookshelf</a></li>
+          <li><a href="https://donate.stripe.com/7sIeVd6E2dAbdeU5kk">Support my work</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <!--<div class="decorative-bar"></div>-->
-
-      <header>
-        <nav class="top-nav"><ul class="nav container container-wide">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="/now">Now</a></li>
-          <li class="nav-item"><a href="/projects">Projects</a></li>
-          <li class="nav-item"><a href="/posts">Posts</a></li>
-          <li class="nav-item"><a href="/bookshelf">Bookshelf</a></li>
-          <li class="nav-item"><a href="https://donate.stripe.com/7sIeVd6E2dAbdeU5kk">Support my work</a></li>
-        </ul></nav>
-      </header>
+    <main class="page">
 
       {{ content | safe }}
 
-      <footer class="container container-wide">
-        <p><img style="height: 1em; width: 1em; margin: 0; display: inline-block; position: relative; top: 0.15em" src="/assets/cc.svg" alt="Creative Commons"> <small><a href="/license">BY-NC-SA</a> 2015-2024</small> Matthew McAdams &middot;
-          <a href="https://webring.xxiivv.com/#mattmcadams">
-            <img style="height: 1em; width: 1em; margin: 0; display: inline-block; position: relative; top: 0.15em" src="https://webring.xxiivv.com/icon.black.svg" alt="XXIIVV"/> webring
-          </a> &middot;
-          <span>mattmcadams@outlook.com</span>
-        </p>
-      </footer>
+    </main>
+
+    <footer class="container--wide">
+      <p>
+        <img src="/assets/cc.svg" alt="Creative Commons">
+        <small><a href="/license">BY-NC-SA</a> 2015-2024</small>
+        Matthew McAdams &middot;
+        <a href="https://webring.xxiivv.com/#mattmcadams">
+          <img src="https://webring.xxiivv.com/icon.black.svg" alt="XXIIVV"/> webring
+        </a> &middot;
+        <span>mattmcadams@outlook.com</span>
+      </p>
+    </footer>
 
     </div>
   </body>

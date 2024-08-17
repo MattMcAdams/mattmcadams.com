@@ -1,11 +1,11 @@
 code, samp, kbd, var {
-  font-family: var(--font-mono);
+  font-family: var(--font_mono);
   padding: 0.1em 0.3em;
   font-variation-settings: "MONO" 1;
 }
 
 code, samp {
-  background-color: var(--element-bg-color);
+  background-color: var(--color_background--element);
 	font-weight: 500;
 }
 
@@ -15,14 +15,12 @@ var {
 }
 
 kbd {
-  background-color: var(--text-color);
-  color: var(--page-bg-color);
+  background-color: var(--color_text--default);
+  color: var(--color_background--surface);
   border-radius: 5px;
 }
 
 pre {
-  margin-bottom: var(--flow-space);
-
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
 	tab-size: 2;
@@ -32,19 +30,19 @@ pre {
 	-ms-hyphens: none;
 	hyphens: none;
 
-  padding: calc(var(--space) / 2);
+  padding: calc(var(--space_flow) / 2);
   border-radius: 0.5em;
-  background-color: var(--prism-background);
+  background-color: var(--color_background--element);
 }
 
 pre code,
 pre samp {
   display: block;
   overflow: auto;
-  background-color: var(--prism-background);
-  color: var(--prism-foreground);
-	font-size: var(--ms--1);
-	line-height: 2em;
+  background-color: var(--color_background--element);
+  color: var(--color_text--default);
+	font-size: var(--font_size--small);
+	line-height: 1.5;
 }
 
 pre.language-txt,
@@ -79,9 +77,10 @@ pre.language-php::before,
 pre.language-yaml::before,
 pre.language-yml::before {
   position: absolute;
-  top: 0;
-  right: 0.5em;
-  font-size: var(--ms--2);
+  top: 0.5em;
+  right: 1em;
+  font-size: var(--font_size--small);
+	line-height: var(--font_height--small);
   color: var(--prism-foreground);
   font-weight: bold;
 }
@@ -103,26 +102,12 @@ pre.language-yml::before { content: "YAML"; }
 
 
 :root {
-	--prism-foreground: var(--color-gray-900);
-	--prism-background: var(--element-bg-color);
-
-	--prism-comment: #607087; /*64748B*/
-	--prism-operator: #9C6200; /*C67C00*/
-	--prism-function: #C72D7A; /*ec4899*/
-	--prism-keyword: #009E8D; /*357F36*/ /*009E8D*/ /*14B8A6*/
-	--prism-tag: #006FD6; /*0074E0*/
+	--prism-comment: #607087;
+	--prism-operator: #9C6200;
+	--prism-function: #C72D7A;
+	--prism-keyword: #009E8D;
+	--prism-tag: #006FD6;
 	--prism-string: #6D28D9;
-
-	/* --prism-foreground: var(--page-bg-color);
-	--prism-background: #27272A;
-
-	--prism-comment: #94A3B8;
-	--prism-operator: #FDBA74;
-	--prism-function: #F472B6;
-	--prism-keyword: #6EE7B7;
-	--prism-tag: #38BDF8;
-	--prism-string: #C4B5FD; */
-
 }
 
 .language-css .token.string,

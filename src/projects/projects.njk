@@ -5,42 +5,36 @@ title: Projects
 description: A collection of my creative work including design, development, client work, and more.
 ---
 
-<div id="main" class="has-sidebar">
-  <div class="sidebar">
+<div class="page__sidebar layout--flow container">
 
-    <p>
-      <a href={{metadata.feed.projects.xml.path}}>Subscribe via XML-RSS</a><br>
-      <a href={{metadata.feed.projects.json.path}}>Subscribe via JSON-RSS</a>
-      <!--<a href="#">Subscribe via Email</a>-->
-    </p>
+  <p>
+    <a href={{metadata.feed.projects.xml.path}}>Subscribe via XML-RSS</a><br>
+    <a href={{metadata.feed.projects.json.path}}>Subscribe via JSON-RSS</a>
+  </p>
 
-    <h3>Filter by Tag</h3>
-    <ul class="tag-list">
-      {% for tag in collections.projectTags %}
-      {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
-        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.projectsByTag[tag] | length }})</span></li>
-      {% endfor %}
-    </ul>
+  <h3>Filter by Tag</h3>
+  <ul class="tag-list">
+    {% for tag in collections.projectTags %}
+    {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
+      <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.projectsByTag[tag] | length }})</span></li>
+    {% endfor %}
+  </ul>
 
-    <h3>Quick Info</h3>
-    <ul>
-      <li>Bachelor of Fine Arts</li>
-      <li>10 years of design experience</li>
-      <li>5 awards / exhibitions</li>
-    </ul>
+  <h3>Quick Info</h3>
+  <ul class="quick-info">
+    <li>Bachelor of Fine Arts</li>
+    <li>10 years of design experience</li>
+    <li>5 awards / exhibitions</li>
+  </ul>
 
-    <h3>Links</h3>
-    <p><a href="https://github.com/MattMcAdams/">GitHub</a><br><a href="/cv">Resume</a></p>
+  <h3>Links</h3>
+  <p><a href="https://github.com/MattMcAdams/">GitHub</a><br><a href="/cv">Resume</a></p>
+</div>
 
-  </div>
-    <main class="content">
-      <div>
-        <h1>Creative work</h1>
-        <p>I’m a multidisciplinary designer with a variety of interests. My primary field is web design and development, but I feel it’s important to represent a larger sample of my work overall. You might see some projects here that could be considered a little “left field” but they represent what I’m interested in as a creative. I've also selected a few pages from my <a href="/sketchbook">sketchbook</a> to show publically.</p>
+<div class="page__content layout--flow container">
+  <h1>Creative work</h1>
+  <p>I’m a multidisciplinary designer with a variety of interests. My primary field is web design and development, but I feel it’s important to represent a larger sample of my work overall. You might see some projects here that could be considered a little “left field” but they represent what I’m interested in as a creative. I've also selected a few pages from my <a href="/sketchbook">sketchbook</a> to show publically.</p>
 
-        {% set collection = collections.projects %}
-        {% include "projectlist.njk" %}
-      </div>
-    </main>
-  </div>
+  {% set collection = collections.projects %}
+  {% include "projectlist.njk" %}
 </div>

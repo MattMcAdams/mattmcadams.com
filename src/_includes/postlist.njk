@@ -1,9 +1,9 @@
 {# Required argument: collection | array of post objects #}
 
-<ol reversed class="post-list" style="counter-reset: start-from {{ collection.length + 1 }}">
+<ol reversed class="post-list layout--flow" style="counter-reset: start-from {{ collection.length + 1 }}">
 {% for post in collection | reverse %}
 
-  <li class="post-list_item {% if post.url == url %}post-list_item-active{% endif %}">
+  <li class="post-list_item layout--flow {% if post.url == url %}post-list_item-active{% endif %}">
 
   <h3><a href="{{ post.url | url }}">
     {% if post.data.title %}
@@ -14,14 +14,14 @@
   </a></h3>
 
 
-  <p class="post-meta">
-  <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">
+  <p class="metadata">
+  <time datetime="{{ post.date | htmlDateString }}">
     {{ post.date | readableDate }}
   </time> &middot;
 
   {% for tag in post.data.tags | filterTagList %}
     {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+    <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
   {% endfor %}
   </p>
 

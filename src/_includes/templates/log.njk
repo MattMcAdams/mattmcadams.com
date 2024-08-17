@@ -6,14 +6,14 @@ layout: layouts/no-sidebar.njk
 
 <h1>{{ title }}</h1>
 
-<div class="post-content">
+<div class="layout--flow">
 {{ content | safe }}
 </div>
 
 {% set previousPost = collections.logs | getPreviousCollectionItem %}
 {% set nextPost = collections.logs | getNextCollectionItem %}
 {% if previousPost or nextPost %}
-  <nav class="log-pagination" aria-label="Pagination">
+  <nav class="layout--level" aria-label="Pagination">
     {% if previousPost %}
       <a href="{{ previousPost.url }}">&larr; Previous</a>
     {% endif %}

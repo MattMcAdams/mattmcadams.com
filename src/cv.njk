@@ -6,86 +6,95 @@ description: A list of my work experience, education, and other professional inf
 ---
 
 <style>
+/* Hide print only content */
 
-main > p {
-  margin-bottom: calc(var(--space) / 2);
+.print-only {
+  display: none;
 }
 
+/* Page Typography */
+
+h1 {
+  font-size: var(--font_size--xxlarge);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--font_size--large);
+  line-height: var(--line_height--large);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--color_accent);
+}
+
+/* Section Specific Styles */
+
+.cv-section {
+  margin-top: calc(var(--space_flow) * 2);
+}
+
+#summary ul {
+  list-style: none;
+}
+
+#summary li {
+  margin-inline: 0;
+}
+
+/* CV Item */
+
+.cv-item .title {
+  font-size: var(--font_size--medium);
+  line-height: var(--font_height--medium);
+  font-weight: bold;
+}
+
+.cv-item .subtitle {
+  font-size: var(--font_size--normal);
+  font-weight: normal;
+}
+
+.cv-item .description {
+  font-size: var(--font_size--small);
+  margin-top: calc(var(--space_flow) / 2);
+}
+
+.cv-item .description > * + * {
+  margin-top: calc(var(--space_flow) / 2);
+}
+
+.cv-item .projects {
+  margin: 0;
+}
+
+.cv-item .projects li {
+  display: inline;
+}
+
+.cv-item .projects li:not(:last-child)::after {
+  content: " |";
+}
+
+/* Initialize grid areas */
+
 .cv-item {
+  margin-top: calc(var(--space_flow) * 2);
   display: grid;
   grid-template-areas: "date" "title" "subtitle" "description";
 }
 
-.cv-item-description {
-  font-size: var(--ms--1);
-  line-height: 1.5;
-  margin-top: var(--space);
-}
+.cv-item .title { grid-area: title; }
+.cv-item .subtitle { grid-area: subtitle; }
+.cv-item .date { grid-area: date; }
+.cv-item .description { grid-area: description; }
 
-.cv-item-title,
-.cv-item-subtitle,
-.cv-item-date,
-.cv-item-description {
-  margin: 0;
-  line-height: 1.8;
-}
-
-.cv-item-subtitle,
-.cv-item-subtitle strong {
-  font-weight: normal;
-}
-
-.cv-item-description :last-child {
-  margin: 0;
-}
-
-.cv-list .cv-item {
-  margin-bottom: calc(var(--space) * 2);
-}
-
-@media (min-width: 700px) {
+@media (min-width: 40rem) {
   .cv-item {
     display: grid;
     grid-template-areas: "date title" "date subtitle" "date description";
-    grid-column-gap: calc(var(--space) * 2);
+    grid-column-gap: var(--space_flow);
     grid-template-columns: 10rem 1fr;
   }
-
-}
-
-.cv-item-title { grid-area: title; }
-.cv-item-subtitle { grid-area: subtitle; }
-.cv-item-date { grid-area: date; }
-.cv-item-description { grid-area: description; }
-
-#summary li:not(:last-child) {
-  margin-bottom: calc(var(--space) / 2 );
-}
-
-.print-only { display: none; }
-
-@media print {
-  :root {
-    --space: 1rem;
-    --ms-0: 0.75rem;
-  }
-  .top-nav { display: none; }
-  h1 { font-size: var(--ms-2); }
-  h2 { color: var(--color-primary-500); }
-
-  #main { padding: 0; margin: 0; }
-
-  .page-info {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-
-  footer { display: none; }
-
-  .cv-item { break-inside: avoid-page; }
-  .print-only { display: initial; }
-  .page-break { break-before: page; }
 }
 
 @page {
@@ -93,252 +102,263 @@ main > p {
   margin: 0.75in;
 }
 
-.cv-section-title {
-  font-size: var(--ms-1);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid var(--color-primary-500);
-  margin: calc(var(--space) * 2) 0;
-}
+@media print {
 
-.cv-item-title {
-  font-size: var(--ms-0);
-}
+  /* Reset font sizes */
+  :root {
+    --font_size--small: 8pt;
+    --font_size--normal: 10pt;
+    --font_size--medium: 12pt;
+    --font_size--large: 14pt;
+    --font_size--xlarge: 16pt;
+    --font_size--xxlarge: 18pt;
+    --space_flow: 15pt;
+  }
+  /* Fix empty page spam */
+  .page {
+    display: block;
+  }
 
-.cv-item-description ul li {
-  display: inline-block;
-  margin: 0;
-}
-.cv-item-description ul li:not(:last-child)::after {
-  content: " |";
-}
+  /* Print only classes */
+  .cv-item { break-inside: avoid-page; }
+  .print-only { display: initial; }
+  .page-break { break-before: page; }
 
+  /* Remove extra padding from the page */
+  .page,
+  .container,
+  .container--wide {
+    padding: 0 !important;
+  }
+
+  /* Remove site header */
+  #app > header,
+  #app > footer {
+    display: none;
+  }
+
+  /* Reduce spacing */
+  .cv-section,
+  .cv-item {
+    margin-top: var(--space_flow);
+  }
+}
 </style>
 
-  <main id="main" class="content container container-wide">
-      <h1>Matthew McAdams</h1>
-      <p>Front-End Engineer, Designer, and Developer Advocate<span class="print-only"><br>&nbsp;</span></p>
-      <p class="page-info"><span class="print-only">Matthew McAdams | </span>Curriculum Vitae | May 2024<span class="print-only"><br><a href="https://mattmcadams.com">mattmcadams.com</a> | <a href="mailto:mattmcadams@outlook.com">mattmcadams@outlook.com</a> | <a href="tel:12054355745">205.435.5745</a></span></p>
+<div class="container--wide">
+  <h1>Matthew McAdams</h1>
+  <p style="margin-top: calc(var(--space_flow) / 2)">Front-End Engineer, Designer, and Developer Advocate</p>
+  <p style="margin-top: calc(var(--space_flow) / 2)">Curriculum Vitae | August 2024</p>
+  <p class="print-only" style="margin-top: calc(var(--space_flow) / 2)">
+    <a href="https://mattmcadams.com">mattmcadams.com</a> &middot; <a href="mailto:mattmcadams@outlook.com">mattmcadams@outlook.com</a> &middot; <a href="tel:12054355745">205.435.5745</a>
+  </p>
 
-      <section class="cv-section" id="summary">
-        <h2 class="cv-section-title">Summary</h2>
-        <ul class="cv-summary">
-          <li>
-            Firmly established developer advocate currently working in the front-end user experience field as a designer, developer, user advocate, and now leader, having been in the creative and design industry for over ten years.
-          </li>
-          <li>
-            Directed a system to assist clients in refining their web architecture, as well as establishing and maintaining quality control, CI/CD workflows, and client-developer relationships.
-          </li>
-          <li>
-            Worked with all stages of the product lifecycle and collaborating with leaders involved to ensure a realistic, well-tested, and delightful end user experience.
-          </li>
-          <li>
-            Experience training developers, hosting workshops, and adivising stakeholders on the development team's behalf.
-          </li>
-          <li>
-            Passionate about technology, best practices, and always learning the latest industry developments and viability; with several personal open source code projects.
-          </li>
-        </ul>
-      </section>
+  <section class="cv-section layout--flow" id="summary">
+    <h2>Summary</h2>
+    <ul>
+      <li>
+        Firmly established developer advocate currently working in the front-end user experience field as a designer, developer, user advocate, and now leader, having been in the creative and design industry for over ten years.
+      </li>
+      <li>
+        Directed a system to assist clients in refining their web architecture, as well as establishing and maintaining quality control, CI/CD workflows, and client-developer relationships.
+      </li>
+      <li>
+        Worked with all stages of the product lifecycle and collaborating with leaders involved to ensure a realistic, well-tested, and delightful end user experience.
+      </li>
+      <li>
+        Experience training developers, hosting workshops, and adivising stakeholders on the development team's behalf.
+      </li>
+      <li>
+        Passionate about technology, best practices, and always learning the latest industry developments and viability; with several personal open source code projects.
+      </li>
+    </ul>
+  </section>
 
-      <section class="cv-section" id="experience">
-        <h2 class="cv-section-title">Experience</h2>
-        <ol class="cv-list">
-          <li class="cv-item">
-            <h3 class="cv-item-title">Associate Director, Web Strategy</h3>
-            <strong class="cv-item-subtitle">The University of Alabama<br>Division of Strategic Communications</strong>
-            <p class="cv-item-date">2022 - Present</p>
-            <div class="cv-item-description">
-              <p>Responsible for supervision and management of the day-to-day operations of the web development staff, set web development standards for websites and applications, and manage code deployment systems and architecture used by the department. Lead collaboration efforts with developers in other campus units and serve as a primary support person for critical UA web infrastructure used by high-profile University websites.</p>
-            </div>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Frontend Developer</h3>
-            <strong class="cv-item-subtitle">Shadow Dragon</strong>
-            <p class="cv-item-date">2022 - 2022</p>
-            <div class="cv-item-description">
-              <p>Designing and developing user interfaces for open source intelegence software used for monitoring, link analysis, and user management. Work with backend API developers on data architecture and integration with frontend products, and engage in cross-departmental collaboration to implement user experience improvements to internal tools.</p>
-            </div>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Senior Web & User Experience Designer</h3>
-            <strong class="cv-item-subtitle">The University of Alabama<br>Division of Strategic Communications</strong>
-            <p class="cv-item-date">2020 - 2022</p>
-            <div class="cv-item-description">
-              <p>Responsible for the definition of requirements, web design, front-end code, content, and development activities within UA's institutional web framework and content management system. Advising leadership on best practices, University standards in web content strategy, accessibility, information architecture, and user experience</p>
-              <p style="margin-bottom: 0;"><strong>Projects</strong></p>
-              <ul>
-                <li>Admissions website refresh</li>
-                <li>Capital Campaign website design (Gold ADDY)</li>
-                <li>Definition of new design system</li>
-                <li>Development of new institutional Wordpress theme</li>
-                <li>Technical and Design documentation</li>
-              </ul>
-            </div>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Student Assistant - Web Development</h3>
-            <strong class="cv-item-subtitle">The University of Alabama at Brimingham<br>Department of Information Technology</strong>
-            <p class="cv-item-date">2016 - 2020</p>
-            <div class="cv-item-description">
-              <p>Responsible for maintaining website content, tracking analytics, and creating mockups, as well as developing new web pages using HTML, CSS, and JavaScript</p>
-              <p style="margin-bottom: 0"><strong>Projects</strong></p>
-              <ul>
-                <li>2017, 2018, and 2019 Annual Reports</li>
-                <li>TechConnect branding and website</li>
-                <li>Internal design system</li>
-                <li>Design documentation and graphics standards</li>
-                <li>Website rebuilds</li>
-              </ul>
-            </div>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Print Technician</h3>
-            <strong class="cv-item-subtitle">OfficeMax</strong>
-            <p class="cv-item-date">2015 - 2016</p>
-            <p class="cv-item-description">Working with clients to design and print a variety of products, overseeing print orders and job progress, printing, cutting, laminating, and binding products. Responsible for maintaining printing equipment and tracking supplies</p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Silkscreen Printmaker</h3>
-            <strong class="cv-item-subtitle">Designs on You</strong>
-            <p class="cv-item-date">2013 - 2015</p>
-            <p class="cv-item-description">Developing and reclaiming screens before and after production, aligning and calibrating the printing press, as well as making prints on fabric and paper media</p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="cv-section page-break" id="service">
-        <h2 class="cv-section-title">Service</h2>
-        <ol class="cv-list">
-          <li class="cv-item">
-            <h3 class="cv-item-title">Design for Good</h3>
-            <strong class="cv-item-subtitle">Freelance</strong>
-            <p class="cv-item-date">2020 - Present</p>
-            <div class="cv-item-description">
-              <p>Pro-bono projects for regional clients, local non-profits, and under-served communities. Using thoughtful design to create a positive impact in our community, as a medium for social change, and to encourage economical development for local businesses</p>
-            </div>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Graphic Designer</h3>
-            <strong class="cv-item-subtitle">Bloom Studio</strong>
-            <p class="cv-item-date">2019</p>
-            <div class="cv-item-description">
-              <p>Student run design studio focusing on "Design for Good" projects for local clients</p>
-              <p style="margin-bottom: 0;"><strong>Clients</strong></p>
-              <ul>
-                <li>Cahaba River Society</li>
-                <li>Birmingham Audubon Society</li>
-                <li>Historic 16th Street Baptist Church</li>
-                <li>Birmingham Botanical Gardens</li>
-                <li>Aveda Institute</li>
-                <li>Paddle the Gulf</li>
-                <li>Plain Schemer LLC</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="cv-section" id="education">
-        <h2 class="cv-section-title">Education</h2>
-        <div class="cv-item">
-          <h3 class="cv-item-title">The University of Alabama at Birmingham</h3>
-          <p class="cv-item-date">2020</p>
-          <p class="cv-item-subtitle"><strong>Bachelor of Fine Arts</strong></p>
-          <p class="cv-item-description">Cum Laude - Graphic and Web Design</p>
+  <section class="cv-section" id="experience">
+    <h2>Experience</h2>
+    <ol class="cv-list">
+      <li class="cv-item">
+        <h3 class="title">Associate Director, Web Strategy</h3>
+        <strong class="subtitle">The University of Alabama<br>Division of Strategic Communications</strong>
+        <p class="date">2022 - Present</p>
+        <div class="description">
+          <p>Responsible for supervision and management of the day-to-day operations of the web development staff, set web development standards for websites and applications, and manage code deployment systems and architecture used by the department. Lead collaboration efforts with developers in other campus units and serve as a primary support person for critical UA web infrastructure used by high-profile University websites.</p>
+          <p><strong>Projects</strong></p>
+          <ul class="projects">
+            <li>Minerva Web Framework architecture</li>
+            <li>WordPress Theme architecture</li>
+            <li>Web documentation hub</li>
+            <li>Directory web app</li>
+          </ul>
         </div>
-      </section>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Frontend Developer</h3>
+        <strong class="subtitle">Shadow Dragon</strong>
+        <p class="date">2022 - 2022</p>
+        <div class="description">
+          <p>Designing and developing user interfaces for open source intelegence software used for monitoring, link analysis, and user management. Work with backend API developers on data architecture and integration with frontend products, and engage in cross-departmental collaboration to implement user experience improvements to internal tools.</p>
+        </div>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Senior Web & User Experience Designer</h3>
+        <strong class="subtitle">The University of Alabama<br>Division of Strategic Communications</strong>
+        <p class="date">2020 - 2022</p>
+        <div class="description">
+          <p>Responsible for the definition of requirements, web design, front-end code, content, and development activities within UA's institutional web framework and content management system. Advising leadership on best practices, University standards in web content strategy, accessibility, information architecture, and user experience</p>
+          <p><strong>Projects</strong></p>
+          <ul class="projects">
+            <li>Admissions website refresh</li>
+            <li>Capital Campaign website design (Gold ADDY)</li>
+            <li>Definition of new design system</li>
+            <li>Development of new institutional Wordpress theme</li>
+            <li>Technical and Design documentation</li>
+          </ul>
+        </div>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Student Assistant - Web Development</h3>
+        <strong class="subtitle">The University of Alabama at Brimingham<br>Department of Information Technology</strong>
+        <p class="date">2016 - 2020</p>
+        <div class="description">
+          <p>Responsible for maintaining website content, tracking analytics, and creating mockups, as well as developing new web pages using HTML, CSS, and JavaScript</p>
+          <p><strong>Projects</strong></p>
+          <ul class="projects">
+            <li>2017, 2018, and 2019 Annual Reports</li>
+            <li>TechConnect branding and website</li>
+            <li>Internal design system</li>
+            <li>Design documentation and graphics standards</li>
+            <li>Website rebuilds</li>
+          </ul>
+        </div>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Print Technician</h3>
+        <strong class="subtitle">OfficeMax</strong>
+        <p class="date">2015 - 2016</p>
+        <p class="description">Working with clients to design and print a variety of products, overseeing print orders and job progress, printing, cutting, laminating, and binding products. Responsible for maintaining printing equipment and tracking supplies</p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Silkscreen Printmaker</h3>
+        <strong class="subtitle">Designs on You</strong>
+        <p class="date">2013 - 2015</p>
+        <p class="description">Developing and reclaiming screens before and after production, aligning and calibrating the printing press, as well as making prints on fabric and paper media</p>
+      </li>
+    </ol>
+  </section>
 
-      <section class="cv-section page-break" id="honors-awards">
-        <h2 class="cv-section-title">Honors & Awards</h2>
-        <ol class="cv-list">
-          <li class="cv-item">
-            <h3 class="cv-item-title">Innovator of the Year</h3>
-            <strong class="cv-item-subtitle">Minerva Web Framework <br>University of Alabama Division of Strategic Communications</strong>
-            <p class="cv-item-date">2022</p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Gold ADDY</h3>
-            <strong class="cv-item-subtitle">Consumer Website <br>The Rising Tide Capital Campaign</strong>
-            <p class="cv-item-date">2022</p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">SIGGUS Communication Award</h3>
-            <strong class="cv-item-subtitle">Best in Show <br>UABIT 2017 Annual Report website</strong>
-            <p class="cv-item-date">2017</p>
-          </li>
-        </ol>
-      </section>
+  <section class="cv-section" id="service">
+    <h2>Service</h2>
+    <ol class="cv-list">
+      <li class="cv-item">
+        <h3 class="title">Design for Good</h3>
+        <strong class="subtitle">Freelance</strong>
+        <p class="date">2020 - Present</p>
+        <div class="description">
+          <p>Pro-bono projects for regional clients, local non-profits, and under-served communities. Using thoughtful design to create a positive impact in our community, as a medium for social change, and to encourage economical development for local businesses</p>
+        </div>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Graphic Designer</h3>
+        <strong class="subtitle">Bloom Studio</strong>
+        <p class="date">2019</p>
+        <div class="description">
+          <p>Student run design studio focusing on "Design for Good" projects for local clients</p>
+          <p><strong>Clients</strong></p>
+          <ul class="projects">
+            <li>Cahaba River Society</li>
+            <li>Birmingham Audubon Society</li>
+            <li>Historic 16th Street Baptist Church</li>
+            <li>Birmingham Botanical Gardens</li>
+            <li>Aveda Institute</li>
+            <li>Paddle the Gulf</li>
+            <li>Plain Schemer LLC</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-      <section class="cv-section" id="exibitions">
-        <h2 class="cv-section-title">Exhibitions</h2>
-        <ol class="cv-list">
-          <li class="cv-item">
-            <h3 class="cv-item-title">BFA Exhibition</h3>
-            <strong class="cv-item-subtitle">Abroms-Engel Institute for the Visual Arts <br>Birmingham, Alabama</strong>
-            <p class="cv-item-date">2020</p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Putnam Birds & Trees</h3>
-            <strong class="cv-item-subtitle">Abroms-Engel Institute for the Visual Arts <br>Birmingham, Alabama</strong>
-            <p class="cv-item-date">2018</p>
-            <p class="cv-item-description">Collaboration with Putnam Middle School, Desert Island Supply Co, and the Birmingham Audubon Society to produce a mobile app encouraging students to learn about nature and express their creativity through poetry</p>
-          </li>
-        </ol>
-      </section>
+  <section class="cv-section" id="education">
+    <h2>Education</h2>
+    <div class="cv-item">
+      <h3 class="title">The University of Alabama at Birmingham</h3>
+      <p class="date">2020</p>
+      <p class="subtitle"><strong>Bachelor of Fine Arts</strong></p>
+      <p class="description">Cum Laude - Graphic and Web Design</p>
+    </div>
+  </section>
 
-      <section class="cv-section page-break" id="projects">
-        <h2 class="cv-section-title">Personal Projects</h2>
-        <ol class="cv-list">
-          <li class="cv-item">
-            <h3 class="cv-item-title">Color Scale app</h3>
-            <strong class="cv-item-subtitle">A web app designed to make harmoneous color scales using various digital color mixing techniques, easing, and graphing.</strong>
-            <p class="cv-item-date">2024 - Present</p>
-            <p class="cv-item-description">Check out <a href="https://colorscale.app">colorscale.app</a> and it's <a href="https://github.com/MattMcAdams/colorscale">GitHub source</a>.</p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Dotfiles</h3>
-            <strong class="cv-item-subtitle">Backup system for dotfiles, common system configurations, and scripts to make my life a little easier. Very much a work in progress, but an interesting project none the less.</strong>
-            <p class="cv-item-date">2022 - Present</p>
-            <p class="cv-item-description">Check out my <a href="https://github.com/MattMcAdams/dotfiles">dotfiles on GitHub</a></p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">CSS Boilerplate</h3>
-            <strong class="cv-item-subtitle">An open source boilerplace for websites focusing on smart style and consistency.</strong>
-            <p class="cv-item-date">2021 - Present</p>
-            <p class="cv-item-description">Check out the <a href="https://github.com/MattMcAdams/CSS-Boilerplate">CSS Boilerplate on GitHub</a></p>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Typefaces</h3>
-            <strong class="cv-item-subtitle">A group of typefaces I've published</strong>
-            <p class="cv-item-date">2019 - 2020</p>
-            <div class="cv-item-description">
-              <ul>
-                <li><a href="https://www.mattmcadams.com/projects/attika/">Attika Variable</a></li>
-                <li><a href="https://www.mattmcadams.com/projects/rebar/">Rebar Slab</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="cv-item">
-            <h3 class="cv-item-title">Stratus</h3>
-            <p class="cv-item-date">2017 - 2020</p>
-            <p class="cv-item-description">An SCSS library for building design systems, standardizing spacing, organizing and manipulating color, and generating a typographical scale.</p>
-          </li>
-        </ol>
-      </section>
+  <section class="cv-section" id="honors-awards">
+    <h2>Honors & Awards</h2>
+    <ol class="cv-list">
+      <li class="cv-item">
+        <h3 class="title">Innovator of the Year</h3>
+        <strong class="subtitle">Minerva Web Framework <br>University of Alabama Division of Strategic Communications</strong>
+        <p class="date">2022</p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Gold ADDY</h3>
+        <strong class="subtitle">Consumer Website <br>The Rising Tide Capital Campaign</strong>
+        <p class="date">2022</p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">SIGGUS Communication Award</h3>
+        <strong class="subtitle">Best in Show <br>UABIT 2017 Annual Report website</strong>
+        <p class="date">2017</p>
+      </li>
+    </ol>
+  </section>
 
-      {# <section class="cv-section">
-        <h2 class="cv-section-title">Professional Affiliations</h2>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li>AAF Birmingham</li>
-          <li>Walker County Arts Alliance</li>
-        </ul>
-        <p style="margin-top: var(--space); margin-bottom: calc(var(--space) / 4);"><strong>Conferences & Events Attended</strong></p>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li>2021: Adobe MAX, Config</li>
-          <li>2020: Adobe MAX</li>
-        </ul>
-      </section> #}
+  <section class="cv-section page-break" id="exibitions">
+    <h2>Exhibitions</h2>
+    <ol class="cv-list">
+      <li class="cv-item">
+        <h3 class="title">BFA Exhibition</h3>
+        <strong class="subtitle">Abroms-Engel Institute for the Visual Arts <br>Birmingham, Alabama</strong>
+        <p class="date">2020</p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Putnam Birds & Trees</h3>
+        <strong class="subtitle">Abroms-Engel Institute for the Visual Arts <br>Birmingham, Alabama</strong>
+        <p class="date">2018</p>
+        <p class="description">Collaboration with Putnam Middle School, Desert Island Supply Co, and the Birmingham Audubon Society to produce a mobile app encouraging students to learn about nature and express their creativity through poetry</p>
+      </li>
+    </ol>
+  </section>
 
-  </main>
+  <section class="cv-section" id="projects">
+    <h2>Personal Projects</h2>
+    <ul class="cv-list">
+      <li class="cv-item">
+        <h3 class="title">Color Scale app</h3>
+        <strong class="subtitle">A web app designed to make harmoneous color scales using various digital color mixing techniques, easing, and graphing.</strong>
+        <p class="date">2024 - Present</p>
+        <p class="description">Check out <a href="https://colorscale.app">colorscale.app</a> and it's <a href="https://github.com/MattMcAdams/colorscale">GitHub source</a>.</p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Dotfiles</h3>
+        <strong class="subtitle">Backup system for dotfiles, common system configurations, and scripts to make my life a little easier. Very much a work in progress, but an interesting project none the less.</strong>
+        <p class="date">2022 - Present</p>
+        <p class="description">Check out my <a href="https://github.com/MattMcAdams/dotfiles">dotfiles on GitHub</a></p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">CSS Boilerplate</h3>
+        <strong class="subtitle">An open source boilerplace for websites focusing on smart style and consistency.</strong>
+        <p class="date">2021 - Present</p>
+        <p class="description">Check out the <a href="https://github.com/MattMcAdams/CSS-Boilerplate">CSS Boilerplate on GitHub</a></p>
+      </li>
+      <li class="cv-item">
+        <h3 class="title">Typefaces</h3>
+        <strong class="subtitle">A group of typefaces I've published</strong>
+        <p class="date">2019 - 2020</p>
+        <div class="description">
+          <ul class="projects">
+            <li><a href="https://www.mattmcadams.com/projects/attika/">Attika Variable</a></li>
+            <li><a href="https://www.mattmcadams.com/projects/rebar/">Rebar Slab</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
 </div>

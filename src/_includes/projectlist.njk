@@ -1,9 +1,10 @@
 {# Required argument: collection | array of project objects #}
-<ul reversed class="project-list grid">
+
+<ul reversed class="layout--grid project-list">
 {% for project in collection | reverse %}
 
-  <li class="project-list_item{% if project.url == url %} project-list_item-active{% endif %}">
-    <a href="{{ project.url | url }}" class="project-list_link">
+  <li>
+    <a href="{{ project.url | url }}" class="project-list__link">
       <img src="{{ project.data.thumbnail }}" alt="{{ project.data.title }}">
     </a>
   </li>
