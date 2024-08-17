@@ -1,3 +1,14 @@
+:root {
+	--prism-background: #f3f4f6; /* Tailwind Gray 100 */
+	--prism-foreground: #111827; /* Tailwind Gray 900 */
+	--prism-comment: #6b7280;    /* Tailwind Gray 500 */
+	--prism-operator: #b45309;   /* Tailwind Amber 700 */
+	--prism-function: #be185d;   /* Tailwind Pink 700 */
+	--prism-keyword: #047857;    /* Tailwind Emerald 700 */
+	--prism-tag: #1d4ed8;        /* Tailwind Blue 700 */
+	--prism-string: #6d28d9;     /* Tailwind Violet 600 */
+}
+
 code, samp, kbd, var {
   font-family: var(--font_mono);
   padding: 0.1em 0.3em;
@@ -32,15 +43,15 @@ pre {
 
   padding: calc(var(--space_flow) / 2);
   border-radius: 0.5em;
-  background-color: var(--color_background--element);
+  background-color: var(--prism-background);
 }
 
 pre code,
 pre samp {
   display: block;
   overflow: auto;
-  background-color: var(--color_background--element);
-  color: var(--color_text--default);
+  background-color: var(--prism-background);
+  color: var(--prism-foreground);
 	font-size: var(--font_size--small);
 	line-height: 1.5;
 }
@@ -99,16 +110,6 @@ pre.language-shell::before { content: "SHELL"; }
 pre.language-php::before { content: "PHP"; }
 pre.language-yaml::before,
 pre.language-yml::before { content: "YAML"; }
-
-
-:root {
-	--prism-comment: #607087;
-	--prism-operator: #9C6200;
-	--prism-function: #C72D7A;
-	--prism-keyword: #009E8D;
-	--prism-tag: #006FD6;
-	--prism-string: #6D28D9;
-}
 
 .language-css .token.string,
 .token.url,

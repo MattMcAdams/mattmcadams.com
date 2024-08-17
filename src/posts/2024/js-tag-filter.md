@@ -107,8 +107,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ## The finished product
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="JS Tag Sort" src="https://codepen.io/mattmcadams/embed/VwrNMwP?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/mattmcadams/pen/VwrNMwP">
-  JS Tag Sort</a> by Matthew McAdams (<a href="https://codepen.io/mattmcadams">@mattmcadams</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+<div class="container--wide">
+  <iframe height="500" style="width: 100%;" scrolling="no" title="JS Tag Sort" src="https://codepen.io/mattmcadams/embed/VwrNMwP?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href="https://codepen.io/mattmcadams/pen/VwrNMwP">
+    JS Tag Sort</a> by Matthew McAdams (<a href="https://codepen.io/mattmcadams">@mattmcadams</a>)
+    on <a href="https://codepen.io">CodePen</a>.
+  </iframe>
+</div>

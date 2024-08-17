@@ -11,8 +11,8 @@ cover_image: null
 
 Before we get started, please be aware I'm going to be using Visual Studio Code with the [Comment Anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors) extension. I really love the ability to place easy to skim, important callouts in my code.
 
-<div class="callout">
-  Helpful tip: You can comment out a selected line in VS Code by either selecting the code you want to comment out or placing your cursor on a specific line and pressing <kbd>command</kbd> + <kbd>/</kbd>
+<div class="callout--tip">
+  <p>Helpful tip: You can comment out a selected line in VS Code by either selecting the code you want to comment out or placing your cursor on a specific line and pressing <kbd>command</kbd> + <kbd>/</kbd></p>
 </div>
 
 ## Comment Guidelines
@@ -72,7 +72,9 @@ This style of comment is meant to remind me what a specific piece of code does a
 
 These are the complicated ones that have to explain how a function works or what it does. Typically, I prefer to use block level comments as documentation and rely on line by line comments to walk through what the code is doing if it's not obvious.
 
-> I think it's important to note here that I favor reasonably verbose code with plenty of comments over excessively opaque things that are hard to read. In my opinion, as long as the code does its job well and there are no performance concerns, the "right" way to code is the way that will allow future developers - maybe even your future self - to understand and modify the code more easily.
+<div class="callout--info">
+  <p>I think it's important to note here that I favor reasonably verbose code with plenty of comments over excessively opaque things that are hard to read. In my opinion, as long as the code does its job well and there are no performance concerns, the "right" way to code is the way that will allow future developers - maybe even your future self - to understand and modify the code more easily.</p>
+</div>
 
 #### Documenting a function
 
@@ -216,7 +218,9 @@ Linking to another anchor is a bit trickier, you'll need to set up the destinati
 // LINK src/file.js#My-ID -->
 ```
 
-> Note that as far as I can tell, there is no way to link to a spot in the same file. It's also important to note that links must point to a valid file in the project. One broken link will break all others in the document.
+<div class="callout--caution">
+<p>Note that as far as I can tell, there is no way to link to a spot in the same file. It's also important to note that links must point to a valid file in the project. One broken link will break all others in the document.</p>
+</div>
 
 ## Closing thoughts
 

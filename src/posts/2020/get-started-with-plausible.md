@@ -13,15 +13,14 @@ Website analytics are great tools to monitor your website's traffic, see what pe
 
 Unfortunately, analytics have a bad rep, and I pin most of this on Google. Being the largest and defacto standard analytics platform, Google makes sure to collect as much information about users as is technologically possible. This often means compromising your user's privacy and taking a little hit to website performance.
 
-This is where [Plausible](https://plausible.io/) comes in. It takes a more modern approach to web analytics. **It's beautiful, lightning fast, super affordable, and it's built around privacy.** This is increasingly important as new internet privacy laws are passed (think GDPR). With Plausible, you don't have to worry about a privacy statement or cookie banners or any of that garbage. Your users can focus on your content, and you can still get valuable stats.
+This is where [Plausible](https://plausible.io/) comes in. It takes a more modern approach to web analytics. **It's beautiful, lightning fast, and it's built around privacy.** This is increasingly important as new internet privacy laws are passed (think GDPR). With Plausible, you don't have to worry about a privacy statement or cookie banners or any of that garbage. Your users can focus on your content, and you can still get valuable stats.
 
 [![Screenshot of the Plausible website](/images/posts/2020/plausible.png)](plausible.io)
 
-Now's a good time to qualify "super affordable". They charge $6/month or $4/month billed annually at the time of writing. Compare this to Netlify's $9/month server side analytics. Personally, I think it's well worth about 50 bucks a year for a great product like this.
-
-> I should also note that I'm not sponsored by anyone. I just think it's a great service, and to be honest, this is going to be more of a checklist than a how to guide. Sorry!
->
-> The Plausible docs are really good and there's no reason to repeat all of it here. Instead, I'll highlight some cool features they don't tell you about.
+<div class="callout layout--flow">
+<p>I should also note that I'm not sponsored by anyone. I just think it's a great service, and to be honest, this is going to be more of a checklist than a how to guide. Sorry!</p>
+<p>The Plausible docs are really good and there's no reason to repeat all of it here. Instead, I'll highlight some cool features they don't tell you about.</p>
+</div>
 
 ## Getting Started
 
@@ -71,7 +70,9 @@ It's also worth noting that you don't have to make any changes to those instruct
 
 After you finish playing around with everything you may want to go ahead and reset your analytics so far to remove your own activity.
 
-> **WARNING:** This will reset ALL collected data - not just your own, so I only recommend using this when you first finish setting things up.
+<div class="callout--warning">
+<p><strong>WARNING:</strong> This will reset ALL collected data - not just your own, so I only recommend using this when you first finish setting things up.</p>
+</div>
 
 [Follow this doc to reset your site's data to date](https://docs.plausible.io/reset-site-data).
 

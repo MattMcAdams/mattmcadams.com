@@ -35,15 +35,15 @@
   );
 
   /* Colors */
-  --color_text--default: #374151;
-  --color_text--subtle: #6b7280;
-  --color_text--link: #0074E0;
-  --color_text--link-alt: #0263BC;
+  --color_text--default: #374151;       /* Tailwind Gray 700 */
+  --color_text--subtle: #6b7280;        /* Tailwind Gray 500 */
+  --color_text--link: #2563eb;          /* Tailwind Blue 600 */
+  --color_text--link-alt: #1d4ed8;      /* Tailwind Blue 700 */
   --color_text--accent: var(--color_text--link);
-  --color_background--surface: #f9fafb;
-  --color_background--element: #f3f4f6;
-  --color_background--chip: #e5e7eb;
-  --color_accent: var(--color_text--link);
+  --color_background--surface: #f9fafb; /* Tailwind Gray 50 */
+  --color_background--element: #f3f4f6; /* Tailwind Gray 100 */
+  --color_background--chip: #e5e7eb;    /* Tailwind Gray 200 */
+  --color_accent: #3b82f6;              /* Tailwind Blue 500 */
 
   /* Font Families */
   --font_body: 'Recursive', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -83,11 +83,24 @@
 }
 
 del {
-  --color_background--element: #fdebeb;
+  --color_background--element: #fce7f3; /* Tailwind Pink 100 */
 }
 
 ins {
-  --color_background--element: #e3fcec;
+  --color_background--element: #d1fae5; /* Tailwind Emerald 100 */
+}
+
+.callout--tip {
+  --color_accent: #10b981; /* Tailwind Emerald 500 */
+}
+
+.callout--caution {
+  --color_accent: #f59e0b; /* Tailwind Amber 500 */
+}
+
+.callout--warning {
+  /* --color_text--accent: #C72D7A; */
+  --color_accent: #ec4899; /* Tailwind Pink 500 */
 }
 
 /* !SECTION Tokens */
@@ -256,6 +269,27 @@ h3[id]:hover .direct-link {
 }
 
 /* !SECTION Anchor Links */
+/* ==============================
+/* SECTION Callouts
+============================== */
+
+.callout,
+.callout--info,
+.callout--tip,
+.callout--caution,
+.callout--warning {
+  padding: var(--space_2);
+  border-left: 5px solid var(--color_text--subtle);
+}
+
+.callout--info,
+.callout--tip,
+.callout--caution,
+.callout--warning {
+  border-left: 5px solid var(--color_accent);
+}
+
+/* !SECTION Callouts */
 /* !SECTION Components */
 /* =================================================================
 /* SECTION Projects & Sketchbook

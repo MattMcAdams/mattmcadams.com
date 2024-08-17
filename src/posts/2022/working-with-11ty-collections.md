@@ -96,7 +96,9 @@ function createCollectionsByTag(collection) {
 }
 ```
 
-> By this point, I no longer needed `filterTagList` and so the above snippet does not filter the tags it creates collections for. If you DO use a tag filter, you may want to add some logic to deal with that here.
+<div class="callout--caution">
+<p>By this point, I no longer needed <code>filterTagList</code> and so the above snippet does not filter the tags it creates collections for. If you DO use a tag filter, you may want to add some logic to deal with that here.</p>
+</div>
 
 Now we can create the actual collection with this:
 
@@ -119,7 +121,9 @@ But what if we wanted to kick it up a notch?
 
 ## Nested Collections
 
-> I've got to warn you that this may or may not be a good idea. As far as I know, there isn't a really good reason to do this, and 11ty doesn't always handle nested collections in the way you'd expect. For example, the 11ty pagination feature won't understand nested collections from my experiments. Hopefully these are classified as bugs and get worked out in the future. I opened an [issue on the eleventy repo](https://github.com/11ty/eleventy/issues/2266) to ask about this behavior.
+<div class="callout--warning">
+<p>I've got to warn you that this may or may not be a good idea. As far as I know, there isn't a really good reason to do this, and 11ty doesn't always handle nested collections in the way you'd expect. For example, the 11ty pagination feature won't understand nested collections from my experiments. Hopefully these are classified as bugs and get worked out in the future. I opened an <a href="https://github.com/11ty/eleventy/issues/2266">issue on the eleventy repo</a> to ask about this behavior.</p>
+</div>
 
 I was inspired to do this after realizing the collection created by `addcollection` is essentially a javascript object that you can manipulate to your needs.
 

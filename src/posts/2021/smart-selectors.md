@@ -90,7 +90,9 @@ a:not([class])[data-link-type='document']::after {
 
 This CSS uses the same principal but adds a PDF icon to the end of the link. We can achieve this with `[href$='.pdf']` this looks for a link who's `href` ends with ".pdf".
 
-> It's important to note that this exact implementation was designed with an icon font in mind. You can get around this by changing the `content` property to whatever suits your need.
+<div class="callout--info">
+<p>It's important to note that this exact implementation was designed with an icon font in mind. You can get around this by changing the `content` property to whatever suits your need.</p>
+</div>
 
 ## Accessibility first
 

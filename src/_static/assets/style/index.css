@@ -1,5 +1,5 @@
 /* ==================================================================
-  CSS Boilerplate v2.0.1
+  CSS Boilerplate v2.0.2
   The Unlicense <https://unlicense.org>
   https://github.com/MattMcAdams/CSS-Boilerplate
 ================================================================== */
@@ -16,19 +16,88 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, hr {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+hr {
   margin: 0;
   padding: 0;
   border: 0;
@@ -39,8 +108,17 @@ time, mark, audio, video, hr {
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -48,11 +126,13 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
@@ -78,7 +158,9 @@ table {
  * smoothly down to that location. */
 
 @media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Hide content visually, but allow screen readers to read the
@@ -147,7 +229,11 @@ body {
 
 /* Heading typography */
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: var(--font_head);
   font-weight: var(--font_weight--bold);
 }
@@ -191,21 +277,43 @@ small,
 
 /* Basic styles for inline semantics */
 
-strong, b { font-weight: bold; }
-em, cite, i, q { font-style: italic; }
-s { text-decoration: line-through; }
-u { text-decoration: underline; font-style: normal; }
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+cite,
+i,
+q {
+  font-style: italic;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+u {
+  text-decoration: underline;
+  font-style: normal;
+}
 
 /* Basic style for subscript and superscript text */
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 del {
   background: var(--color_background--element);
@@ -230,7 +338,10 @@ mark {
 /* Basic styles for abbreviation. Only style differently when
  * a title is present. */
 
-abbr { text-decoration: none; }
+abbr {
+  text-decoration: none;
+}
+
 abbr[title] {
   cursor: help;
   text-decoration: underline;
@@ -308,8 +419,8 @@ blockquote cite {
   font-style: italic;
 }
 
-blockquote > cite,
-blockquote > footer {
+blockquote>cite,
+blockquote>footer {
   display: block;
   margin-block-start: calc(var(--space_flow) / 2);
 }
@@ -324,15 +435,31 @@ blockquote > footer {
 
 /* Set nested unordered list styles */
 
-ul:not([class]) { list-style-type: disc; }
-ul:not([class]) ul:not([class]) { list-style-type: circle; }
-ul:not([class]) ul:not([class]) ul:not([class]) { list-style-type: square; }
+ul:not([class]) {
+  list-style-type: disc;
+}
+
+ul:not([class]) ul:not([class]) {
+  list-style-type: circle;
+}
+
+ul:not([class]) ul:not([class]) ul:not([class]) {
+  list-style-type: square;
+}
 
 /* Set nested ordered list styles */
 
-ol:not([class]) { list-style-type: decimal; }
-ol:not([class]) ol:not([class]) { list-style-type: upper-alpha; }
-ol:not([class]) ol:not([class]) ol:not([class]) { list-style-type: lower-roman; }
+ol:not([class]) {
+  list-style-type: decimal;
+}
+
+ol:not([class]) ol:not([class]) {
+  list-style-type: upper-alpha;
+}
+
+ol:not([class]) ol:not([class]) ol:not([class]) {
+  list-style-type: lower-roman;
+}
 
 /* Set indention and flow spacing for lists */
 
@@ -344,8 +471,13 @@ ul:not([class]) li {
 
 /* Add basic styles for definition lists */
 
-dt { font-weight: bold; }
-dd { padding-inline-start: var(--space_2); }
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding-inline-start: var(--space_2);
+}
 
 /* !SECTION Lists */
 /* ==============================
@@ -404,13 +536,13 @@ audio {
 
 /* Position inner elements in media wrappers */
 
-.embed-wrapper > iframe,
-.embed-wrapper > embed,
-.embed-wrapper > object,
-.aspect-ratio > iframe,
-.aspect-ratio > embed,
-.aspect-ratio > object,
-.aspect-ratio > img {
+.embed-wrapper>iframe,
+.embed-wrapper>embed,
+.embed-wrapper>object,
+.aspect-ratio>iframe,
+.aspect-ratio>embed,
+.aspect-ratio>object,
+.aspect-ratio>img {
   position: absolute;
   inset: 0;
   height: 100%;
@@ -419,7 +551,7 @@ audio {
 
 /* Allow img to crop to avoid being stretched */
 
-.aspect-ratio > img {
+.aspect-ratio>img {
   object-fit: cover;
 }
 
@@ -469,14 +601,17 @@ thead {
   color: var(--color_background--surface);
 }
 
-th, td {
+th,
+td {
   font-size: var(--font_size--small);
   line-height: var(--font_height--small);
   padding: var(--space_2);
   text-align: start;
 }
 
-th { font-weight: bold; }
+th {
+  font-weight: bold;
+}
 
 tr {
   border-block-end: 0.5px solid var(--color_text--subtle);
@@ -495,12 +630,16 @@ tfoot {
 /* SECTION Code
 ============================== */
 
-code, samp, kbd, var {
+code,
+samp,
+kbd,
+var {
   font-family: var(--font_mono);
   padding: 0.1em 0.3em;
 }
 
-code, samp {
+code,
+samp {
   background-color: var(--color_background--element);
 }
 
@@ -566,11 +705,11 @@ summary:focus::before {
   color: var(--color_accent);
 }
 
-summary + * {
+summary+* {
   margin-block-start: calc(var(--space_flow) / 2);
 }
 
-details[open] > summary::before {
+details[open]>summary::before {
   transform: rotate(45deg);
 }
 
@@ -698,7 +837,8 @@ form:has(.form-field input[required])::after {
 
 /* Standardize labels */
 
-label, legend {
+label,
+legend {
   background-color: transparent;
   font: inherit;
 }
@@ -799,7 +939,7 @@ input[type="range"]::-moz-range-track {
   background-color: var(--color_background--element);
 }
 
-input[type="range"]::-moz-range-progress{
+input[type="range"]::-moz-range-progress {
   background-color: var(--color_accent);
   height: 5px;
 }
@@ -918,64 +1058,53 @@ button[type="reset"][disabled] {
 .container {
   margin-inline: auto;
   padding-inline: var(--space_gutter);
-  width: 100%;
   max-width: var(--width_content);
 }
 
 .container--wide {
   margin-inline: auto;
   padding-inline: var(--space_gutter);
-  width: 100%;
   max-width: var(--width_wide);
 }
 
 .container--full {
   margin-inline: auto;
   padding-inline: var(--space_gutter);
-  width: 100%;
 }
 
 /* Allow nested containers wider than parent */
 
-.container > .container--wide {
+.container>.container--wide {
   max-width: var(--width_wide);
-  margin-inline: calc(
-    min(
-      calc(100vw - 100%),
-      calc(var(--width_wide) - 100%)
-    ) / -2
-  );
+  margin-inline: calc(min(calc(100vw - 100%),
+        calc(var(--width_wide) - 100%)) / -2);
 }
 
-.container > .container--full,
-.container--wide > .container--full {
+.container>.container--full,
+.container--wide>.container--full {
   max-width: 100vw;
   margin-inline: calc((100vw - 100%) / -2);
 }
 
 /* Remove duplicate gutters from nested containers the same size as parent */
 
-.container > .container,
-.container--wide > .container--wide,
-.container--full > .container--full {
+.container>.container,
+.container--wide>.container--wide,
+.container--full>.container--full {
   margin-inline: calc(var(--space_gutter) * -1);
 }
 
 /* Account for containers smaller than parent */
 
-.container--wide > .container,
-.container--full > .container {
-  margin-inline: max(
-    calc(var(--space_gutter) * -1),
-    calc((100% - var(--width_content)) / 2)
-  );
+.container--wide>.container,
+.container--full>.container {
+  margin-inline: max(calc(var(--space_gutter) * -1),
+      calc((100% - var(--width_content)) / 2));
 }
 
-.container--full > .container--wide {
-  margin-inline: max(
-    calc(var(--space_gutter) * -1),
-    calc((100% - var(--width_wide)) / 2)
-  );
+.container--full>.container--wide {
+  margin-inline: max(calc(var(--space_gutter) * -1),
+      calc((100% - var(--width_wide)) / 2));
 }
 
 /* !SECTION Containers */
@@ -986,34 +1115,34 @@ button[type="reset"][disabled] {
 ** Flow spacing can be applied to a individual container using the .layout--flow class. or to the entire document using the .global--flow class. The implementation is different for each method, so consider how you want the spacing to be applied.
 ============================== */
 
-.layout--flow > * + *,
-blockquote > * + *,
-details > * + * {
+.layout--flow>*+*,
+blockquote>*+*,
+details>*+* {
   margin-block-start: var(--space_flow);
 }
 
-.layout--flow-double > * + * {
+.layout--flow-double>*+* {
   margin-block-start: calc(var(--space_flow) * 2);
 }
 
-.layout--flow-half > * + * {
+.layout--flow-half>*+* {
   margin-block-start: calc(var(--space_flow) / 2);
 }
 
-.layout--flow > * + h1,
-.layout--flow > * + h2,
-.layout--flow > * + h3,
-.layout--flow > * + h4,
-.layout--flow > * + h5,
-.layout--flow > * + h6 {
+.layout--flow>*+h1,
+.layout--flow>*+h2,
+.layout--flow>*+h3,
+.layout--flow>*+h4,
+.layout--flow>*+h5,
+.layout--flow>*+h6 {
   margin-block-start: calc(var(--space_flow) * 2);
 }
 
-.layout--flow > h1 + h2,
-.layout--flow > h2 + h3,
-.layout--flow > h3 + h4,
-.layout--flow > h4 + h5,
-.layout--flow > h5 + h6 {
+.layout--flow>h1+h2,
+.layout--flow>h2+h3,
+.layout--flow>h3+h4,
+.layout--flow>h4+h5,
+.layout--flow>h5+h6 {
   margin-block-start: calc(var(--space_flow) / 2);
 }
 
@@ -1060,15 +1189,15 @@ details > * + * {
 
 /* Stabilize height of components that are side by side */
 
-.layout--grid > div > :only-child,
-.layout--grid > li > :only-child {
+.layout--grid>div> :only-child,
+.layout--grid>li> :only-child {
   display: flex;
   align-items: stretch;
   height: 100%;
 }
 
-.layout--grid > div > :only-child > *,
-.layout--grid > li > :only-child > * {
+.layout--grid>div> :only-child>*,
+.layout--grid>li> :only-child>* {
   flex: 1;
 }
 
@@ -1093,7 +1222,7 @@ details > * + * {
   max-width: 100vw;
 }
 
-#app > :nth-child(2) {
+#app> :nth-child(2) {
   width: 100%;
   flex: 1 0 auto;
   place-content: start center;
@@ -1124,7 +1253,7 @@ details > * + * {
 
 /* Fix for x overflow elements breaking layout */
 
-.page > * {
+.page>* {
   min-width: 0;
 }
 
@@ -1146,12 +1275,12 @@ details > * + * {
 
 /* Layout fixes */
 
-.page:has(.page__sidebar) .container > .container--wide,
-.page:has(.page__sidebar) .container > .container--full,
-.page:has(.page__sidebar) .container--wide > .container,
-.page:has(.page__sidebar) .container--wide > .container--full,
-.page:has(.page__sidebar) .container--full > .container,
-.page:has(.page__sidebar) .container--full > .container--wide {
+.page:has(.page__sidebar) .container>.container--wide,
+.page:has(.page__sidebar) .container>.container--full,
+.page:has(.page__sidebar) .container--wide>.container,
+.page:has(.page__sidebar) .container--wide>.container--full,
+.page:has(.page__sidebar) .container--full>.container,
+.page:has(.page__sidebar) .container--full>.container--wide {
   margin-inline: calc(var(--space_gutter) * -1);
 }
 
@@ -1170,9 +1299,9 @@ details > * + * {
       "header header"
       "sidebar content";
     grid-template-columns:
-      minmax(calc(25% - (var(--space_layout-gap) / 2)), var(--width_sidebar))
-      min(calc(75% - (var(--space_layout-gap) / 2)), var(--width_content));
+      minmax(calc(25% - (var(--space_layout-gap) / 2)), var(--width_sidebar)) min(calc(75% - (var(--space_layout-gap) / 2)), var(--width_content));
   }
+
   .page__sidebar {
     margin-block-start: var(--space_section);
   }
