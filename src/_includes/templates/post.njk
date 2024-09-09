@@ -5,8 +5,8 @@ layout: layouts/no-sidebar.njk
 <h1>{{ title }}</h1>
 
 <p class="metadata">
-  <time datetime="{{ page.date | htmlDateString }}">
-    {{ page.date | readableDate }}
+  <time datetime="{{ date | htmlDateString }}">
+    {{ date | readableDate }}
   </time>
 
   {% if tags %}
@@ -17,5 +17,15 @@ layout: layouts/no-sidebar.njk
     {% endfor %}
   {% endif %}
 </p>
+
+{% if not ageExempt %}
+{% if date and functions.isOlderThan(date, config.posts.yearsOld) %}
+<div class="callout--caution layout--flow">
+  <p>
+    Please be advised that this post is more than {{ config.posts.yearsOld }} years old. These posts are rarely, if ever, edited. This post may contain information that is out of date or inaccurate, or the information presented may no longer align with my current opinions or methodology.
+  </p>
+</div>
+{% endif %}
+{% endif %}
 
 {{ content | safe }}

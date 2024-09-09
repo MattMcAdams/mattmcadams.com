@@ -2,34 +2,38 @@
 
 <ol reversed class="post-list layout--flow" style="counter-reset: start-from {{ collection.length + 1 }}">
 {% for post in collection | reverse %}
-
   <li class="post-list_item layout--flow {% if post.url == url %}post-list_item-active{% endif %}">
 
-  <h3><a href="{{ post.url | url }}">
-    {% if post.data.title %}
-      {{ post.data.title }}
-    {% else %}
-      <code>{{ post.url }}</code>
+    <h3>
+      <a href="{{ post.url | url }}">
+        {% if post.data.title %}
+          {{ post.data.title }}
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+    </h3>
+
+
+    <p class="metadata">
+      <time datetime="{{ post.data.date | htmlDateString }}">
+        {{ post.data.date | readableDate }}
+      </time>
+
+      {% if post.data.tags %}
+      &middot;
+      {% endif %}
+
+      {% for tag in post.data.tags | filterTagList %}
+        {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </p>
+
+    {% if post.data.description %}
+      <p class="post-description">{{post.data.description}}</p>
     {% endif %}
-  </a></h3>
 
-
-  <p class="metadata">
-  <time datetime="{{ post.date | htmlDateString }}">
-    {{ post.date | readableDate }}
-  </time> &middot;
-
-  {% for tag in post.data.tags | filterTagList %}
-    {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
-  {% endfor %}
-  </p>
-
-
-  {% if post.data.description %}
-    <p class="post-description">{{post.data.description}}</p>
-  {% endif %}
   </li>
-
 {% endfor %}
 </ol>

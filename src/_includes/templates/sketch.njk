@@ -5,8 +5,8 @@ layout: layouts/no-sidebar.njk
 <h1>{{ title }}</h1>
 
 <p class="metadata">
-  <time datetime="{{ page.date | htmlDateString }}">
-    {{ page.date | readableDate }}
+  <time datetime="{{ date | htmlDateString }}">
+    {{ date | readableDate }}
   </time>
 
   {% if tags %}
