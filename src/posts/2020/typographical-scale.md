@@ -48,7 +48,7 @@ The classical typographical scale uses multiples of 3 and a designer has selecte
 
 One way to create a typographical scale is to use a ratio. Sometimes called "modular scales" these scales can have an infinite number of steps and can react to changes in the base unit.
 
-![Preview of the first three font sizes in a modular scale with a ratio of 1.5](/images/2020/typographic-scales/posts/modular-scale.png)
+![Preview of the first three font sizes in a modular scale with a ratio of 1.5](/images/posts/2020/typographic-scales/modular-scale.png)
 
 The first step is to choose a ratio, for this example I'll be using 1.5 and a base unit of 10px. Multiply each step by the ratio to get the value of the next.
 

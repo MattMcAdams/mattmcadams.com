@@ -57,7 +57,7 @@ eleventyExcludeFromCollections: true
 <h2>Posts</h2>
 <p><a href="/posts/"><code>/posts</code></a></p>
 {%- set pageQuery = collections.all | find("/posts/") -%}
-<p>{{ pageQuery.data.description }} You can subscrible to this list via <a href="/feed.xml">XML RSS</a> or <a href="/feed.json">JSON RSS</a>.</p>
+<p>{{ pageQuery.data.description }}</p>
 {%- for entry in collections.posts -%}
   {%- if loop.last -%}
     <p>Latest entry: <a href="{{ entry.url }}">{{ entry.data.title }}</a></p>

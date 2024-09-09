@@ -5,8 +5,8 @@ date: 2020-12-02
 tags: ['analytics', 'tutorial']
 description: "Plausible is a fantastic alternative to existing JS based analytics solutions. Inexpensive, lightning fast, and build around privacy."
 
-thumbnail: https://www.mattmcadams.com/images/posts/plausible.png
-cover_image: https://www.mattmcadams.com/images/posts/plausible.png
+thumbnail: https://www.mattmcadams.com/images/posts/2020/plausible.png
+cover_image: https://www.mattmcadams.com/images/posts/2020/plausible.png
 ---
 
 Website analytics are great tools to monitor your website's traffic, see what people are interested in on your site, and inform how you develop your site going forward. They can help you understand more about your audience.
@@ -15,7 +15,7 @@ Unfortunately, analytics have a bad rep, and I pin most of this on Google. Being
 
 This is where [Plausible](https://plausible.io/) comes in. It takes a more modern approach to web analytics. **It's beautiful, lightning fast, and it's built around privacy.** This is increasingly important as new internet privacy laws are passed (think GDPR). With Plausible, you don't have to worry about a privacy statement or cookie banners or any of that garbage. Your users can focus on your content, and you can still get valuable stats.
 
-[![Screenshot of the Plausible website](/images/posts/2020/plausible.png)](plausible.io)
+[![Screenshot of the Plausible website](/images/posts/2020/plausible.png)](https://plausible.io/)
 
 <div class="callout layout--flow">
 <p>I should also note that I'm not sponsored by anyone. I just think it's a great service, and to be honest, this is going to be more of a checklist than a how to guide. Sorry!</p>
@@ -24,7 +24,7 @@ This is where [Plausible](https://plausible.io/) comes in. It takes a more moder
 
 ## Getting Started
 
-Head on over to plausible.io and sign up for their 30 day free trial (no credit card required). They'll give you a [script to put in your website's `<head>`](https://docs.plausible.io/plausible-script) and thats pretty much all there is to it!
+Head on over to [plausible.io](https://plausible.io/) and sign up for their 30 day free trial (no credit card required). They'll give you a [script to put in your website's `<head>`](https://docs.plausible.io/plausible-script) and thats pretty much all there is to it!
 
 Analytics will start rolling in as soon as you get 1 page view. You can test it out by visiting your site yourself. (We'll omit ourselves from the analytics later).
 
@@ -32,7 +32,7 @@ Analytics will start rolling in as soon as you get 1 page view. You can test it 
 
 Plausible also lets you [track which URLs are going to 404 pages](https://plausible.io/docs/error-pages-tracking-404). This is a little more involved, but still extremely straight forward.
 
-If you're using one of the cool new frameworks like Vue (Gridsome in my case), you may have to put the 404 page script in a module export or something. Here's what that looks like:
+If you're using one of the cool new frameworks like Vue or React, you may have to put the 404 page script in a module export or something. Here's what that looks like:
 
 ```html
 <script>
@@ -64,7 +64,7 @@ Thankfully, they have an article on how to [exclude yourself](https://docs.plaus
 
 After you've excluded yourself from your own analytics, you may find that you need to test something else out. Maybe you need to create another goal of some kind, or want to double check to make sure something is working. The best way to do this is to temporarily disable the ad block extension and enable it again when you're done testing.
 
-It's also worth noting that you don't have to make any changes to those instructions if you chose to use a custom domain. Blocking plausible.io will still work.
+It's also worth noting that you don't have to make any changes to those instructions if you chose to use a custom domain. Blocking `plausible.io` will still work.
 
 ## Resetting your website's data
 

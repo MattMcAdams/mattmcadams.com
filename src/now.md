@@ -5,7 +5,7 @@ description: A periodically updated, high level overview of what I'm currently d
 
 # Now
 
-A periodically updated, high level overview of what I'm currently doing, experimenting with, learning, reading, or am otherwise interested in. For my weekly check-ins, take a look through my [adventure log](/log).
+A periodically updated, high level overview of what I'm currently doing, experimenting with, learning, reading, or am otherwise interested in. For my semi-weekly check-ins, take a look through my [adventure log](/log).
 
 ## Occupation
 
@@ -25,8 +25,8 @@ I'm currently reading *I hate you, don't leave me*. It is a book about Borderlin
 
 ## Down Time
 
-In my down time, I'm watching *Metallic Rouge* and playing with my [color palette generator](https://colorscale.app), ColorScale. I'm also playing a lot of *Elder Scrolls Online*.
+In my down time, I'm playing with my [color palette generator](https://colorscale.app), ColorScale. I'm currently playing *Elder Scrolls Online* and *Genshin Impact*.
 
 ## Interests
 
-I'm currently really interested in sustainable and portable technology. I recently watched a really cool [talk at Strange Loop by Devine Lu Linvega](https://www.youtube.com/watch?v=T3u7bGgVspM) that has had me really inspired. I've been looking into [permacomputing](https://wiki.xxiivv.com/site/permacomputing.html) as a result of my recent delves into the internet rabbit hole.
+I'm currently really interested in sustainable and portable technology. I recently watched a really cool [talk at Strange Loop by Devine Lu Linvega](https://www.youtube.com/watch?v=T3u7bGgVspM) that has had me really inspired. I've been looking into [permacomputing](https://wiki.xxiivv.com/site/permacomputing.html) as a result of my recent delves into this internet rabbit hole.
