@@ -79,3 +79,5 @@ After you finish playing around with everything you may want to go ahead and res
 ## Enjoy
 
 Congrats, you're all set up with a pretty powerful little analytics tool and you don't have to worry about it impacting performance or causing privacy headaches.
+
+*This post was modified on the 14th of Feb 2024 to remove some language related to pricing, as Plausible's pricing options have changed since the original publication.*
