@@ -11,13 +11,13 @@ A periodically updated, high level overview of what I'm currently doing, experim
 
 I am currently working as the Associate Director of Web Strategy at The University of Alabama.
 
+In this role, I handle the day to day operations of our development team, as well as run a community forum centered around web development at the University. My favorite part of my job is helping developers across campus achieve their goals with the products our team creates and maintains.
+
 ## Learning
 
-Thanks to work, I'm learning a lot more about WordPress and the Customizer. The majority of my development work for UA has been in the design system, but I've wanted to get more familiar with how our WordPress theme works too.
+Thanks to work, I'm learning a lot more about WordPress and PHP. The majority of my development work for UA has been in the design system and React component library, but I've wanted to get more familiar with how our WordPress theme works too.
 
-Lately, I've been learning more PHP and am getting started with Microsoft's graph API for a project at work.
-
-Outside of work, I'm learning more about [RemoteStorage](https://github.com/remotestorage/remotestorage.js) and how I can implement it in my own apps.
+Outside of work, I'm learning more about [RemoteStorage](https://github.com/remotestorage/remotestorage.js) and how I can implement it in my own apps. I'm also learning more about Linux and have a few projects in mind for a small home server.
 
 ## Reading
 
