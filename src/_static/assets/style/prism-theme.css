@@ -69,7 +69,8 @@ pre.language-bash,
 pre.language-shell,
 pre.language-php,
 pre.language-yaml,
-pre.language-yml {
+pre.language-yml,
+pre.language-ts {
   position: relative;
 }
 
@@ -86,7 +87,8 @@ pre.language-bash::before,
 pre.language-shell::before,
 pre.language-php::before,
 pre.language-yaml::before,
-pre.language-yml::before {
+pre.language-yml::before,
+pre.language-ts::before {
   position: absolute;
   top: 0.5em;
   right: 1em;
@@ -101,6 +103,7 @@ pre.language-css::before { content: "CSS"; }
 pre.language-scss::before { content: "SCSS"; }
 pre.language-html::before { content: "HTML"; }
 pre.language-js::before { content: "JS"; }
+pre.language-ts::before { content: "TS"; }
 pre.language-vue::before { content: "VUE"; }
 pre.language-md::before { content: "MD"; }
 pre.language-njk::before { content: "NJK"; }
