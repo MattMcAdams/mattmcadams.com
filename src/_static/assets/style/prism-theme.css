@@ -31,7 +31,7 @@ kbd {
   border-radius: 5px;
 }
 
-pre {
+pre:has(code) {
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
 	tab-size: 2;
@@ -41,19 +41,19 @@ pre {
 	-ms-hyphens: none;
 	hyphens: none;
 
-  padding: calc(var(--space_flow) / 2);
   border-radius: 0.5em;
   background-color: var(--prism-background);
+  padding: var(--space_flow);
 }
 
 pre code,
 pre samp {
   display: block;
-  overflow: auto;
   background-color: var(--prism-background);
   color: var(--prism-foreground);
 	font-size: var(--font_size--small);
 	line-height: 1.5;
+  padding: 0;
 }
 
 pre.language-txt,

@@ -115,6 +115,27 @@ ins {
 
 /* !SECTION Container Width Fix */
 /* =================================================================
+/* SECTION Link Styles
+================================================================= */
+
+a:not([class])[target="_blank"]::after,
+a:not([class])[data-link-type="external"] {
+  content: ' ↗︎';
+  padding-inline-start: 0.1em;
+}
+
+/* !SECTION Link Styles */
+/* =================================================================
+/* SECTION Rules
+================================================================= */
+
+hr {
+  border: 0;
+  border-block-end: 1px solid var(--color_background--chip);
+}
+
+/* !SECTION Rules */
+/* =================================================================
 /* SECTION Top Navigation
 ================================================================= */
 
@@ -154,10 +175,6 @@ ins {
 /* =================================================================
 /* SECTION Content
 ================================================================= */
-
-.page {
-  padding: var(--space_section) 0;
-}
 
 #app > :nth-child(2) {
   place-content: center;
