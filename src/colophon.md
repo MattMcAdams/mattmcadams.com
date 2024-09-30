@@ -11,6 +11,8 @@ This website's code is stored on [GitHub](https://github.com/MattMcAdams/mattmca
 
 My domains are all registered through [Hover](https://www.hover.com/), but I generally use Cloudflare's DNS. For analytics, I use [Plausible](https://plausible.io/).
 
+The typeface used on this website is the lovely [Recursive](https://www.recursive.design/) variable font. It is used for all text including body copy and code snippets.
+
 ## Other tools
 
 These weren't strictly used for the creation of this website, but I do use these quite a lot and they remain important to my work.
