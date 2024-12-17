@@ -4,32 +4,36 @@ permalink: /sketchbook/
 title: Sketchbook
 description: This is the space I use to show one-off concepts, sketches, doodles, and other minor works.
 ---
-<div class="page__sidebar layout--flow container">
-  <p>
-    <a href={{metadata.feed.sketchbook.xml.path}}>Subscribe via XML-RSS</a><br>
-    <a href={{metadata.feed.sketchbook.json.path}}>Subscribe via JSON-RSS</a>
-  </p>
-  <h3>Filter by Tag</h3>
-  <ul class="tag-list">
-    {% for tag in collections.sketchbookTags %}
-    {% set tagUrl %}/sketchbook/tags/{{ tag | slug }}/{% endset %}
-      <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.sketchbookByTag[tag] | length }})</span></li>
-    {% endfor %}
-  </ul>
+<div class="page__sidebar">
+  <div class="layout--flow container">
+    <p>
+      <a href={{metadata.feed.sketchbook.xml.path}}>Subscribe via XML-RSS</a><br>
+      <a href={{metadata.feed.sketchbook.json.path}}>Subscribe via JSON-RSS</a>
+    </p>
+    <h3>Filter by Tag</h3>
+    <ul class="tag-list">
+      {% for tag in collections.sketchbookTags %}
+      {% set tagUrl %}/sketchbook/tags/{{ tag | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.sketchbookByTag[tag] | length }})</span></li>
+      {% endfor %}
+    </ul>
 
-  <h3>Archive</h3>
-  <ul class="year-list">
-    {% for year in collections.sketchbookYears %}
-    {% set tagUrl %}/sketchbook/{{ year | slug }}/{% endset %}
-      <li><a href="{{ tagUrl | url }}">#{{ year }}</a></li>
-    {% endfor %}
-  </ul>
+    <h3>Archive</h3>
+    <ul class="year-list">
+      {% for year in collections.sketchbookYears %}
+      {% set tagUrl %}/sketchbook/{{ year | slug }}/{% endset %}
+        <li><a href="{{ tagUrl | url }}">#{{ year }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
-<main class="page__content layout--flow container">
-  <h1>{{title}}</h1>
-  <p>{{description}}</p>
+<main class="page__content">
+  <div class="layout--flow container">
+    <h1>{{title}}</h1>
+    <p>{{description}}</p>
 
-  {% set collection = collections.sketchbook %}
-  {% include "sketchlist.njk" %}
+    {% set collection = collections.sketchbook %}
+    {% include "sketchlist.njk" %}
+  </div>
 </main>

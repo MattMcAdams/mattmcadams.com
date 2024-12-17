@@ -5,9 +5,8 @@ eleventyExcludeFromCollections: true
 title: 404
 ---
 
-<div id="main" class="has-sidebar">
-  <div class="sidebar">
-
+<div class="page__sidebar">
+  <div class="layout--flow container">
     <h3 style="margin-top: 0;">Post Tags</h3>
     <ul class="tag-list">
       {% for tag in collections.postTags %}
@@ -15,7 +14,6 @@ title: 404
         <li><a href="{{ tagUrl | url }}">#{{ tag }}</a> <span>({{ collections.postsByTag[tag] | length }})</span></li>
       {% endfor %}
     </ul>
-
     <h3>Archive</h3>
     <ul class="year-list">
       {% for year in collections.postYears %}
@@ -23,38 +21,33 @@ title: 404
         <li><a href="{{ tagUrl | url }}">#{{ year }}</a></li>
       {% endfor %}
     </ul>
-
-  </div>
-    <main class="content">
-      <div>
-        <h1>Content not found</h1>
-
-        <p>Looks like the page or resource you were looking for wasn&apos;t found at this address. This can happen if there was a mistake in the URL, if the content has moved, or if the content no longer exists.</p>
-
-        <div id="404"></div>
-
-        <p>
-          <a href="/" class="button">Return Home</a>
-          <a href="/sitemap" class="button">Sitemap</a>
-          <a href="/feed" class="button">RSS Feeds</a>
-        </p>
-      </div>
-    </main>
   </div>
 </div>
+<main class="page__content">
+  <div class="layout--flow container">
+    <h1>Content not found</h1>
+    <p>Looks like the page or resource you were looking for wasn&apos;t found at this address. This can happen if there was a mistake in the URL, if the content has moved, or if the content no longer exists.</p>
+    <div id="404"></div>
+    <p>
+      <a href="/" class="button">Return Home</a>
+      <a href="/sitemap" class="button">Sitemap</a>
+      <a href="/feed" class="button">RSS Feeds</a>
+    </p>
+  </div>
 
-<script>
-function notFoundMessage(id) {
-    let url = window.location.href
-    let errorMessage =  document.createTextNode("Error: 404\nFile not found at:\n"+url)
-    let code = document.createElement("code")
-    code.appendChild(errorMessage)
-    let pre = document.createElement("pre")
-    pre.appendChild(code)
-    let container = document.getElementById(id)
-    container.appendChild(pre)
-  }
+  <script>
+  function notFoundMessage(id) {
+      let url = window.location.href
+      let errorMessage =  document.createTextNode("Error: 404\nFile not found at:\n"+url)
+      let code = document.createElement("code")
+      code.appendChild(errorMessage)
+      let pre = document.createElement("pre")
+      pre.appendChild(code)
+      let container = document.getElementById(id)
+      container.appendChild(pre)
+    }
 
-  notFoundMessage("404")
-  //plausible("404",{ props: { path: document.location.pathname } })
-</script>
+    notFoundMessage("404")
+    //plausible("404",{ props: { path: document.location.pathname } })
+  </script>
+</main>

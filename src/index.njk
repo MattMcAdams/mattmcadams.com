@@ -2,24 +2,28 @@
 layout: layouts/base.njk
 ---
 
-<div class="page__sidebar container home-sidebar">
-  <img src="/images/about/portrait-full.png">
+<div class="page__sidebar home-sidebar">
+  <div class="container">
+    <img src="/images/about/portrait-full.png">
+  </div>
 </div>
 
-<main class="page__content layout--flow container">
-  <h1>Hi, I'm Matt McAdams</h1>
-  <p>I&apos;m a multidisciplinary creative with a BFA from the University of Alabama at Birmingham with a focus in graphic and web design. Currently, I work professionally in UX Design and Front End Development. When I&apos;m not pecking at code or pushing pixels, I like to explore fantasy worlds in books and video games.</p>
-  <p>I&apos;m an advocate for creating a more accessible and inclusive web through thoughtful design and great experiences. I'm interested in the sustainability, portability, and preservation of technology. On this website, you can see my design work, code projects, and read my thoughts on technology, design, and whatever else inspires me.</p>
-  <p>While I'm not very active on social media, you can also find me on
-    {%- for platform in socialMedia -%}
-      {%- if platform.active -%}
-        {%- if not loop.last -%}
-          {{' '}}<a href="{{ platform.url }}">{{ platform.name }}</a>{{','}}
-        {%- else -%}
-          {{' and '}}<a href="{{ platform.url }}">{{ platform.name }}</a>
+<main class="page__content">
+  <div class="layout--flow container">
+    <h1>Hi, I'm Matt McAdams</h1>
+    <p>I&apos;m a multidisciplinary creative with a BFA from the University of Alabama at Birmingham with a focus in graphic and web design. Currently, I work professionally in UX Design and Front End Development. When I&apos;m not pecking at code or pushing pixels, I like to explore fantasy worlds in books and video games.</p>
+    <p>I&apos;m an advocate for creating a more accessible and inclusive web through thoughtful design and great experiences. I'm interested in the sustainability, portability, and preservation of technology. On this website, you can see my design work, code projects, and read my thoughts on technology, design, and whatever else inspires me.</p>
+    <p>While I'm not very active on social media, you can also find me on
+      {%- for platform in socialMedia -%}
+        {%- if platform.active -%}
+          {%- if not loop.last -%}
+            {{' '}}<a href="{{ platform.url }}">{{ platform.name }}</a>{{','}}
+          {%- else -%}
+            {{' and '}}<a href="{{ platform.url }}">{{ platform.name }}</a>
+          {%- endif -%}
         {%- endif -%}
-      {%- endif -%}
-    {%- endfor -%}
-  .</p>
-  <p>If you're interested in the technical side of this wbesite, consider reading the <a href="/colophon">colophon</a>. I think the objects we surround ourselves with tell a story about us. If you've like to know <a href="/objects">what's in my bag</a>, I've got a page for that too.</p>
+      {%- endfor -%}
+    .</p>
+    <p>If you're interested in the technical side of this wbesite, consider reading the <a href="/colophon">colophon</a>. I think the objects we surround ourselves with tell a story about us. If you've like to know <a href="/objects">what's in my bag</a>, I've got a page for that too.</p>
+  </div>
 </main>

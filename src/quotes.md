@@ -9,6 +9,16 @@ This is a collection of quotes I've collected over the years that I think about 
 
 ---
 
+"Completely surround yourself with things that inspire your creative path."
+*&mdash; Emonee LaRussa*
+
+---
+
+"For someone to change there are two requirements: That the person believes the change is possible, and that the person believes the change is worth the work"
+*&mdash; Unknown*
+
+---
+
 "You've got to look deep to find the deep things. If all you do in your life is stay at the surface, you'll never find anything worth exploring."
 *&mdash; Unknown*
 
