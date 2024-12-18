@@ -26,9 +26,9 @@
     <meta name="twitter:image" content="{{thumbnail or metadata.thumbnail}}">
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="{{ '/assets/style/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/style/mattmcadams.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/style/prism-theme.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/mattmcadams.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/prism-theme.css' | url }}">
 
     <!-- FEEDS -->
     <link rel="alternate" href="{{ metadata.feed.default.xml.path | url }}" type="application/rss+xml" title="{{ metadata.feed.default.title }}">
@@ -46,7 +46,7 @@
           <li><a href="/projects">Projects</a></li>
           <li><a href="/posts">Posts</a></li>
           <li><a href="/bookshelf">Bookshelf</a></li>
-          <li><a href="https://donate.stripe.com/7sIeVd6E2dAbdeU5kk">Support my work ↗︎</a></li>
+          <li><a href="https://donate.stripe.com/7sIeVd6E2dAbdeU5kk" target="_blank">Support my work ↗︎</a></li>
         </ul>
       </nav>
     </header>
@@ -70,5 +70,10 @@
     </footer>
 
     </div>
+    <div id="console"></div>
+    <script src="{{ '/assets/scripts/console.js' | url }}"></script>
+    <script>
+      console.info('Hello, curious developer! Thanks for checking out my humble home on the internet. If you want to see how this site is built, check out the source code on GitHub: https://github.com/MattMcAdams/mattmcadams.com and leave me a star if you find something cool');
+    </script>
   </body>
 </html>

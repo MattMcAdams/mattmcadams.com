@@ -44,6 +44,10 @@
   --color_background--element: #f3f4f6; /* Tailwind Gray 100 */
   --color_background--chip: #e5e7eb;    /* Tailwind Gray 200 */
   --color_accent: #3b82f6;              /* Tailwind Blue 500 */
+  --color_console--background: #111827; /* Tailwind Gray 900 */
+  --color_console--text: #f9fafb;       /* Tailwind Gray 50 */
+  --color_console--subtle: #6b7280;     /* Tailwind Gray 500 */
+  --color_console--error: #ef4444;      /* Tailwind Red 500 */
 
   /* Font Families */
   --font_body: 'Recursive', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -341,3 +345,83 @@ h3[id]:hover .direct-link {
 }
 
 /* !SECTION Projects */
+/* =================================================================
+/* SECTION Console
+================================================================= */
+
+#console {
+  display: none;
+}
+
+#console[aria-expanded="true"] {
+  font-family: var(--font_mono);
+  font-size: var(--font_size--small);
+  line-height: var(--font_height--small);
+  color: var(--color_console--text);
+  background: var(--color_console--background);
+  padding: var(--space_2);
+
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  min-height: 10rem;
+  max-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: scroll;
+}
+
+#console input {
+  font-size: inherit;
+  line-height: inherit;
+  min-height: 0;
+  height: auto;
+  color: inherit;
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
+
+#console input:focus {
+  outline: none;
+}
+
+#console form {
+  margin-block-start: 1em;
+}
+
+#console code {
+  background: none;
+  padding: 0;
+  border: 1px solid var(--color_text--default);
+  border-radius: 0.25rem;
+}
+
+#consoleHistory {
+  overflow-y: scroll;
+}
+
+.console_history-line--command {
+  margin-block-start: 1em;
+  display: flex;
+}
+
+.console_history_content {
+  flex-grow: 1;
+}
+
+.console_history_timestamp {
+  color: var(--color_console--subtle);
+}
+
+.console_history-line--response,
+.console_history-line--error {
+  padding-inline-start: 1rem;
+}
+
+.console_history-line--error {
+  color: var(--color_console--error);
+}
+
+/* !SECTION Console */
