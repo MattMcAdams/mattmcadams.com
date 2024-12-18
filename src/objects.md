@@ -11,7 +11,7 @@ I've always thought the objects people keep near them can tell a lot about the p
 
 ![photo of my bag's contents](/images/about/objects.jpg)
 
-I keep a small travel notebook, of no particular brand, to capture quick sketches and ideas. I'm currently thinking aout making a smaller version of my main notebook (shown below) for this purpose in the future though.
+I keep a small travel notebook, of no particular brand, to capture quick sketches and ideas. I'm currently thinking about making a smaller version of my main notebook (shown below) for this purpose in the future though.
 
 Combined with this little notebook is a Lilliput extra fine fountain pen. I've grown to really enjoy writing with a fountain pen and this one is my favorite. You can pick it up on JetPens, but if you live in the Birmingham AL area, I'd recommend going down to Forstall to get one.
 
@@ -43,7 +43,8 @@ I also carry with me my physical notebook, which I've [written an article about 
 
 I have a few other items I carry with me every day that I didn't get a picture of. These include:
 
-- Airpods
-- MacBook Pro
-- iPad Pro
-- iPhone 15
+- 3rd generation Airpods
+- M2 MacBook Pro
+- 6th generation 12.9in iPad Pro
+- iPhone 16 Pro
+- 20oz Hydroflask
