@@ -48,6 +48,7 @@
   --color_console--text: #f9fafb;       /* Tailwind Gray 50 */
   --color_console--subtle: #6b7280;     /* Tailwind Gray 500 */
   --color_console--error: #ef4444;      /* Tailwind Red 500 */
+  --color_console--accent: #60a5fa;     /* Tailwind Blue 400 */
 
   /* Font Families */
   --font_body: 'Recursive', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -354,6 +355,8 @@ h3[id]:hover .direct-link {
 }
 
 #console[aria-expanded="true"] {
+  --color_text--link: var(--color_console--accent);
+  --color_text--link-alt: var(--color_console--accent);
   font-family: var(--font_mono);
   font-size: var(--font_size--small);
   line-height: var(--font_height--small);

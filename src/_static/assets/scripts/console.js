@@ -29,7 +29,6 @@ class SiteConsole {
         this.name = name;
         localStorage.setItem("consoleName", name);
         this.addHistory("response", `Logged in as ${name}`, "system");
-        this.openConsole();
         return;
       }, {
       help: "Set the username for the console. Syntax: su [name]"
@@ -38,10 +37,38 @@ class SiteConsole {
         localStorage.removeItem("consoleName");
         this.name = "guest";
         this.addHistory("response", "Logged out", "system");
-        this.openConsole();
         return;
       }, {
       help: "Log out of the console and set the username to default",
+    }),
+    echo: Object.assign((command) => {
+        const content = command.split(" ").slice(1).join(" ");
+        if (!content) {
+          this.addHistory("error", "Missing required argument `content`", "system");
+          return;
+        }
+        this.addHistory("response", content, this.name);
+        return;
+      }, {
+      help: "Print the content of the command. Syntax: echo [content]",
+    }),
+    sudo: Object.assign(() => {
+        this.addHistory("error", "Insufficient permissions", "root");
+        return;
+      }, {
+      help: "Execute a command as root. Syntax: sudo [command]",
+    }),
+    whoami: Object.assign(() => {
+        this.addHistory("response", this.name, "system");
+        return;
+      }, {
+      help: "Print the current username",
+    }),
+    date: Object.assign(() => {
+        this.addHistory("response", new Date().toLocaleString(), "system");
+        return;
+      }, {
+      help: "Print the current date and time",
     }),
   }
 
@@ -148,8 +175,14 @@ class SiteConsole {
     const firstWord = command.split(" ")[0];
     // Add the command to the history
     this.addHistory("command", command, this.name.toString());
-    // Run the command
-    if (firstWord in this.commands) {
+    if (firstWord === 'mkdir' || firstWord === 'touch') {
+      this.addHistory("error", "Insufficient permissions", "system");
+      this.addHistory(
+        "response",
+        "If you'd like to modify this site, <a href='https://github.com/MattMcAdams/mattmcadams.com'>open a PR on github</a>.",
+        "system"
+      );
+    } else if (firstWord in this.commands) {
       this.commands[firstWord](command);
     } else if (firstWord === "help") {
       // The help command has to be hard coded into the doCommand method
@@ -190,8 +223,7 @@ class SiteConsole {
         "system"
       );
     }
-    historyElement.innerHTML = this.printHistory();
-    historyElement.scrollTop = historyElement.scrollHeight;
+    this.openConsole();
   }
 
   openConsole() {
@@ -212,6 +244,8 @@ class SiteConsole {
     parent.querySelector("form").addEventListener("submit", this.doCommand);
     localStorage.setItem("consoleOpen", true);
     this.consoleOpen = true;
+    const historyElement = document.getElementById("consoleHistory");
+    historyElement.scrollTop = historyElement.scrollHeight;
     return true;
   }
 
