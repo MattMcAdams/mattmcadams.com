@@ -4,6 +4,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItFootnote = require("markdown-it-footnote");
 
 module.exports = function (eleventyConfig) {
   /* =================================================================
@@ -33,7 +34,15 @@ module.exports = function (eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "&sect;",
-  });
+  }).use(markdownItFootnote);
+
+  // Custom renderer for footnote back link
+  markdownLibrary.renderer.rules.footnote_anchor = (tokens, idx) => {
+    let n = Number(tokens[idx].meta.id + 1).toString();
+    let id = `fnref${n}`;
+    return ` <span class="footnote-backref"><a href="#${id}">↑</a></span>`;
+  };
+
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   /* !SECTION Markdown */
